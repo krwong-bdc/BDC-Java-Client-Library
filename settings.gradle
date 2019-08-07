@@ -1,0 +1,4 @@
+rootProject.name = 'bdc-api'
+include 'java-client-library'
+findProject(':java-client-library')?.name = 'bdc-api'
+
