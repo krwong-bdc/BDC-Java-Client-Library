@@ -1,6 +1,11 @@
 plugins {
     id 'java'
+//    id("net.ltgt.errorprone") version "0.8.1"
 }
+//
+//tasks.withType(JavaCompile).configureEach {
+//    options.fork(javaHome: project.getProperty("jdk11home"))
+//}
 
 group 'com.bill.java.api'
 version '0.0.1'
@@ -13,4 +18,9 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation("com.squareup.okhttp3:okhttp:4.0.1")
+    compile 'org.apache.httpcomponments:httpclient:4.5.8'
+//    errorprone("com.google.errorprone:error_prone_core:0.8.1")
+
 }
