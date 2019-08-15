@@ -23,9 +23,6 @@ Things that should be set?
         - Method
         - Data format (another class?)
  */
-
-//STRIPE LIVE STRIPE RESPONSE GETTER IS A WRAPPER AROUND APIRESOURCE.GSON.FROMJSON() (Which is a Serialized object of the resource model being requested (probably))
-//LSRG is kind of like a factory at that point?
 public class BDCHttpClient {
 //TODO: implement authClient
 //    public static AuthClient authClient = Auth.getClient();
