@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpCookie;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.Map;
 
 /*
 Method will always be POST, so does anything need to change? Probably not for this first iteration
@@ -25,24 +27,24 @@ Things that should be set?
  */
 public class BDCHttpClient {
 //TODO: implement authClient
-//    public static AuthClient authClient = Auth.getClient();
+//public static AuthClient authClient = Auth.getClient();
 
     public static int connectTimeout = 5000;
     public static int readTimeout = 5000;
     public static HttpCookie authCookie;
 
-    public HttpResponse request(String url, ApiResourceParams params) throws IOException{
+    public HttpResponse request(String url, ApiResourceParams params) throws IOException, Exception{
 //        create cookies with authentication
 //        create url encoded body
 
-        return execute(url, params.toJsonString());
+        return execute(BDC.getApiBase() + url, params.toFormURLEncodedString());
     }
 
-    private HttpResponse execute(String url, String params) throws IOException {
+    private HttpResponse execute(String url, String data) throws IOException {
         HttpsURLConnection connection = openConnection(url);
 
         try(OutputStream os = connection.getOutputStream()) {
-            byte[] input = params.getBytes("utf-8");
+            byte[] input = data.getBytes("utf-8");
             os.write(input, 0, input.length);
         }
 
@@ -64,7 +66,7 @@ public class BDCHttpClient {
                 "Content-Type",
                 "application/x-www-form-urlencoded");
         conn.setRequestProperty("Accept", "application/json");
-        conn.setRequestProperty("Cookie", String.format("sessionId=%s", BDC.sessionId));
+//        conn.setRequestProperty("Cookie", String.format("sessionId=%s", BDC.sessionId));
         conn.setConnectTimeout(connectTimeout);
         conn.setReadTimeout(readTimeout);
 

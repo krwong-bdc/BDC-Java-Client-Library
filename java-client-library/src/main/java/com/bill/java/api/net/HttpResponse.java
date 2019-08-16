@@ -35,7 +35,7 @@ public class HttpResponse {
             }
             in.close();
 
-            response = body.toString();
+            this.response = body.toString();
         } catch(IOException e) {
             throw e;
         } finally {
@@ -51,7 +51,7 @@ public class HttpResponse {
         JsonParser parser = new JsonParser();
         JsonObject obj = parser.parse(response).getAsJsonObject();
 
-        if(obj.getAsJsonPrimitive("response_status").getAsInt() == 0) {
+        if(obj.getAsJsonPrimitive("response_status").getAsInt() == 1) {
             JsonObject responseData = obj.getAsJsonObject("response_data");
             String errorCode = responseData.get("error_code").getAsString();
             String errorMessage = responseData.get("error_message").getAsString();

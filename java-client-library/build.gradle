@@ -14,21 +14,25 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.1')
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.5.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.1")
     implementation 'com.google.code.gson:gson:2.8.5'
-//    implementation("com.squareup.okhttp3:okhttp:4.0.1")
-    compile 'org.apache.httpcomponments:httpclient:4.5.8'
-//    errorprone("com.google.errorprone:error_prone_core:0.8.1")
 
+    testCompile "org.mockito:mockito-core:2.+"
 }
 
 
 test {
     useJUnitPlatform()
-    testLogging {
-        events "passed", "skipped", "failed"
-    }
+    systemProperty 'junit.jupiter.conditions.deactivate', '*'
+    systemProperties = [
+            'junit.jupiter.extensions.autodetection.enabled': 'true',
+            'junit.jupiter.testinstance.lifecycle.default': 'per_class'
+    ]
 }

@@ -4,6 +4,9 @@ import com.bill.java.api.param.ApiResourceParams;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+/**
+ * Class responsible for converting API responses into resource model instances
+ */
 public abstract class ApiResource {
     /**
      * Underlying client
@@ -28,6 +31,7 @@ public abstract class ApiResource {
      */
     public static <T> T create(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
