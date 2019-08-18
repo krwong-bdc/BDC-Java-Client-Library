@@ -25,6 +25,9 @@ public abstract class ApiResourceParams {
     protected ApiResourceParams() {
         params.put("devKey", BDC.devKey);
         params.put("sessionId", BDC.sessionId);
+        params.put("userName", BDC.userName);
+        params.put("password", BDC.password);
+
     }
 
     /**

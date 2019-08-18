@@ -26,12 +26,16 @@ Things that should be set?
         - Data format (another class?)
  */
 public class BDCHttpClient {
-//TODO: implement authClient
-//public static AuthClient authClient = Auth.getClient();
-
     public static int connectTimeout = 5000;
     public static int readTimeout = 5000;
     public static HttpCookie authCookie;
+
+    public HttpResponse request(String url) throws IOException, Exception{
+//        create cookies with authentication
+//        create url encoded body
+
+        return execute(BDC.getApiBase() + url, new ApiResourceParams() {}.toFormURLEncodedString());
+    }
 
     public HttpResponse request(String url, ApiResourceParams params) throws IOException, Exception{
 //        create cookies with authentication
@@ -66,6 +70,7 @@ public class BDCHttpClient {
                 "Content-Type",
                 "application/x-www-form-urlencoded");
         conn.setRequestProperty("Accept", "application/json");
+//        TODO: Set the cookie on subsequent requests
 //        conn.setRequestProperty("Cookie", String.format("sessionId=%s", BDC.sessionId));
         conn.setConnectTimeout(connectTimeout);
         conn.setReadTimeout(readTimeout);

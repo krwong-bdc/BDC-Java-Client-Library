@@ -1,11 +1,13 @@
 package com.bill.java.api.param;
 
+
+/**
+ * Request Parameters for the login enpdpoint to obtain the Session Id
+ */
 public class SessionLoginRequestParams extends ApiResourceParams {
 //    devKey taken from BDC in super
-    private SessionLoginRequestParams(String userName, String password, String orgId){
+    private SessionLoginRequestParams(String orgId){
         super();
-        params.put("userName", userName);
-        params.put("password", password);
         params.put("orgId", orgId);
     }
 
@@ -14,22 +16,10 @@ public class SessionLoginRequestParams extends ApiResourceParams {
     }
 
     public static class Builder {
-        private String userName;
-        private String password;
         private String orgId;
 
         public SessionLoginRequestParams build() {
-            return new SessionLoginRequestParams(this.userName, this.password, this.orgId);
-        }
-
-        public Builder setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-
-        public Builder setPassword(String password) {
-            this.password = password;
-            return this;
+            return new SessionLoginRequestParams(this.orgId);
         }
 
         public Builder setOrgId(String orgId) {

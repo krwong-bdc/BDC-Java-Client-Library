@@ -10,6 +10,7 @@ public class Invoice extends ApiResource {
 // TODO: Serialize variable names to match what they are in the API (also may protect user when they obfuscate code)
 // Do member variables need to be public in order for GSON to deserialize?
 //    Stripe lets everything be package-private
+    public static final String CREATE_URL = "/CRUD/create";
 
     @SerializedName("entity")
     private String entity = "Invoice";
@@ -37,7 +38,7 @@ public class Invoice extends ApiResource {
      * @return Returns an instance of the Invoice class
      */
     public static Invoice create(InvoiceCreateParams params) throws Exception {
-        String resourceUrl = BDC.getApiBase() + "/CRUD/create";
+        String resourceUrl = BDC.getApiBase() + CREATE_URL;
         return create(resourceUrl, params, Invoice.class);
     }
 

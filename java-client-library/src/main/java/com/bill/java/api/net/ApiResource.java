@@ -3,6 +3,13 @@ package com.bill.java.api.net;
 import com.bill.java.api.param.ApiResourceParams;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class responsible for converting API responses into resource model instances
@@ -19,6 +26,34 @@ public abstract class ApiResource {
 
     private static Gson createGson() {
         return new GsonBuilder().create();
+    }
+
+    /**
+     *TODO Should be for collection of Api Resources
+     */
+//    public static <T> T createCollection(String resourceUrl, Class<T> clazz) throws Exception {
+//        HttpResponse response = ApiResource.httpClient.request(resourceUrl);
+//
+//        JsonArray dataList = response.getJsonDataList();
+//        Type listType = new TypeToken<List<T>>() {}.getType();
+//        List<T>
+//        return GSON.fromJson(dataList, listType);
+//    }
+
+    public static <T> List<T> createList(String resourceUrl, Class<T> clazz) throws Exception {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl);
+
+        JsonArray jsonArray = response.getJsonDataList();
+        Type listType = new TypeToken<List<JsonObject>>() {}.getType();
+        List<JsonObject> dataList = GSON.fromJson(jsonArray, listType);
+
+        List<T> convertedDataList = new ArrayList<T>();
+
+        for(JsonObject jo: dataList) {
+            convertedDataList.add(GSON.fromJson(jo, clazz));
+        }
+//        TODO need to convert list objects to class type
+        return convertedDataList;
     }
 
     /**
