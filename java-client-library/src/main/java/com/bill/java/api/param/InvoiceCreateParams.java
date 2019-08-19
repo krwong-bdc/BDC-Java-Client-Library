@@ -8,7 +8,7 @@ public class InvoiceCreateParams extends ApiResourceParams {
     }
 
     public void setAmount(int amount) {
-        params.put("amount", Integer.toString(amount));
+        params.put("amount", new Param<Integer>(amount));
         this.amount = amount;
     }
 }

@@ -1,7 +1,5 @@
 package com.bill.java.api.net;
 
-
-//import com.bill.java.api.Auth;
 import com.bill.java.api.BDC;
 import com.bill.java.api.param.ApiResourceParams;
 
@@ -11,41 +9,30 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpCookie;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.util.Map;
 
-/*
-Method will always be POST, so does anything need to change? Probably not for this first iteration
-Things that should be customizable?
-        - Timeouts
-        - Headers? - No
-Things that should be set?
-        - URL, can open up one connection because Base URL does not change
-        - Headers
-        - Method
-        - Data format (another class?)
- */
+
 public class BDCHttpClient {
-    public static int connectTimeout = 5000;
-    public static int readTimeout = 5000;
+    public static int connectTimeout = 10000;
+    public static int readTimeout = 10000;
     public static HttpCookie authCookie;
 
-    public HttpResponse request(String url) throws IOException, Exception{
-//        create cookies with authentication
-//        create url encoded body
-
+    /**
+     *
+     * @param url
+     * @return
+     * @throws Exception
+     */
+    public HttpResponse request(String url) throws Exception{
         return execute(BDC.getApiBase() + url, new ApiResourceParams() {}.toFormURLEncodedString());
     }
 
-    public HttpResponse request(String url, ApiResourceParams params) throws IOException, Exception{
-//        create cookies with authentication
-//        create url encoded body
-
+    public HttpResponse request(String url, ApiResourceParams params) throws Exception{
         return execute(BDC.getApiBase() + url, params.toFormURLEncodedString());
     }
 
     private HttpResponse execute(String url, String data) throws IOException {
         HttpsURLConnection connection = openConnection(url);
+//        data = "data=" + data;
 
         try(OutputStream os = connection.getOutputStream()) {
             byte[] input = data.getBytes("utf-8");
@@ -71,18 +58,34 @@ public class BDCHttpClient {
                 "application/x-www-form-urlencoded");
         conn.setRequestProperty("Accept", "application/json");
 //        TODO: Set the cookie on subsequent requests
-//        conn.setRequestProperty("Cookie", String.format("sessionId=%s", BDC.sessionId));
+        conn.setRequestProperty("Cookie", createAuthCookie());
         conn.setConnectTimeout(connectTimeout);
         conn.setReadTimeout(readTimeout);
 
         return conn;
     }
 
-    private HttpCookie getAuthCookie() {
-        if(authCookie == null || BDC.sessionId == null) {
-//            throw
+    private String createAuthCookie() {
+        StringBuilder builder = new StringBuilder();
+        if(BDC.devKey != null){
+            builder.append(BDC.devKey);
         }
-        return authCookie;
+        if(BDC.sessionId != null) {
+            builder.append(BDC.sessionId);
+        }
+        if(BDC.userName != null) {
+            builder.append(BDC.userName);
+        }
+        if(BDC.password != null) {
+            builder.append(BDC.password);
+        }
+        if(BDC.mfaId != null) {
+            builder.append(BDC.mfaId);
+        }
+        if(BDC.deviceId != null) {
+            builder.append(BDC.deviceId);
+        }
+        return builder.toString();
     }
 
 

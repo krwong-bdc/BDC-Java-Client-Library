@@ -1,5 +1,6 @@
 package com.bill.java.api;
 
+import com.bill.java.api.models.Session;
 import com.bill.java.api.net.HttpResponse;
 import com.bill.java.api.param.SessionLoginRequestParams;
 
@@ -21,7 +22,11 @@ public abstract class BDC {
     public static volatile String userName;
     public static volatile String password;
     public static volatile String sessionId;
-//    public static volatile String orgId;
+    public static volatile Boolean useBackup;
+    public static volatile String mfaId;
+    public static volatile String deviceId;
+    public static volatile String orgId;
+    public static volatile String usersId;
 
     public static volatile String apiBase = SANDBOX_BASE;
 

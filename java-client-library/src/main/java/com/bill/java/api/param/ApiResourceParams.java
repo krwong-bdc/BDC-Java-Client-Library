@@ -8,6 +8,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 import static java.util.stream.Collectors.joining;
@@ -20,14 +21,24 @@ public abstract class ApiResourceParams {
     /**
      * Map that stores BDC Api POST body data
      */
-    protected Map<String, String> params = new HashMap<String, String>();
+    protected Map<String, Param> params = new HashMap<String, Param>();
 
     protected ApiResourceParams() {
-        params.put("devKey", BDC.devKey);
-        params.put("sessionId", BDC.sessionId);
-        params.put("userName", BDC.userName);
-        params.put("password", BDC.password);
-
+        if(BDC.devKey != null){
+            params.put("devKey", new Param<String>(BDC.devKey));
+        }
+        if(BDC.sessionId != null) {
+            params.put("sessionId", new Param<String>(BDC.sessionId));
+        }
+        if(BDC.userName != null) {
+            params.put("userName", new Param<String>(BDC.userName));
+        }
+        if(BDC.password != null) {
+            params.put("password", new Param<String>(BDC.password));
+        }
+        if(BDC.useBackup != null) {
+            params.put("password", new Param<Boolean>(BDC.useBackup));
+        }
     }
 
     /**
@@ -43,20 +54,47 @@ public abstract class ApiResourceParams {
         return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
     }
 
-    public String toFormURLEncodedString() throws Exception {
+    public String toFormURLEncodedString() {
+//        String encodedURL = params.keySet()
+//                .stream()
+//                .map(key -> {
+//                    try {
+//                        return key + "=" + encodeValue(params.get(key).getStringValue());
+//                    } catch (Exception e) {
+//                        System.err.println(e.getMessage());
+//                        return "";
+//                    }
+//                })
+//                .collect(joining("&"));
+//        return encodedURL;
+        return "data=" + urlEncodeParams();
+    }
+
+    protected String urlEncodeParams(){
         String encodedURL = params.keySet()
                 .stream()
                 .map(key -> {
                     try {
-                        return key + "=" + encodeValue(params.get(key));
+                        return key + "=" + encodeValue(params.get(key).getStringValue());
                     } catch (Exception e) {
                         System.err.println(e.getMessage());
+                        return "";
                     }
-                    return "";
                 })
-                .collect(joining("&", "", ""));
-
+                .collect(joining("&"));
         return encodedURL;
+    }
+
+    class Param<T> {
+        private T value;
+
+        public Param(T value) {
+            this.value = value;
+        }
+
+        public String getStringValue() throws UnsupportedOperationException {
+            return value.toString();
+        }
     }
 
 }
