@@ -1,5 +1,6 @@
 package com.bill.java.api.net;
 
+import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.ApiResourceParams;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -33,23 +34,15 @@ public abstract class ApiResource {
      */
     public static <T> List<T> createCollection(String resourceUrl, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl);
-
-        JsonArray jsonArray = response.getJsonDataList();
-        Type listType = new TypeToken<List<JsonObject>>() {}.getType();
-        List<JsonObject> dataList = GSON.fromJson(jsonArray, listType);
-
-        List<T> convertedDataList = new ArrayList<T>();
-
-        for(JsonObject obj: dataList) {
-            convertedDataList.add(GSON.fromJson(obj, clazz));
-        }
-//        TODO need to convert list objects to class type
-        return convertedDataList;
+        return createCollection(response, clazz);
     }
 
     public static <T> List<T> createCollection(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+        return createCollection(response, clazz);
+    }
 
+    private static <T> List<T> createCollection(HttpResponse response, Class<T> clazz) throws BDCException {
         JsonArray jsonArray = response.getJsonDataList();
         Type listType = new TypeToken<List<JsonObject>>() {}.getType();
         List<JsonObject> dataList = GSON.fromJson(jsonArray, listType);
@@ -59,13 +52,12 @@ public abstract class ApiResource {
         for(JsonObject obj: dataList) {
             convertedDataList.add(GSON.fromJson(obj, clazz));
         }
-//        TODO need to convert list objects to class type
+
         return convertedDataList;
     }
 
     public static <T> T create(String resourceUrl, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl);
-
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
@@ -79,12 +71,8 @@ public abstract class ApiResource {
      */
     public static <T> T create(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
-
         return GSON.fromJson(response.getJsonData(), clazz);
     }
-
-    //TODO: implement requestCollection(url, map params, clazz)
-
 
     // TODO: read, update, and delete should take class T (or an ID)
 

@@ -56,7 +56,6 @@ public class Session extends ApiResource {
         BDC.sessionId = null;
         return true;
     }
-//    //    TODO
 
     /**
      *
