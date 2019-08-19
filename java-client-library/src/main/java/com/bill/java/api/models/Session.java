@@ -1,11 +1,11 @@
 package com.bill.java.api.models;
 
+import com.bill.java.api.BDC;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.ApiResourceParams;
-import com.bill.java.api.param.ListOrgsRequestParams;
 import com.bill.java.api.param.SessionLoginRequestParams;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -17,6 +17,7 @@ import java.util.List;
  */
 public class Session extends ApiResource {
     public static final String LOGIN_URL = "/Login.json";
+    public static final String LOGOUT_URL = "/Logout.json";
     public static final String GET_SESSION_INFO_URL = "/GetSessionInfo.json";
     public static final String LIST_ORGS_URL = "/ListOrgs.json";
 
@@ -33,17 +34,39 @@ public class Session extends ApiResource {
     private String usersId;
 
     public static Session login(SessionLoginRequestParams params) throws Exception {
-        return create(LOGIN_URL, params, Session.class);
+        Session session = create(LOGIN_URL, params, Session.class);
+        BDC.sessionId = session.getSessionId();
+        return session;
     }
 
 //    TODO
     public static List<OrgInfo> ListOrgs() throws Exception {
-        return createList(LIST_ORGS_URL, OrgInfo.class);
+        return createCollection(LIST_ORGS_URL, OrgInfo.class);
+    }
+
+    /**
+     * Logs the user out of the current session
+     *
+     * @return True unless an unsuccessful response was received
+     * @throws IOException
+     * @throws com.bill.java.api.exception.BDCException
+     */
+    public static Boolean logout() throws Exception {
+        httpClient.request(LOGOUT_URL).getJsonData();
+        BDC.sessionId = null;
+        return true;
     }
 //    //    TODO
-//    public static Session logout() {}
-//    //    TODO
-//    public static Session getSessionInfo() {}
+
+    /**
+     *
+     * @return
+     * @throws Exception
+     * @throws com.bill.java.api.exception.BDCException when session invalid
+     */
+    public static SessionInfo getSessionInfo() throws Exception {
+        return create(GET_SESSION_INFO_URL, SessionInfo.class);
+    }
 
     public String getSessionId() {
         return sessionId;

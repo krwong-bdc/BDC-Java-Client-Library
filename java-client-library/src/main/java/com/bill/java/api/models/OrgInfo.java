@@ -4,8 +4,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class OrgInfo {
     @SerializedName("orgId")
-    public String orgId;
+    private String orgId;
 
     @SerializedName("orgName")
-    public String orgName;
+    private String orgName;
+
+    public String getOrgId() {
+        return orgId;
+    }
+
+    public String getOrgName() {
+        return orgName;
+    }
 }

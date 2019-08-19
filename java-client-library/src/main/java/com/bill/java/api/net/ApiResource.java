@@ -29,18 +29,9 @@ public abstract class ApiResource {
     }
 
     /**
-     *TODO Should be for collection of Api Resources
+     *Factory for producing a collection of instances of the specified ApiResource type
      */
-//    public static <T> T createCollection(String resourceUrl, Class<T> clazz) throws Exception {
-//        HttpResponse response = ApiResource.httpClient.request(resourceUrl);
-//
-//        JsonArray dataList = response.getJsonDataList();
-//        Type listType = new TypeToken<List<T>>() {}.getType();
-//        List<T>
-//        return GSON.fromJson(dataList, listType);
-//    }
-
-    public static <T> List<T> createList(String resourceUrl, Class<T> clazz) throws Exception {
+    public static <T> List<T> createCollection(String resourceUrl, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl);
 
         JsonArray jsonArray = response.getJsonDataList();
@@ -49,15 +40,37 @@ public abstract class ApiResource {
 
         List<T> convertedDataList = new ArrayList<T>();
 
-        for(JsonObject jo: dataList) {
-            convertedDataList.add(GSON.fromJson(jo, clazz));
+        for(JsonObject obj: dataList) {
+            convertedDataList.add(GSON.fromJson(obj, clazz));
         }
 //        TODO need to convert list objects to class type
         return convertedDataList;
     }
 
+    public static <T> List<T> createCollection(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+
+        JsonArray jsonArray = response.getJsonDataList();
+        Type listType = new TypeToken<List<JsonObject>>() {}.getType();
+        List<JsonObject> dataList = GSON.fromJson(jsonArray, listType);
+
+        List<T> convertedDataList = new ArrayList<T>();
+
+        for(JsonObject obj: dataList) {
+            convertedDataList.add(GSON.fromJson(obj, clazz));
+        }
+//        TODO need to convert list objects to class type
+        return convertedDataList;
+    }
+
+    public static <T> T create(String resourceUrl, Class<T> clazz) throws Exception {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl);
+
+        return GSON.fromJson(response.getJsonData(), clazz);
+    }
+
     /**
-     * Factory for producing instances of type ApiResource
+     * Factory for producing instances of the specified ApiResource type
      *
      * @param resourceUrl The full URL of the target endpoint. Should only ever be for a single resource
      * @param params As required, parameters for HTTP POST request are x-www-form-urlencoded
