@@ -37,9 +37,9 @@ public class BDCException extends Exception {
      */
     @Override
     public String getMessage() {
-        String additionalInfo = " ErrorCode: " + errorCode;
-        additionalInfo += "; Reference: " + REFERENCE_URL;
+        String code = String.format("ErrorCode: %s (", this.errorCode);
+        String additionalInfo = String.format(")\nReference: %s", BDCException.REFERENCE_URL);
 
-        return super.getMessage() + additionalInfo;
+        return code + super.getMessage() + additionalInfo;
     }
 }

@@ -25,19 +25,29 @@ public class Session extends ApiResource {
     public static final String MFA_CHALLENGE_URL = "/MFAChallenge.json";
     public static final String MFA_AUTHENTICATE_URL = "/MFAAuthenticate.json";
 
+    /** The id of the current session */
     @SerializedName("sessionId")
     private String sessionId;
 
+    /** The id of the organization currently associated with the session */
     @SerializedName("orgId")
     private String orgId;
 
+    /** The current environment the session belongs to */
     @SerializedName("apiEndPoint")
     private String apiEndPoint;
 
+    /** The id of the user currently associated with the session */
     @SerializedName("usersId")
     private String usersId;
 
-
+    /**
+     * Logs in and creates a session for further API usage.
+     *
+     * @param orgId
+     * @return
+     * @throws Exception
+     */
     public static Session login(String orgId) throws Exception {
         AuthenticationParams authParams = new AuthenticationParams();
         authParams.setParam("userName", BDC.userName);

@@ -49,7 +49,7 @@ public class BDCHttpClient {
      * @param data Request data that corresponds to the data passed in on a BDC API resource call
      * @param auth Credentials to be passed along with the request
      * @return An HttpResponse object wrapping the request's input stream
-     * @throws IOException
+     * @throws IOException if an I/O error occurs while creating the output stream or input stream
      */
     private HttpResponse execute(String url, String data, String auth) throws IOException {
         HttpsURLConnection connection = openConnection(url);
@@ -58,6 +58,7 @@ public class BDCHttpClient {
             requestParameters += "&" + data;
         }
 
+        /** Sends the post request data to the URL, output stream auto-closed upon exiting try-with-resource block */
         try(OutputStream os = connection.getOutputStream()) {
             byte[] input = requestParameters.getBytes("utf-8");
             os.write(input, 0, input.length);
@@ -70,8 +71,8 @@ public class BDCHttpClient {
      * Opens a Https connection to the BDC API endpoint with properly configured headers
      *
      * @param httpsUrl A url of the BDC API endpoint
-     * @return The configured HttpsURLConnection object
-     * @throws IOException
+     * @return the configured HttpsURLConnection object
+     * @throws IOException if an I/O exception occurs.
      */
     private HttpsURLConnection openConnection(String httpsUrl) throws IOException {
         URL url = new URL(httpsUrl);

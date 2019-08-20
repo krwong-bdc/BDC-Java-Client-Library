@@ -15,26 +15,15 @@ public class HttpResponse {
      * @param connection
      * @throws IOException
      */
-    public HttpResponse(InputStream connection) throws IOException{
-//        Read response and throw BDC error
-        BufferedReader in = null;
+    public HttpResponse(InputStream connection) throws IOException {
         String inputLine;
         StringBuilder body;
-        try {
-            in = new BufferedReader(new InputStreamReader(connection));
-
+        try (BufferedReader in = new BufferedReader((new InputStreamReader(connection)))) {
             body = new StringBuilder();
-
             while ((inputLine = in.readLine()) != null) {
                 body.append(inputLine);
             }
-            in.close();
-
             this.response = body.toString();
-        } catch(IOException e) {
-            throw e;
-        } finally {
-            this.closeQuietly(in);
         }
     }
 
@@ -72,15 +61,4 @@ public class HttpResponse {
 
         return obj.getAsJsonObject("response_data");
     }
-
-    protected void closeQuietly(Closeable closeable) {
-        try {
-            if( closeable != null ) {
-                closeable.close();
-            }
-        } catch(IOException e) {
-
-        }
-    }
-
 }
