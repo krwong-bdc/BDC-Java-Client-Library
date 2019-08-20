@@ -1,14 +1,13 @@
 package com.bill.java.api.param;
 
+import com.google.gson.annotations.SerializedName;
+
 public class InvoiceCreateParams extends ApiResourceParams {
+    @SerializedName("amount")
     private int amount;
 
-    public int getAmount() {
-        return amount;
-    }
 
     public void setAmount(int amount) {
-        params.put("amount", new Param<Integer>(amount));
         this.amount = amount;
     }
 }

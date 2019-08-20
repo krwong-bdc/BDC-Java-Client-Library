@@ -2,7 +2,9 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.BDC;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.ApiResourceParams;
 import com.bill.java.api.param.AuthenticationParams;
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
@@ -84,10 +86,11 @@ public class Session extends ApiResource {
     }
 
     public static MFAChallenge requestMFAChallenge(Boolean useBackup) throws Exception {
-        BDC.useBackup = useBackup;
-        return create(MFA_CHALLENGE_URL, MFAChallenge.class);
-    }
+//        BDC.useBackup = useBackup;
+        MFAChallengeRequestParams params = new MFAChallengeRequestParams(useBackup);
 
+        return create(MFA_CHALLENGE_URL, params, MFAChallenge.class);
+    }
 
     public String getSessionId() {
         return sessionId;
@@ -103,5 +106,19 @@ public class Session extends ApiResource {
 
     public String getUsersId() {
         return usersId;
+    }
+
+    private static class MFAChallengeRequestParams extends ApiResourceParams {
+        @SerializedName("useBackup")
+        public Boolean useBackup;
+
+        public MFAChallengeRequestParams(Boolean useBackup) {
+            this.useBackup = useBackup;
+        }
+
+        @Override
+        public String toJsonString() {
+            return new Gson().toJson(this);
+        }
     }
 }

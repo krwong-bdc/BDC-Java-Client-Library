@@ -39,7 +39,7 @@ public class BDCHttpClient {
     }
 
     public HttpResponse request(String url, ApiResourceParams params, AuthenticationParams auth) throws Exception{
-        return execute(BDC.getApiBase() + url, auth.toFormURLEncodedString() ,params.toFormURLEncodedString());
+        return execute(BDC.getApiBase() + url, params.toFormURLEncodedString(), auth.toFormURLEncodedString());
     }
 
     private HttpResponse execute(String url, String data, String auth) throws IOException {
