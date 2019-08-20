@@ -13,39 +13,59 @@ import java.net.URL;
 
 
 public class BDCHttpClient {
+    /** TODO: allow timeouts to be passed into each request as optional parameters */
+    /** Connection and request timeouts set to 10s by default */
     public static int connectTimeout = 10000;
     public static int readTimeout = 10000;
-    public static HttpCookie authCookie;
 
-    public HttpResponse request(String url) throws Exception{
+    /**
+     * TODO: Unnecessary chaining since restructuring params. Delete any extraneous calls
+     */
+    public HttpResponse request(String url) throws IOException {
         return request(url, new ApiResourceParams() {});
     }
 
-    public HttpResponse request(String url, ApiResourceParams params) throws Exception{
-        return request(url, params, new AuthenticationParams(){});
+    /**
+     * Creates credentials to be passed along to {@link #request(String, ApiResourceParams, AuthenticationParams)}
+     *
+     * @param url the BDC API endpoint to be requested
+     * @param resourceParams object wrapping the request data
+     * @return HTTPResponse object returned from {@link #request(String, ApiResourceParams, AuthenticationParams)}
+     * @throws IOException if an I/O error occurs in {@link #execute(String, String, String)}
+     */
+    public HttpResponse request(String url, ApiResourceParams resourceParams) throws IOException {
+        return request(url, resourceParams, new AuthenticationParams(){});
     }
 
-    public HttpResponse request(String url, AuthenticationParams params) throws Exception{
-        return execute(BDC.getApiBase()+ url, "", params.toFormURLEncodedString());
+    /**
+     * Converts authentication parameters to String form and executes the Http Request
+     *
+     * @param url the BDC API endpoint to be requested
+     * @param authParams object wrapping the user's credentials
+     * @return HTTPResponse object returned from {@link #execute(String, String, String)}
+     * @throws IOException if an I/O error occurs in {@link #execute(String, String, String)}
+     */
+    public HttpResponse request(String url, AuthenticationParams authParams) throws IOException {
+        return execute(BDC.getApiBase()+ url, "", authParams.toFormURLEncodedString());
     }
 
     /**
      * Converts parameters and data to String form and executes the Http Request
      *
-     * @param url The BDC API endpoint
-     * @param params object wrapping the request data
-     * @param auth Object wrapping the credentials to be passed along with the request
-     * @return
-     * @throws Exception
+     * @param url the BDC API endpoint to be requested
+     * @param resourceParams object wrapping the request data
+     * @param authParams object wrapping the credentials to be passed along with the request
+     * @return HTTPResponse object returned from {@link #execute(String, String, String)}
+     * @throws IOException if an I/O error occurs in {@link #execute(String, String, String)}
      */
-    public HttpResponse request(String url, ApiResourceParams params, AuthenticationParams auth) throws Exception{
-        return execute(BDC.getApiBase() + url, params.toFormURLEncodedString(), auth.toFormURLEncodedString());
+    public HttpResponse request(String url, ApiResourceParams resourceParams, AuthenticationParams authParams) throws IOException {
+        return execute(BDC.getApiBase() + url, resourceParams.toFormURLEncodedString(), authParams.toFormURLEncodedString());
     }
 
     /**
      * Executes the request to the given url with the specified data.
      *
-     * @param url The BDC Api endpoint
+     * @param url The BDC Api endpoint to be requested
      * @param data Request data that corresponds to the data passed in on a BDC API resource call
      * @param auth Credentials to be passed along with the request
      * @return An HttpResponse object wrapping the request's input stream
@@ -72,7 +92,7 @@ public class BDCHttpClient {
      *
      * @param httpsUrl A url of the BDC API endpoint
      * @return the configured HttpsURLConnection object
-     * @throws IOException if an I/O exception occurs.
+     * @throws IOException if an I/O exception occurs
      */
     private HttpsURLConnection openConnection(String httpsUrl) throws IOException {
         URL url = new URL(httpsUrl);

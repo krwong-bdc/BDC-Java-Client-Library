@@ -9,6 +9,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,37 +18,70 @@ import java.util.List;
  * Class responsible for converting API responses into resource model instances
  */
 public abstract class ApiResource {
-    /**
-     * Underlying client
-     *
-     * TODO: allow for customization for things like timeout length
-     */
+    /** Underlying Httpclient, handles making the connection to the API and fetching responses */
     public static  BDCHttpClient httpClient = new BDCHttpClient();
 
+    /** Transforms models to JSON and vice versa. Used to map Http Response to useable models */
     public static final Gson GSON = createGson();
-
     private static Gson createGson() {
         return new GsonBuilder().create();
     }
 
     /**
-     *Factory for producing a collection of instances of the specified ApiResource type
+     * Executes a request to the specified URL and transforms the response into a List of instance of the specified type
+     *
+     * @param resourceUrl the full URL  of the target endpoint. Should only ever be for a list of resources
+     * @see #create(String, Class)
+     * @param clazz the mapping class of the resources being requested
+     * @return A list of the specified type
+     * @throws BDCException When the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
      */
-    public static <T> List<T> createCollection(String resourceUrl, Class<T> clazz) throws Exception {
+    public static <T> List<T> createCollection(String resourceUrl, Class<T> clazz) throws BDCException, IOException {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl);
         return createCollection(response, clazz);
     }
 
-    public static <T> List<T> createCollection(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+    /**
+     * Executes a request to the specified URL and transforms the response into a List of instance of the specified type
+     *
+     * @param resourceUrl the full URL  of the target endpoint. Should only ever be for a list of resources
+     * @see #create(String, ApiResourceParams, Class)
+     * @param resourceParams credentials needed for the request
+     * @param clazz the mapping class of the resources being requested
+     * @return A list of the specified type
+     * @throws BDCException When the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static <T> List<T> createCollection(String resourceUrl, ApiResourceParams resourceParams, Class<T> clazz) throws BDCException, IOException {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, resourceParams);
         return createCollection(response, clazz);
     }
 
-    public static <T> List<T> createCollection(String resourceUrl, AuthenticationParams params, Class<T> clazz) throws Exception {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+    /**
+     * Executes a request to the specified URL and transforms the response into a List of instance of the specified type
+     *
+     * @param resourceUrl the full URL  of the target endpoint. Should only ever be for a list of resources
+     * @see #create(String, AuthenticationParams, Class)
+     * @param authParams credentials required to make the request
+     * @param clazz the mapping class of the resources being requested
+     * @return A list of the specified type
+     * @throws BDCException When the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static <T> List<T> createCollection(String resourceUrl, AuthenticationParams authParams, Class<T> clazz) throws BDCException, IOException {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, authParams);
         return createCollection(response, clazz);
     }
 
+    /**
+     * Maps the HttpResponse data into a list of instances of the specified type
+     *
+     * @param response from the Http request
+     * @param clazz the mapping class of the resources being requested
+     * @return A list of the specified type
+     * @throws BDCException when the response from the API is not a success
+     */
     private static <T> List<T> createCollection(HttpResponse response, Class<T> clazz) throws BDCException {
         JsonArray jsonArray = response.getJsonDataList();
         Type listType = new TypeToken<List<JsonObject>>() {}.getType();
@@ -62,26 +96,49 @@ public abstract class ApiResource {
         return convertedDataList;
     }
 
-    public static <T> T create(String resourceUrl, Class<T> clazz) throws Exception {
+    /** Executes a request to the specified URL and transforms the response into an instance of the specified type
+     *
+     * @param resourceUrl The full URL of the target endpoint. Should only ever be for a single resource
+     * @see #createCollection(String, Class) createCollection
+     * @param clazz the mapping class of the resource being requested
+     * @return an instance of the type passed in as clazz
+     * @throws BDCException when the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static <T> T create(String resourceUrl, Class<T> clazz) throws BDCException, IOException {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl);
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
     /**
-     * Factory for producing instances of the specified ApiResource type
+     * Executes a request to the specified URL and transforms the response into an instance of the specified Type
      *
      * @param resourceUrl The full URL of the target endpoint. Should only ever be for a single resource
-     * @param params As required, parameters for HTTP POST request are x-www-form-urlencoded
-     * @param clazz Class of resource being requested
-     * @return Return instance of class T
+     * @see #createCollection(String, ApiResourceParams, Class) createCollection
+     * @param resourceParams data required to be passed on the body of the Http request
+     * @param clazz the mapping class of resource being requested
+     * @return an instance of the type passed in as clazz
+     * @throws BDCException when the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
      */
-    public static <T> T create(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+    public static <T> T create(String resourceUrl, ApiResourceParams resourceParams, Class<T> clazz) throws BDCException, IOException {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, resourceParams);
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
-    public static <T> T create(String resourceUrl, AuthenticationParams params, Class<T> clazz) throws Exception {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+    /**
+     * Executes a request to the specified URL and transforms the response into instances of the specified type
+     *
+     * @param resourceUrl The full URL of the target endpoint. Should only ever be for a single resource
+     * @see #createCollection(String, AuthenticationParams, Class) createCollection
+     * @param authParams credentials required to to make the request
+     * @param clazz the mapping class of resource being requested
+     * @return an instance of the type passed in as clazz
+     * @throws BDCException when the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static <T> T create(String resourceUrl, AuthenticationParams authParams, Class<T> clazz) throws BDCException, IOException {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, authParams);
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
