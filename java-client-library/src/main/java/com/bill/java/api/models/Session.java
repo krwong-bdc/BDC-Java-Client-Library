@@ -26,6 +26,7 @@ public class Session extends ApiResource {
     public static final String LIST_ORGS_URL = "/ListOrgs.json";
     public static final String MFA_CHALLENGE_URL = "/MFAChallenge.json";
     public static final String MFA_AUTHENTICATE_URL = "/MFAAuthenticate.json";
+    public static final String MFA_STATUS_URL = "/MFAStatus.json";
 
     /** The id of the current session */
     @SerializedName("sessionId")
@@ -146,6 +147,21 @@ public class Session extends ApiResource {
         return create(MFA_AUTHENTICATE_URL, params, MFA.class);
     }
 
+    /**
+     * Queries the validity of the specified mfaId
+     *
+     * @param mfaId id of the session being verified
+     * @param deviceId device associated with the mfaId
+     * @return instance of MFAStatus with values set from the Http response
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
+     * @see <a href="https://developer.bill.com/hc/en-us/articles/212471546">MFA Workflow</a>
+     */
+    public static MFAStatus getMFAStatus(String mfaId, String deviceId) throws BDCException, IOException {
+        MFAStatusRequestParams mfaStatusRequestParams = new MFAStatusRequestParams(mfaId, deviceId);
+        return create(MFA_STATUS_URL, mfaStatusRequestParams, MFAStatus.class);
+    }
+
     /** Getter methods for Session member variables */
     public String getSessionId() {
         return sessionId;
@@ -164,7 +180,7 @@ public class Session extends ApiResource {
     }
 
     /**
-     * Wrapper around parameters required for the MFAChallenge endpoint
+     * Wrapper around data required for the MFAChallenge endpoint
      *
      * TODO: may require user to make instance to keep consistent with rest of library usage
      */
@@ -179,7 +195,7 @@ public class Session extends ApiResource {
     }
 
     /**
-     * Wrapper around parameters required for the MFAChallenge endpoint
+     * Wrapper around data required for the MFAChallenge endpoint
      *
      * TODO: may require user to make instance to keep consistent with rest of library usage
      */
@@ -211,6 +227,26 @@ public class Session extends ApiResource {
             this.machineName = machineName;
             this.rememberMe = rememberMe;
 
+        }
+    }
+
+    /**
+     * Wrapper around data required for the MFAStatus endpoint
+     *
+     * TODO: May require user to make instance to keep consistent with rest of library usage
+     */
+    private static class MFAStatusRequestParams extends ApiResourceParams {
+        /** Id acquired from a previous call to {@link #MFAAuthenticate(String, String, String, String, Boolean)} */
+        @SerializedName("mfaId")
+        private String mfaId;
+
+        /** Id of device used to make previous call to {@link #MFAAuthenticate(String, String, String, String, Boolean)} */
+        @SerializedName("deviceId")
+        private String deviceId;
+
+        public MFAStatusRequestParams(String mfaId, String deviceId) {
+            this.mfaId = mfaId;
+            this.deviceId = deviceId;
         }
     }
 }
