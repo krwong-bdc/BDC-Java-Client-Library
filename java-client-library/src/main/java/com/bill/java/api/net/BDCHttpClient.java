@@ -2,6 +2,7 @@ package com.bill.java.api.net;
 
 import com.bill.java.api.BDC;
 import com.bill.java.api.param.ApiResourceParams;
+import com.bill.java.api.param.AuthenticationParams;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -23,19 +24,33 @@ public class BDCHttpClient {
      * @throws Exception
      */
     public HttpResponse request(String url) throws Exception{
-        return execute(BDC.getApiBase() + url, new ApiResourceParams() {}.toFormURLEncodedString());
+        return request(url, new ApiResourceParams() {});
+//        return execute(BDC.getApiBase() + url, new ApiResourceParams() {}.toFormURLEncodedString());
     }
 
     public HttpResponse request(String url, ApiResourceParams params) throws Exception{
-        return execute(BDC.getApiBase() + url, params.toFormURLEncodedString());
+        return request(url, params, new AuthenticationParams(){});
+//        return execute(BDC.getApiBase() + url, params.toFormURLEncodedString());
     }
 
-    private HttpResponse execute(String url, String data) throws IOException {
+    public HttpResponse request(String url, AuthenticationParams params) throws Exception{
+        return execute(BDC.getApiBase()+ url, "", params.toFormURLEncodedString());
+//        return execute(BDC.getApiBase() + url, params.toFormURLEncodedString());
+    }
+
+    public HttpResponse request(String url, ApiResourceParams params, AuthenticationParams auth) throws Exception{
+        return execute(BDC.getApiBase() + url, auth.toFormURLEncodedString() ,params.toFormURLEncodedString());
+    }
+
+    private HttpResponse execute(String url, String data, String auth) throws IOException {
         HttpsURLConnection connection = openConnection(url);
-//        data = "data=" + data;
+        String requestParameters = auth;
+        if (data != "") {
+            requestParameters += "&" + data;
+        }
 
         try(OutputStream os = connection.getOutputStream()) {
-            byte[] input = data.getBytes("utf-8");
+            byte[] input = requestParameters.getBytes("utf-8");
             os.write(input, 0, input.length);
         }
 
@@ -67,23 +82,8 @@ public class BDCHttpClient {
 
     private String createAuthCookie() {
         StringBuilder builder = new StringBuilder();
-        if(BDC.devKey != null){
-            builder.append(BDC.devKey);
-        }
         if(BDC.sessionId != null) {
-            builder.append(BDC.sessionId);
-        }
-        if(BDC.userName != null) {
-            builder.append(BDC.userName);
-        }
-        if(BDC.password != null) {
-            builder.append(BDC.password);
-        }
-        if(BDC.mfaId != null) {
-            builder.append(BDC.mfaId);
-        }
-        if(BDC.deviceId != null) {
-            builder.append(BDC.deviceId);
+            builder.append(String.format("sid=%s;", BDC.sessionId));
         }
         return builder.toString();
     }

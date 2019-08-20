@@ -2,8 +2,7 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.BDC;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.ApiResourceParams;
-import com.bill.java.api.param.SessionLoginRequestParams;
+import com.bill.java.api.param.AuthenticationParams;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
@@ -35,17 +34,15 @@ public class Session extends ApiResource {
     @SerializedName("usersId")
     private String usersId;
 
-//    private String devKey;
-//    private String password;
-//    private String mfaId;
-//    private String deviceId;
-//
-//    public Session(String devKey, String userName, String password, String sessionId, String mfaId, String deviceId) {
-//
-//    }
 
-    public static Session login(SessionLoginRequestParams params) throws Exception {
-        Session session = create(LOGIN_URL, params, Session.class);
+    public static Session login(String orgId) throws Exception {
+        AuthenticationParams authParams = new AuthenticationParams();
+        authParams.setParam("userName", BDC.userName);
+        authParams.setParam("password", BDC.password);
+        authParams.setParam("orgId", orgId);
+
+        Session session = create(LOGIN_URL, authParams, Session.class);
+
         BDC.sessionId = session.getSessionId();
         BDC.orgId = session.getOrgId();
         BDC.usersId = session.getUsersId();
@@ -55,13 +52,10 @@ public class Session extends ApiResource {
 
 //    TODO
     public static List<OrgInfo> ListOrgs() throws Exception {
-        // Must override toFormURLEncodedString, because endpoint requires it not to be nested in data={}
-        return createCollection(LIST_ORGS_URL, new ApiResourceParams(){
-            @Override
-            public String toFormURLEncodedString() {
-                return urlEncodeParams();
-            }
-        }, OrgInfo.class);
+        AuthenticationParams authParams = new AuthenticationParams();
+        authParams.setParam("userName", BDC.userName);
+        authParams.setParam("password", BDC.password);
+        return createCollection(LIST_ORGS_URL, authParams, OrgInfo.class);
     }
 
     /**
@@ -72,12 +66,7 @@ public class Session extends ApiResource {
      * @throws com.bill.java.api.exception.BDCException
      */
     public static Boolean logout() throws Exception {
-        httpClient.request(LOGOUT_URL, new ApiResourceParams() {
-            @Override
-            public String toFormURLEncodedString() {
-                return urlEncodeParams();
-            }
-        }).getJsonData();
+        httpClient.request(LOGOUT_URL).getJsonData();
         BDC.sessionId = null;
         return true;
     }
@@ -91,12 +80,7 @@ public class Session extends ApiResource {
      */
     public static SessionInfo getSessionInfo() throws Exception {
         // Must override toFormURLEncodedString, because endpoint requires it not to be nested in data={}
-        return create(GET_SESSION_INFO_URL,new ApiResourceParams(){
-            @Override
-            public String toFormURLEncodedString() {
-                return urlEncodeParams();
-            }
-        }, SessionInfo.class);
+        return create(GET_SESSION_INFO_URL, SessionInfo.class);
     }
 
     public static MFAChallenge requestMFAChallenge(Boolean useBackup) throws Exception {

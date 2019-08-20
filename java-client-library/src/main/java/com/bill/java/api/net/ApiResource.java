@@ -2,6 +2,7 @@ package com.bill.java.api.net;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.ApiResourceParams;
+import com.bill.java.api.param.AuthenticationParams;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -42,6 +43,11 @@ public abstract class ApiResource {
         return createCollection(response, clazz);
     }
 
+    public static <T> List<T> createCollection(String resourceUrl, AuthenticationParams params, Class<T> clazz) throws Exception {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+        return createCollection(response, clazz);
+    }
+
     private static <T> List<T> createCollection(HttpResponse response, Class<T> clazz) throws BDCException {
         JsonArray jsonArray = response.getJsonDataList();
         Type listType = new TypeToken<List<JsonObject>>() {}.getType();
@@ -70,6 +76,11 @@ public abstract class ApiResource {
      * @return Return instance of class T
      */
     public static <T> T create(String resourceUrl, ApiResourceParams params, Class<T> clazz) throws Exception {
+        HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
+        return GSON.fromJson(response.getJsonData(), clazz);
+    }
+
+    public static <T> T create(String resourceUrl, AuthenticationParams params, Class<T> clazz) throws Exception {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl, params);
         return GSON.fromJson(response.getJsonData(), clazz);
     }

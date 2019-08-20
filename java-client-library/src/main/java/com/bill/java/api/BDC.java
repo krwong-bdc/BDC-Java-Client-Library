@@ -1,11 +1,5 @@
 package com.bill.java.api;
 
-import com.bill.java.api.models.Session;
-import com.bill.java.api.net.HttpResponse;
-import com.bill.java.api.param.SessionLoginRequestParams;
-
-import java.io.IOException;
-
 /**
  * @author      Keith Wong <krwong@hq.bill.com>
  * @since       0.0.1
