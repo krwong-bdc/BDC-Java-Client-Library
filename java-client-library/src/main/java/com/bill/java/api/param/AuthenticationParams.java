@@ -19,7 +19,6 @@ public class AuthenticationParams implements BDCParams {
         }
     }
 
-    @Override
     public String encodeValue(String value) throws UnsupportedEncodingException {
         return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());
     }

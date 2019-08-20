@@ -30,7 +30,6 @@ public abstract class ApiResourceParams implements BDCParams {
     }
 
     public String toJsonString() {
-        Gson GSON = new Gson();
-        return GSON.toJson(this);
+        return new Gson().toJson(this);
     }
 }

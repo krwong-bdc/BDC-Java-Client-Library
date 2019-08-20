@@ -23,6 +23,7 @@ public class Session extends ApiResource {
     public static final String GET_SESSION_INFO_URL = "/GetSessionInfo.json";
     public static final String LIST_ORGS_URL = "/ListOrgs.json";
     public static final String MFA_CHALLENGE_URL = "/MFAChallenge.json";
+    public static final String MFA_AUTHENTICATE_URL = "/MFAAuthenticate.json";
 
     @SerializedName("sessionId")
     private String sessionId;
@@ -86,10 +87,18 @@ public class Session extends ApiResource {
     }
 
     public static MFAChallenge requestMFAChallenge(Boolean useBackup) throws Exception {
-//        BDC.useBackup = useBackup;
         MFAChallengeRequestParams params = new MFAChallengeRequestParams(useBackup);
-
         return create(MFA_CHALLENGE_URL, params, MFAChallenge.class);
+    }
+
+    public static MFA MFAAuthenticate(String challengeId,
+                                      String token,
+                                      String deviceId,
+                                      String machineName,
+                                      Boolean rememberMe) throws Exception {
+        MFAAuthenticationRequestParams params =
+                new MFAAuthenticationRequestParams(challengeId, token, deviceId, machineName, rememberMe);
+        return create(MFA_AUTHENTICATE_URL, params, MFA.class);
     }
 
     public String getSessionId() {
@@ -115,10 +124,31 @@ public class Session extends ApiResource {
         public MFAChallengeRequestParams(Boolean useBackup) {
             this.useBackup = useBackup;
         }
+    }
 
-        @Override
-        public String toJsonString() {
-            return new Gson().toJson(this);
+    private static class MFAAuthenticationRequestParams extends ApiResourceParams {
+        @SerializedName("challengeId")
+        public String challengeId;
+
+        @SerializedName("token")
+        public String token;
+
+        @SerializedName("deviceId")
+        public String deviceId;
+
+        @SerializedName("machineName")
+        public String machineName;
+
+        @SerializedName("rememberMe")
+        public Boolean rememberMe;
+
+        public MFAAuthenticationRequestParams(String challengeId, String token, String deviceId, String machineName, Boolean rememberMe) {
+            this.challengeId = challengeId;
+            this.token = token;
+            this.deviceId = deviceId;
+            this.machineName = machineName;
+            this.rememberMe = rememberMe;
+
         }
     }
 }
