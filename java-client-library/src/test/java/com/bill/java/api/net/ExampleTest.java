@@ -1,18 +1,21 @@
 package com.bill.java.api.net;
 
-import interfaces.BDDTests;
+import resources.BDDTests;
 import org.junit.jupiter.api.DisplayName;
-
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
-@DisplayName("@BDCClient")
-class BDCHttpClientTest extends BDDTests {
+@DisplayName("@ExampleTest")
+class ExampleTest extends BDDTests {
 
+//    @BeforeAll
+//    void setup() {
+//        BDC mockedBDC = mock(BDC.class);
+//    }
 
     @InitialBehaviors
     class On_Start {
@@ -29,10 +32,10 @@ class BDCHttpClientTest extends BDDTests {
     }
 
     @Interface
-    class request {
+    class SomeMethod {
 
         @Condition
-        class When_things_go_right {
+        class When_dependency_is_set_to_something {
 
             @ParameterizedTest
             @ValueSource(strings = {"Hello", "Hi", "Goodbye", "Sayonara"})

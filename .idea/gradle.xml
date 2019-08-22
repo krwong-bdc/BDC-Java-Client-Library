@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/java-client-library" />
           </set>
         </option>
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

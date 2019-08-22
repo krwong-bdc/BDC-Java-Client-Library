@@ -8,7 +8,6 @@ import javax.net.ssl.HttpsURLConnection;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.net.HttpCookie;
 import java.net.URL;
 
 
@@ -71,7 +70,7 @@ public class BDCHttpClient {
      * @return An HttpResponse object wrapping the request's input stream
      * @throws IOException if an I/O error occurs while creating the output stream or input stream
      */
-    private HttpResponse execute(String url, String data, String auth) throws IOException {
+    public HttpResponse execute(String url, String data, String auth) throws IOException {
         HttpsURLConnection connection = openConnection(url);
         String requestParameters = auth;
         if (data != "") {

@@ -39,7 +39,7 @@ public abstract class ApiResource {
      */
     public static <T> List<T> createCollection(String resourceUrl, Class<T> clazz) throws BDCException, IOException {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl);
-        return createCollection(response, clazz);
+        return convertToList(response, clazz);
     }
 
     /**
@@ -55,7 +55,7 @@ public abstract class ApiResource {
      */
     public static <T> List<T> createCollection(String resourceUrl, ApiResourceParams resourceParams, Class<T> clazz) throws BDCException, IOException {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl, resourceParams);
-        return createCollection(response, clazz);
+        return convertToList(response, clazz);
     }
 
     /**
@@ -71,7 +71,7 @@ public abstract class ApiResource {
      */
     public static <T> List<T> createCollection(String resourceUrl, AuthenticationParams authParams, Class<T> clazz) throws BDCException, IOException {
         HttpResponse response = ApiResource.httpClient.request(resourceUrl, authParams);
-        return createCollection(response, clazz);
+        return convertToList(response, clazz);
     }
 
     /**
@@ -82,7 +82,7 @@ public abstract class ApiResource {
      * @return A list of the specified type
      * @throws BDCException when the response from the API is not a success
      */
-    private static <T> List<T> createCollection(HttpResponse response, Class<T> clazz) throws BDCException {
+    public static <T> List<T> convertToList(HttpResponse response, Class<T> clazz) throws BDCException {
         JsonArray jsonArray = response.getJsonDataList();
         Type listType = new TypeToken<List<JsonObject>>() {}.getType();
         List<JsonObject> dataList = GSON.fromJson(jsonArray, listType);
@@ -106,7 +106,7 @@ public abstract class ApiResource {
      * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static <T> T create(String resourceUrl, Class<T> clazz) throws BDCException, IOException {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl);
+        HttpResponse response = httpClient.request(resourceUrl);
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
@@ -122,7 +122,7 @@ public abstract class ApiResource {
      * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static <T> T create(String resourceUrl, ApiResourceParams resourceParams, Class<T> clazz) throws BDCException, IOException {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl, resourceParams);
+        HttpResponse response = httpClient.request(resourceUrl, resourceParams);
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 
@@ -138,7 +138,7 @@ public abstract class ApiResource {
      * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static <T> T create(String resourceUrl, AuthenticationParams authParams, Class<T> clazz) throws BDCException, IOException {
-        HttpResponse response = ApiResource.httpClient.request(resourceUrl, authParams);
+        HttpResponse response = httpClient.request(resourceUrl, authParams);
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 

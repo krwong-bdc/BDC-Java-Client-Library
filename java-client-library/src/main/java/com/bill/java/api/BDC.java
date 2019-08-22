@@ -20,7 +20,7 @@ public abstract class BDC {
     public static volatile String mfaId;
     public static volatile String deviceId;
     public static volatile String orgId;
-    public static volatile String usersId;
+    public static volatile String userId;
 
     public static volatile String apiBase = SANDBOX_BASE;
 
