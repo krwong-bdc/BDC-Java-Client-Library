@@ -34,7 +34,7 @@ public class BDCHttpClient {
      * @throws IOException if an I/O error occurs in {@link #execute(String, String, String)}
      */
     public HttpResponse request(String url, ApiResourceParams resourceParams) throws IOException {
-        return request(url, resourceParams, new AuthenticationParams(){});
+        return request(url, resourceParams, AuthenticationParams.builder().build());
     }
 
     /**

@@ -42,4 +42,9 @@ public class BDCException extends Exception {
 
         return code + super.getMessage() + additionalInfo;
     }
+
+    /** Getter method for BDCException member variable*/
+    public String getErrorCode() {
+        return errorCode;
+    }
 }

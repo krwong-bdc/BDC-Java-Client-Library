@@ -21,10 +21,11 @@ public class AuthenticationParams implements BDCParams {
      * Developer key must be included on every request. SessionId will be passed on cookies
      * @see com.bill.java.api.net.BDCHttpClient #createAuthCookie
      * */
-    public AuthenticationParams() {
-        if(BDC.devKey != null){
-            params.put("devKey", new Param<String>(BDC.devKey));
-        }
+    public AuthenticationParams(String userName, String password, String orgId, String devKey) {
+        setParam("userName", userName);
+        setParam("password", password);
+        setParam("orgId", orgId);
+        setParam("devKey", devKey);
     }
 
     /**
@@ -74,7 +75,7 @@ public class AuthenticationParams implements BDCParams {
      * @param value value of credential
      * @param <T> Should be a String or Boolean
      */
-    public <T> void setParam(String key, T value) {
+    private <T> void setParam(String key, T value) {
         params.put(key, new Param<T>(value));
     }
 
@@ -91,6 +92,50 @@ public class AuthenticationParams implements BDCParams {
 
         public String getStringValue() throws UnsupportedOperationException {
             return value.toString();
+        }
+    }
+
+    public static AuthenticationParamsBuilder builder() {
+        return new AuthenticationParamsBuilder();
+    }
+
+    public static class AuthenticationParamsBuilder {
+        private String userName = "";
+        private String password = "";
+        private String orgId = "";
+        private String devKey = "";
+
+        public AuthenticationParams build() {
+            if(devKey == "") {
+                devKey = BDC.devKey;
+            }
+            if(userName == "") {
+                userName = BDC.userName;
+            }
+            if(password == "") {
+                password = BDC.password;
+            }
+            return new AuthenticationParams(userName, password, orgId, devKey);
+        }
+
+        public AuthenticationParamsBuilder withUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+
+        public AuthenticationParamsBuilder withPassword(String password) {
+            this.password = password;
+            return this;
+        }
+
+        public AuthenticationParamsBuilder withOrgId(String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        public AuthenticationParamsBuilder withDevKey(String devKey) {
+            this.devKey = devKey;
+            return this;
         }
     }
 }
