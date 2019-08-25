@@ -1,6 +1,7 @@
 package com.bill.java.api.param;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -15,6 +16,9 @@ import java.nio.charset.StandardCharsets;
  * @since       0.0.1
  */
 public abstract class ApiResourceParams implements BDCParams {
+    /** Holds the actual api resource variables for creation */
+    @SerializedName("obj")
+    protected objParams params;
 
     /**
      * Transforms the instanced ApiResourceParams object into a JSON representation
@@ -44,5 +48,10 @@ public abstract class ApiResourceParams implements BDCParams {
      */
     public String toFormURLEncodedString() throws UnsupportedEncodingException {
         return "data="+ encodeValue(this.toJsonString());
+    }
+
+    /* Must implement for api resource creation due to nesting in variable "obj": {} */
+    abstract protected static class objParams {
+
     }
 }
