@@ -3,6 +3,7 @@ package com.bill.java.api.models;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.VendorCreateRequestParams;
+import com.bill.java.api.param.VendorGetRequestParams;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
@@ -110,15 +111,27 @@ public class Vendor extends ApiResource {
     private String accountType;
 
     /**
-     * Creates a vendor in the database
+     * Creates a vendor in BDC
      *
-     * @param vendorCreateRequestParams
-     * @return
-     * @throws BDCException
-     * @throws IOException
+     * @param vendorCreateRequestParams data for Vendor creation
+     * @return the Vendor that has been created through the BDC API
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static Vendor create(VendorCreateRequestParams vendorCreateRequestParams) throws BDCException, IOException {
         return create(CREATE_URL, vendorCreateRequestParams, Vendor.class);
+    }
+
+    /**
+     * Retrives a vendor from the BDC
+     *
+     * @param vendorGetRequestParams data for Vendor read request
+     * @return the Vendor specified in the request
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static Vendor get(VendorGetRequestParams vendorGetRequestParams) throws BDCException, IOException {
+        return create(READ_URL, vendorGetRequestParams, Vendor.class);
     }
 
 
