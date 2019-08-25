@@ -119,6 +119,9 @@ public class Vendor extends ApiResource {
      * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static Vendor create(VendorCreateRequestParams vendorCreateRequestParams) throws BDCException, IOException {
+        if(vendorCreateRequestParams == null) {
+            throw new NullPointerException("VendorCreateRequestParams required");
+        }
         return create(CREATE_URL, vendorCreateRequestParams, Vendor.class);
     }
 
@@ -131,6 +134,9 @@ public class Vendor extends ApiResource {
      * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static Vendor get(VendorGetRequestParams vendorGetRequestParams) throws BDCException, IOException {
+        if(vendorGetRequestParams == null) {
+            throw new NullPointerException("VendorCreateRequestParams required");
+        }
         return create(READ_URL, vendorGetRequestParams, Vendor.class);
     }
 

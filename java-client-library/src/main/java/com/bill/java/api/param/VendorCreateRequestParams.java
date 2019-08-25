@@ -5,7 +5,11 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 public class VendorCreateRequestParams extends ApiResourceParams {
-    public VendorCreateRequestParams(Params params) {
+    /** Holds the actual api resource variables for creation */
+    @SerializedName("obj")
+    protected Params params;
+
+    private VendorCreateRequestParams(Params params) {
         this.params = params;
     }
 
@@ -77,7 +81,7 @@ public class VendorCreateRequestParams extends ApiResourceParams {
         }
     }
 
-    private static class Params extends objParams{
+    private static class Params {
         @SerializedName("entity")
         private final String entity = "Vendor";
 
