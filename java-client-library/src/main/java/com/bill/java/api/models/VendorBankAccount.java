@@ -65,6 +65,14 @@ public class VendorBankAccount extends ApiResource {
         return create(CREATE_URL, vendorBankAccountCreateRequestParams, VendorBankAccount.class);
     }
 
+    /**
+     * Retrives a vendor bank account from the BDC
+     *
+     * @param vendorBankAcccountGetRequestParams data for Vendor read request
+     * @return the Vendor specified in the request
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
     public static VendorBankAccount get(VendorBankAcccountGetRequestParams vendorBankAcccountGetRequestParams) throws BDCException, IOException {
         if(vendorBankAcccountGetRequestParams == null) {
             throw new NullPointerException("VendorCreateRequestParams required");
@@ -76,95 +84,49 @@ public class VendorBankAccount extends ApiResource {
         return entity;
     }
 
-    public void setEntity(String entity) {
-        this.entity = entity;
-    }
 
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getIsActive() {
         return isActive;
     }
 
-    public void setIsActive(String isActive) {
-        this.isActive = isActive;
-    }
-
     public String getCreatedTime() {
         return createdTime;
-    }
-
-    public void setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
     }
 
     public String getUpdatedTime() {
         return updatedTime;
     }
 
-    public void setUpdatedTime(String updatedTime) {
-        this.updatedTime = updatedTime;
-    }
 
     public String getVendorId() {
         return vendorId;
-    }
-
-    public void setVendorId(String vendorId) {
-        this.vendorId = vendorId;
     }
 
     public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
     public String getRoutingNumber() {
         return routingNumber;
-    }
-
-    public void setRoutingNumber(String routingNumber) {
-        this.routingNumber = routingNumber;
     }
 
     public String getUsersId() {
         return usersId;
     }
 
-    public void setUsersId(String usersId) {
-        this.usersId = usersId;
-    }
-
     public String getStatus() {
         return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public Boolean getSavings() {
         return isSavings;
     }
 
-    public void setSavings(Boolean savings) {
-        isSavings = savings;
-    }
-
     public Boolean getPersonalAcct() {
         return isPersonalAcct;
-    }
-
-    public void setPersonalAcct(Boolean personalAcct) {
-        isPersonalAcct = personalAcct;
     }
 }

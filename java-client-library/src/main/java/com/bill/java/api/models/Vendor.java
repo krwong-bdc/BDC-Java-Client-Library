@@ -146,16 +146,8 @@ public class Vendor extends ApiResource {
         return entity;
     }
 
-    public void setEntity(String entity) {
-        this.entity = entity;
-    }
-
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getIsActive() {
@@ -346,16 +338,8 @@ public class Vendor extends ApiResource {
         return createdTime;
     }
 
-    public void setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
-    }
-
     public String getUpdatedTime() {
         return updatedTime;
-    }
-
-    public void setUpdatedTime(String updatedTime) {
-        this.updatedTime = updatedTime;
     }
 
     public String getContactFirstName() {
