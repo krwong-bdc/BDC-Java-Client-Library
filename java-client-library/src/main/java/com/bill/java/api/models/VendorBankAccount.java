@@ -8,12 +8,16 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 
+/**
+ * Represents a bank account for a vendor in the user's network
+ */
 public class VendorBankAccount extends ApiResource {
-    /** Resource endpoints for everything vendor bank account related */
+    /* Resource endpoints for everything vendor bank account related */
     public static final String CREATE_URL = "/Crud/Create/VendorBankAccount.json";
     public static final String READ_URL = "/Crud/Read/VendorBankAccount.json";
     public static final String DELETE_URL = "/Crud/Delete/VendorBankAccount.json";
 
+    /* All retrievable attributes of a Vendor */
     @SerializedName("entity")
     private String entity;
 
@@ -80,6 +84,7 @@ public class VendorBankAccount extends ApiResource {
         return create(READ_URL, vendorBankAcccountGetRequestParams, VendorBankAccount.class);
     }
 
+    /* Getter-Setter methods for VendorBankAccount variables */
     public String getEntity() {
         return entity;
     }

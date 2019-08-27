@@ -4,19 +4,23 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.VendorCreateRequestParams;
 import com.bill.java.api.param.VendorGetRequestParams;
+import com.bill.java.api.param.VendorUpdateRequestParams;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
 
+/**
+ * Represents a Vendor in the User's network
+ */
 public class Vendor extends ApiResource {
-    /** Resource endpoints for everything vendor related */
+    /* Resource endpoints for everything vendor related */
     public static final String CREATE_URL = "/Crud/Create/Vendor.json";
     public static final String READ_URL = "/Crud/Read/Vendor.json";
     public static final String UPDATE_URL = "/Crud/Update/Vendor.json";
     public static final String DELETE_URL = "/Crud/Delete/Vendor.json";
     public static final String UNDELETE_URL = "/Crud/Undelete/Vendor.json";
 
-
+    /* All retrievable attributes of a Vendor */
     @SerializedName("entity")
     private String entity;
 
@@ -140,6 +144,20 @@ public class Vendor extends ApiResource {
         return create(READ_URL, vendorGetRequestParams, Vendor.class);
     }
 
+    /**
+     * Updates a vendor in the BDC database
+     *
+     * @param vendorUpdateRequestparams data for Vendor read request
+     * @return the Vendor specified in the request
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static Vendor update(VendorUpdateRequestParams vendorUpdateRequestparams) throws BDCException, IOException {
+        if(vendorUpdateRequestparams == null) {
+            throw new NullPointerException("VendorCreateRequestParams required");
+        }
+        return create(UPDATE_URL, vendorUpdateRequestparams, Vendor.class);
+    }
 
     /* Getter-Setter methods for Vendor member variables */
     public String getEntity() {
