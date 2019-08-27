@@ -2,6 +2,7 @@ package com.bill.java.api.net;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.ApiResourceParams;
+import com.bill.java.api.param.ApiResourceUpdateRequestParams;
 import com.bill.java.api.param.AuthenticationParams;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -139,6 +140,21 @@ public abstract class ApiResource {
      */
     public static <T> T create(String resourceUrl, AuthenticationParams authParams, Class<T> clazz) throws BDCException, IOException {
         HttpResponse response = httpClient.request(resourceUrl, authParams);
+        return GSON.fromJson(response.getJsonData(), clazz);
+    }
+
+    /**
+     *
+     * @param resourceUrl The full URL of the target endpoint. Should only ever be for a single resource
+     * @see #createCollection(String, AuthenticationParams, Class) createCollection
+     * @param apiResource the data required to be passed onto the body of the Http request
+     * @param clazz the mapping class of resource being requested
+     * @return an instance of the type passed in as clazz
+     * @throws BDCException when the response from the API is not a success
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static <T> T create(String resourceUrl, ApiResource apiResource, Class<T> clazz) throws BDCException, IOException {
+        HttpResponse response = httpClient.request(resourceUrl, new ApiResourceUpdateRequestParams(apiResource));
         return GSON.fromJson(response.getJsonData(), clazz);
     }
 

@@ -147,16 +147,31 @@ public class Vendor extends ApiResource {
     /**
      * Updates a vendor in the BDC database
      *
-     * @param vendorUpdateRequestparams data for Vendor read request
+     * @param vendorUpdateRequestparams data for Vendor update request
      * @return the Vendor specified in the request
      * @throws BDCException when the response from the API is unsuccessful
      * @throws IOException when an I/O exception occurs on the underlying request
      */
     public static Vendor update(VendorUpdateRequestParams vendorUpdateRequestparams) throws BDCException, IOException {
         if(vendorUpdateRequestparams == null) {
-            throw new NullPointerException("VendorCreateRequestParams required");
+            throw new NullPointerException("VendorUpdateRequestParams required");
         }
         return create(UPDATE_URL, vendorUpdateRequestparams, Vendor.class);
+    }
+
+    /**
+     * Updates a vendor in the BDC database
+     *
+     * @param vendor Vendor object to be updated to the BDC database
+     * @return the Vendor specified in the request
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static Vendor update(Vendor vendor) throws BDCException, IOException {
+        if(vendor == null) {
+            throw new NullPointerException("Vendor required");
+        }
+        return create(UPDATE_URL, vendor, Vendor.class);
     }
 
     /* Getter-Setter methods for Vendor member variables */
