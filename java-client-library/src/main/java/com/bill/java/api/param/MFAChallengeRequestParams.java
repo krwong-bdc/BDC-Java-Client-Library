@@ -10,9 +10,9 @@ import java.util.function.Consumer;
 public class MFAChallengeRequestParams extends ApiResourceParams {
     /** Specifies whether the MFA token will be sent to the primary/backup phone of the user */
     @SerializedName("useBackup")
-    public Boolean useBackup;
+    private Boolean useBackup;
 
-    public MFAChallengeRequestParams(Boolean useBackup) {
+    private MFAChallengeRequestParams(Boolean useBackup) {
         this.useBackup = useBackup;
     }
 

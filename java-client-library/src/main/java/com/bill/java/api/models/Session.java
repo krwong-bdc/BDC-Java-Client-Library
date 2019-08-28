@@ -13,7 +13,6 @@ import java.util.List;
 /**
  * The Session class represents a user's session credentials and includes all methods for Authentication
  *
- * @author      Keith Wong <krwong@hq.bill.com>
  * @since       0.0.1
  */
 public class Session extends ApiResource {
@@ -44,6 +43,8 @@ public class Session extends ApiResource {
 
     /**
      * Logs in and creates a session for further API usage
+     *
+     * TODO: Switch to params and allow for mfaId and DeviceId to be passed on
      *
      * @param orgId id of the organization to be associated with the session, user must be associated with the organization
      * @return a Session object containing the response values from the API

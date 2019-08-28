@@ -21,7 +21,7 @@ public class AuthenticationParams implements BDCParams {
      * Developer key must be included on every request. SessionId will be passed on cookies
      * @see com.bill.java.api.net.BDCHttpClient #createAuthCookie
      * */
-    public AuthenticationParams(String userName, String password, String orgId, String devKey) {
+    private AuthenticationParams(String userName, String password, String orgId, String devKey) {
         setParam("userName", userName);
         setParam("password", password);
         setParam("orgId", orgId);

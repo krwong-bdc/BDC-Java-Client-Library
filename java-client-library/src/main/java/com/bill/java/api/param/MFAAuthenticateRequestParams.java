@@ -30,7 +30,7 @@ public class MFAAuthenticateRequestParams extends ApiResourceParams {
     @SerializedName("rememberMe")
     private final Boolean rememberMe;
 
-    public MFAAuthenticateRequestParams(String challengeId, String token, String deviceId, String machineName, Boolean rememberMe) {
+    private MFAAuthenticateRequestParams(String challengeId, String token, String deviceId, String machineName, Boolean rememberMe) {
         this.challengeId = challengeId;
         this.token = token;
         this.deviceId = deviceId;

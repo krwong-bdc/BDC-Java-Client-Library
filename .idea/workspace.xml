@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab7c437-22ea-4cdf-83e0-1c70b06e703d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -42,149 +47,132 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2570">
-                  <caret line="399" selection-start-line="399" selection-end-line="399" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="250">
-                  <caret line="165" column="43" lean-forward="true" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#5415#5416#0" expanded="true" />
-                    <element signature="e#5450#5451#0" expanded="true" />
-                    <element signature="e#5720#5721#0" expanded="true" />
-                    <element signature="e#5671#5672#0" expanded="true" />
-                    <element signature="e#5714#5715#0" expanded="true" />
-                    <element signature="e#5829#5830#0" expanded="true" />
-                    <element signature="e#5863#5864#0" expanded="true" />
-                    <element signature="e#5912#5913#0" expanded="true" />
-                    <element signature="e#5946#5947#0" expanded="true" />
-                    <element signature="e#5989#5990#0" expanded="true" />
-                    <element signature="e#6040#6041#0" expanded="true" />
-                    <element signature="e#5992#5993#0" expanded="true" />
-                    <element signature="e#6030#6031#0" expanded="true" />
-                    <element signature="e#5832#5833#0" expanded="true" />
-                    <element signature="e#5886#5887#0" expanded="true" />
-                    <element signature="e#5917#5918#0" expanded="true" />
-                    <element signature="e#5970#5971#0" expanded="true" />
-                    <element signature="e#6005#6006#0" expanded="true" />
-                    <element signature="e#6061#6062#0" expanded="true" />
-                    <element signature="e#6096#6097#0" expanded="true" />
-                    <element signature="e#6147#6148#0" expanded="true" />
-                    <element signature="e#6214#6215#0" expanded="true" />
-                    <element signature="e#6241#6242#0" expanded="true" />
-                    <element signature="e#6271#6272#0" expanded="true" />
-                    <element signature="e#6317#6318#0" expanded="true" />
-                    <element signature="e#6351#6352#0" expanded="true" />
-                    <element signature="e#6388#6389#0" expanded="true" />
-                    <element signature="e#6437#6438#0" expanded="true" />
-                    <element signature="e#6474#6475#0" expanded="true" />
-                    <element signature="e#6509#6510#0" expanded="true" />
-                    <element signature="e#6530#6531#0" expanded="true" />
-                    <element signature="e#6595#6596#0" expanded="true" />
-                    <element signature="e#6651#6652#0" expanded="true" />
-                    <element signature="e#6689#6690#0" expanded="true" />
-                    <element signature="e#6710#6711#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="81" column="12" lean-forward="true" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2834#2835#0" expanded="true" />
+                <element signature="e#2886#2887#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/BDCParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -219,33 +207,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/SessionLogoutRequestParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/SessionLoginRequestParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFA.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAChallenge.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/OrgInfo.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ExampleParam.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/BDCParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/InvoiceCreateParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAStatus.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/HttpResponse.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/exception/BDCExceptionTest.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/dependencies/GsonTest.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/interfaces/BDDTests.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/BDCTest.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParamsBuilder.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/plans/fast.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/param/InvoiceCreateParamsTest.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/credentials.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/CREDENTIALS.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/net/ExampleTest.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticationRequestParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/LoginSnippet.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/CREDENTIALS.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java" />
@@ -254,15 +233,12 @@
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/net/BDCHttpClientTest.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/BDCHttpClient.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceUpdateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/script.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/build.gradle" />
@@ -270,13 +246,25 @@
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/package-info.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/package-info.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/package-info.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-874" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-29" />
     <option name="y" value="-1417" />
-    <option name="width" value="3440" />
+    <option name="width" value="1750" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectView">
@@ -634,10 +622,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-874" y="-1417" width="3440" height="1417" extended-state="6" />
+    <frame x="-29" y="-1417" width="1750" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.10741613" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21370023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -647,12 +635,12 @@
       <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32981133" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.22037736" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.22037736" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32754716" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19245283" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19245283" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32981133" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32830188" />
@@ -759,25 +747,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.5.1/65bfbe4ebcddf7351870140aa75164ea3e10249f/junit-platform-commons-1.5.1-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="677" selection-start-line="677" selection-end-line="677" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.28.2/8322b59516491570931c086329654ef841e61811/mockito-core-2.28.2-sources.jar!/org/mockito/internal/invocation/RealMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#1014#1216#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/param/InvoiceCreateParamsTest.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/2.28.2/8322b59516491570931c086329654ef841e61811/mockito-core-2.28.2-sources.jar!/org/mockito/internal/creation/bytebuddy/MockMethodInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -851,13 +820,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/net/HttpResponseTest.java" />
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/BDCParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="108" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/http/HttpURLConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
@@ -868,105 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/OrgInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding>
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAChallenge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Invoice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/HttpResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -987,16 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="42" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,101 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/InvoiceCreateParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceUpdateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2082">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1148,17 +910,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="390">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2570">
-          <caret line="399" selection-start-line="399" selection-end-line="399" />
+        <state relative-caret-position="150">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1210,16 +979,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        <state relative-caret-position="15">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAChallenge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="105" lean-forward="true" selection-start-line="6" selection-start-column="105" selection-end-line="6" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Invoice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/OrgInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="-1519">
           <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1227,17 +1048,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        <state relative-caret-position="1185">
+          <caret line="79" column="11" lean-forward="true" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+          <folding>
+            <element signature="e#2581#2582#0" expanded="true" />
+            <element signature="e#2611#2612#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="15" column="58" lean-forward="true" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="39" lean-forward="true" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceUpdateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="81" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
+          <folding>
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/InvoiceCreateParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/BDCParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="81" column="12" lean-forward="true" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2834#2835#0" expanded="true" />
+            <element signature="e#2886#2887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
