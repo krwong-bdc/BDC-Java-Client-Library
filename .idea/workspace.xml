@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab7c437-22ea-4cdf-83e0-1c70b06e703d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -47,36 +37,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+            <state relative-caret-position="176">
+              <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java">
+        <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
-                <element signature="e#428#429#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -84,14 +61,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="10">
+              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#428#429#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,44 +89,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+            <state relative-caret-position="-2082">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="16" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -224,7 +184,6 @@
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAStatusRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceUpdateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/script.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java" />
@@ -234,6 +193,7 @@
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAcccountGetRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" />
       </list>
     </option>
   </component>
@@ -581,7 +541,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-297" y="-1417" width="2560" height="1417" extended-state="6" />
+    <frame x="-874" y="-1417" width="3440" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.14495632" />
@@ -823,13 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar!/sun/net/www/protocol/http/HttpURLConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
@@ -1036,16 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
-          <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/InvoiceCreateParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1086,24 +1029,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+        <state relative-caret-position="-2082">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1136,8 +1069,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorGetRequestParams.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

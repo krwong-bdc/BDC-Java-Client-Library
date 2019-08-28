@@ -130,7 +130,7 @@ public class Vendor extends ApiResource {
     }
 
     /**
-     * Retrives a vendor from the BDC
+     * Retrieves a vendor from the BDC
      *
      * @param vendorGetRequestParams data for Vendor read request
      * @return the Vendor specified in the request
@@ -139,7 +139,7 @@ public class Vendor extends ApiResource {
      */
     public static Vendor get(VendorGetRequestParams vendorGetRequestParams) throws BDCException, IOException {
         if(vendorGetRequestParams == null) {
-            throw new NullPointerException("VendorCreateRequestParams required");
+            throw new NullPointerException("VendorGetRequestParams required");
         }
         return create(READ_URL, vendorGetRequestParams, Vendor.class);
     }
