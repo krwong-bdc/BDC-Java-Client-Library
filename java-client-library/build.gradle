@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+//tasks.withType(JavaCompile).configureEach {
+//    options.fork(javaHome: project.getProperty("jdk11home"))
+//}
+
 group 'com.bill.java.api'
 version '0.0.1'
 
@@ -9,8 +13,25 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.1')
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.5.1")
+
+    testCompile "org.mockito:mockito-core:2.+"
+}
+
+
+test {
+    useJUnitPlatform()
+    systemProperty 'junit.jupiter.conditions.deactivate', '*'
+    systemProperties = [
+            'junit.jupiter.extensions.autodetection.enabled': 'true',
+            'junit.jupiter.testinstance.lifecycle.default': 'per_class'
+    ]
 }
