@@ -15,10 +15,18 @@ public class VendorGetRequestParams extends ApiResourceParams {
         this.id = id;
     }
 
+    /**
+     * Makes a new Builder for VendorGetRequestParams
+     *
+     * @return a builder for VendorGetRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a new VendorGetRequestParams object
+     */
     public static class Builder {
         public String id;
 

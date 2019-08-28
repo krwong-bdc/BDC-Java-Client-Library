@@ -16,10 +16,18 @@ public class VendorUpdateRequestParams extends ApiResourceParams {
         this.params = params;
     }
 
+    /**
+     * Makes a new Builder for VendorUpdateRequestParams
+     *
+     * @return a builder for VendorUpdateRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a new VendorUpdateRequestParams object
+     */
     public static class Builder {
         public String id;
         public String isActive;
@@ -86,6 +94,7 @@ public class VendorUpdateRequestParams extends ApiResourceParams {
         }
     }
 
+    /* Holds request data. Will be nested in <tt>obj</tt> */
     private static class Params {
         @SerializedName("entity")
         private final String entity = "Vendor";
