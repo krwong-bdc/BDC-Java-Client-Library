@@ -7,18 +7,26 @@ import java.util.function.Consumer;
 /**
  * Parameters for retrieving a Vendor Bank Account through the BDC API
  */
-public class VendorBankAcccountGetRequestParams extends ApiResourceParams {
+public class VendorBankAccountGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
     private final String id;
 
-    private VendorBankAcccountGetRequestParams(String id) {
+    private VendorBankAccountGetRequestParams(String id) {
         this.id = id;
     }
 
+    /**
+     * Makes a new Builder for VendorBankAccountGetRequestParams
+     *
+     * @return a builder for VendorBankAccountGetRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a new VendorBankAccountGetRequestParams object
+     */
     public static class Builder {
         public String id;
 
@@ -27,8 +35,8 @@ public class VendorBankAcccountGetRequestParams extends ApiResourceParams {
             return this;
         }
 
-        public VendorBankAcccountGetRequestParams build() {
-            return new VendorBankAcccountGetRequestParams(id);
+        public VendorBankAccountGetRequestParams build() {
+            return new VendorBankAccountGetRequestParams(id);
         }
     }
 }
