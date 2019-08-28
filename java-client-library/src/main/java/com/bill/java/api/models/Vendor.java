@@ -27,6 +27,9 @@ public class Vendor extends ApiResource {
     @SerializedName("id")
     private String id;
 
+    /**
+     * Will be '1' for active, '2' for not active
+     */
     @SerializedName("isActive")
     private String isActive;
 
@@ -393,10 +396,6 @@ public class Vendor extends ApiResource {
 
     public String getMergedIntoId() {
         return mergedIntoId;
-    }
-
-    public void setMergedIntoId(String mergedIntoId) {
-        this.mergedIntoId = mergedIntoId;
     }
 
     public String getAccountType() {
