@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for making an update to a Vendor through the BDC API
+ */
 public class VendorUpdateRequestParams extends ApiResourceParams {
     /** Holds the actual api resource variables for creation */
     @SerializedName("obj")
@@ -165,7 +168,7 @@ public class VendorUpdateRequestParams extends ApiResourceParams {
         @SerializedName("accountType")
         private final String accountType;
 
-        public Params(String id,
+        Params(String id,
                       String isActive,
                       String name,
                       String shortName,

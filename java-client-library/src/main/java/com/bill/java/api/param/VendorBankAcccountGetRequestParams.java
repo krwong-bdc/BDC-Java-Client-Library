@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for retrieving a Vendor Bank Account through the BDC API
+ */
 public class VendorBankAcccountGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
     private final String id;

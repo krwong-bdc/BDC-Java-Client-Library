@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for creating a Vendor Bank Account through the BDC API
+ */
 public class VendorBankAccountCreateRequestParams extends ApiResourceParams {
     /** Holds the actual api resource variables for creation */
     @SerializedName("obj")
@@ -79,7 +82,7 @@ public class VendorBankAccountCreateRequestParams extends ApiResourceParams {
         @SerializedName("isPersonalAcct")
         private Boolean isPersonalAcct;
 
-        public Params(String id, String isActive, String createdTime, String updatedTime, String vendorId, String accountNumber, String routingNumber, String usersId, String status, Boolean isSavings, Boolean isPersonalAcct) {
+        Params(String id, String isActive, String createdTime, String updatedTime, String vendorId, String accountNumber, String routingNumber, String usersId, String status, Boolean isSavings, Boolean isPersonalAcct) {
             this.id = id;
             this.isActive = isActive;
             this.createdTime = createdTime;

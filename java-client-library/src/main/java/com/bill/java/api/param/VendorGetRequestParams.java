@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters needed to fetch a Vendor from the BDC database
+ * Parameters for retrieving a Vendor through the BDC API
  */
 public class VendorGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
