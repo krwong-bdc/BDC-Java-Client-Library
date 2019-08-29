@@ -251,7 +251,7 @@ public class Vendor extends ApiResource {
         this.taxId = taxId;
     }
 
-    public Boolean getTrack1099() {
+    public Boolean isTrack1099() {
         return track1099;
     }
 

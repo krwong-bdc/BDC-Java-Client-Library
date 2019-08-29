@@ -2,50 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab7c437-22ea-4cdf-83e0-1c70b06e703d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/BDC$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/BDC$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/BDC$Env.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/BDC$Env.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/BDC.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/BDC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/exception/BDCException.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/exception/BDCException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/Invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/Invoice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/Session.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/SessionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/SessionInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/Vendor.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/Vendor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/VendorBankAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/models/VendorBankAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/AuthenticationParams$AuthenticationParamsBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/AuthenticationParams$AuthenticationParamsBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/AuthenticationParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/AuthenticationParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAAuthenticateRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAAuthenticateRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAAuthenticateRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAAuthenticateRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAChallengeRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAChallengeRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAChallengeRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAChallengeRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAStatusRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAStatusRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAStatusRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAStatusRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAcccountGetRequestParams$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAcccountGetRequestParams$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAcccountGetRequestParams.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAccountCreateRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAccountCreateRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAccountCreateRequestParams$Params.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAccountCreateRequestParams$Params.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAccountCreateRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorBankAccountCreateRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorCreateRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorCreateRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorCreateRequestParams$Params.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorCreateRequestParams$Params.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorCreateRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorCreateRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorGetRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorGetRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorGetRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorGetRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorUpdateRequestParams$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorUpdateRequestParams$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorUpdateRequestParams$Params.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorUpdateRequestParams$Params.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorUpdateRequestParams.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/VendorUpdateRequestParams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/script.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$create.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$create.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$get.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$get.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$update.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$update.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$updateWithApiResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest$updateWithApiResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Behaviors.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Behaviors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Conditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Conditions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Initializers.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Initializers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Methods.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Methods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -79,210 +63,227 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3419#3420#0" expanded="true" />
-                <element signature="e#3448#3449#0" expanded="true" />
-                <element signature="e#3478#3479#0" expanded="true" />
-                <element signature="e#3503#3504#0" expanded="true" />
-                <element signature="e#3538#3539#0" expanded="true" />
-                <element signature="e#3569#3570#0" expanded="true" />
-                <element signature="e#3607#3608#0" expanded="true" />
-                <element signature="e#3641#3642#0" expanded="true" />
-                <element signature="e#3679#3680#0" expanded="true" />
-                <element signature="e#3713#3714#0" expanded="true" />
-                <element signature="e#3749#3750#0" expanded="true" />
-                <element signature="e#3780#3781#0" expanded="true" />
-                <element signature="e#3820#3821#0" expanded="true" />
-                <element signature="e#3856#3857#0" expanded="true" />
-                <element signature="e#3896#3897#0" expanded="true" />
-                <element signature="e#3932#3933#0" expanded="true" />
-                <element signature="e#3966#3967#0" expanded="true" />
-                <element signature="e#3996#3997#0" expanded="true" />
-                <element signature="e#4029#4030#0" expanded="true" />
-                <element signature="e#4058#4059#0" expanded="true" />
-                <element signature="e#4093#4094#0" expanded="true" />
-                <element signature="e#4125#4126#0" expanded="true" />
-                <element signature="e#4165#4166#0" expanded="true" />
-                <element signature="e#4202#4203#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6456#6457#0" expanded="true" />
-                <element signature="e#6485#6486#0" expanded="true" />
-                <element signature="e#6514#6515#0" expanded="true" />
-                <element signature="e#6539#6540#0" expanded="true" />
-                <element signature="e#6574#6575#0" expanded="true" />
-                <element signature="e#6605#6606#0" expanded="true" />
-                <element signature="e#6650#6651#0" expanded="true" />
-                <element signature="e#6690#6691#0" expanded="true" />
-                <element signature="e#6724#6725#0" expanded="true" />
-                <element signature="e#6751#6752#0" expanded="true" />
-                <element signature="e#6730#6731#0" expanded="true" />
-                <element signature="e#6762#6763#0" expanded="true" />
-                <element signature="e#6859#6860#0" expanded="true" />
-                <element signature="e#6891#6892#0" expanded="true" />
-                <element signature="e#6812#6813#0" expanded="true" />
-                <element signature="e#6854#6855#0" expanded="true" />
-                <element signature="e#7021#7022#0" expanded="true" />
-                <element signature="e#7055#7056#0" expanded="true" />
-                <element signature="e#6908#6909#0" expanded="true" />
-                <element signature="e#6954#6955#0" expanded="true" />
-                <element signature="e#7193#7194#0" expanded="true" />
-                <element signature="e#7227#7228#0" expanded="true" />
-                <element signature="e#7008#7009#0" expanded="true" />
-                <element signature="e#7054#7055#0" expanded="true" />
-                <element signature="e#7363#7364#0" expanded="true" />
-                <element signature="e#7395#7396#0" expanded="true" />
-                <element signature="e#7104#7105#0" expanded="true" />
-                <element signature="e#7146#7147#0" expanded="true" />
-                <element signature="e#7519#7520#0" expanded="true" />
-                <element signature="e#7547#7548#0" expanded="true" />
-                <element signature="e#7188#7189#0" expanded="true" />
-                <element signature="e#7222#7223#0" expanded="true" />
-                <element signature="e#7660#7661#0" expanded="true" />
-                <element signature="e#7692#7693#0" expanded="true" />
-                <element signature="e#7273#7274#0" expanded="true" />
-                <element signature="e#7315#7316#0" expanded="true" />
-                <element signature="e#7820#7821#0" expanded="true" />
-                <element signature="e#7851#7852#0" expanded="true" />
-                <element signature="e#7363#7364#0" expanded="true" />
-                <element signature="e#7403#7404#0" expanded="true" />
-                <element signature="e#7974#7975#0" expanded="true" />
-                <element signature="e#8005#8006#0" expanded="true" />
-                <element signature="e#7451#7452#0" expanded="true" />
-                <element signature="e#7491#7492#0" expanded="true" />
-                <element signature="e#8128#8129#0" expanded="true" />
-                <element signature="e#8159#8160#0" expanded="true" />
-                <element signature="e#7539#7540#0" expanded="true" />
-                <element signature="e#7579#7580#0" expanded="true" />
-                <element signature="e#8282#8283#0" expanded="true" />
-                <element signature="e#8313#8314#0" expanded="true" />
-                <element signature="e#7627#7628#0" expanded="true" />
-                <element signature="e#7667#7668#0" expanded="true" />
-                <element signature="e#8439#8440#0" expanded="true" />
-                <element signature="e#8473#8474#0" expanded="true" />
-                <element signature="e#7721#7722#0" expanded="true" />
-                <element signature="e#7767#7768#0" expanded="true" />
-                <element signature="e#8612#8613#0" expanded="true" />
-                <element signature="e#8647#8648#0" expanded="true" />
-                <element signature="e#7823#7824#0" expanded="true" />
-                <element signature="e#7871#7872#0" expanded="true" />
-                <element signature="e#8788#8789#0" expanded="true" />
-                <element signature="e#8821#8822#0" expanded="true" />
-                <element signature="e#7923#7924#0" expanded="true" />
-                <element signature="e#7967#7968#0" expanded="true" />
-                <element signature="e#8958#8959#0" expanded="true" />
-                <element signature="e#8995#8996#0" expanded="true" />
-                <element signature="e#8027#8028#0" expanded="true" />
-                <element signature="e#8079#8080#0" expanded="true" />
-                <element signature="e#9139#9140#0" expanded="true" />
-                <element signature="e#9167#9168#0" expanded="true" />
-                <element signature="e#8121#8122#0" expanded="true" />
-                <element signature="e#8155#8156#0" expanded="true" />
-                <element signature="e#9273#9274#0" expanded="true" />
-                <element signature="e#9299#9300#0" expanded="true" />
-                <element signature="e#8193#8194#0" expanded="true" />
-                <element signature="e#8223#8224#0" expanded="true" />
-                <element signature="e#9399#9400#0" expanded="true" />
-                <element signature="e#9427#9428#0" expanded="true" />
-                <element signature="e#8265#8266#0" expanded="true" />
-                <element signature="e#8299#8300#0" expanded="true" />
-                <element signature="e#9535#9536#0" expanded="true" />
-                <element signature="e#9563#9564#0" expanded="true" />
-                <element signature="e#9678#9679#0" expanded="true" />
-                <element signature="e#9713#9714#0" expanded="true" />
-                <element signature="e#8431#8432#0" expanded="true" />
-                <element signature="e#8479#8480#0" expanded="true" />
-                <element signature="e#9856#9857#0" expanded="true" />
-                <element signature="e#9891#9892#0" expanded="true" />
-                <element signature="e#8535#8536#0" expanded="true" />
-                <element signature="e#8583#8584#0" expanded="true" />
-                <element signature="e#10033#10034#0" expanded="true" />
-                <element signature="e#10067#10068#0" expanded="true" />
-                <element signature="e#8637#8638#0" expanded="true" />
-                <element signature="e#8683#8684#0" expanded="true" />
-                <element signature="e#10205#10206#0" expanded="true" />
-                <element signature="e#10239#10240#0" expanded="true" />
-                <element signature="e#10277#10278#0" expanded="true" />
-                <element signature="e#10311#10312#0" expanded="true" />
-                <element signature="e#10354#10355#0" expanded="true" />
-                <element signature="e#10393#10394#0" expanded="true" />
-                <element signature="e#8747#8748#0" expanded="true" />
-                <element signature="e#8803#8804#0" expanded="true" />
-                <element signature="e#10555#10556#0" expanded="true" />
-                <element signature="e#10593#10594#0" expanded="true" />
-                <element signature="e#8865#8866#0" expanded="true" />
-                <element signature="e#8919#8920#0" expanded="true" />
-                <element signature="e#10748#10749#0" expanded="true" />
-                <element signature="e#10783#10784#0" expanded="true" />
-                <element signature="e#10821#10822#0" expanded="true" />
-                <element signature="e#10855#10856#0" expanded="true" />
-                <element signature="e#8973#8974#0" expanded="true" />
-                <element signature="e#9019#9020#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-957">
-              <caret line="142" column="52" selection-start-line="142" selection-start-column="52" selection-end-line="142" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="89" column="48" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="978">
+                  <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#3419#3420#0" expanded="true" />
+                    <element signature="e#3448#3449#0" expanded="true" />
+                    <element signature="e#3478#3479#0" expanded="true" />
+                    <element signature="e#3503#3504#0" expanded="true" />
+                    <element signature="e#3538#3539#0" expanded="true" />
+                    <element signature="e#3569#3570#0" expanded="true" />
+                    <element signature="e#3607#3608#0" expanded="true" />
+                    <element signature="e#3641#3642#0" expanded="true" />
+                    <element signature="e#3679#3680#0" expanded="true" />
+                    <element signature="e#3713#3714#0" expanded="true" />
+                    <element signature="e#3749#3750#0" expanded="true" />
+                    <element signature="e#3780#3781#0" expanded="true" />
+                    <element signature="e#3820#3821#0" expanded="true" />
+                    <element signature="e#3856#3857#0" expanded="true" />
+                    <element signature="e#3896#3897#0" expanded="true" />
+                    <element signature="e#3932#3933#0" expanded="true" />
+                    <element signature="e#3966#3967#0" expanded="true" />
+                    <element signature="e#3996#3997#0" expanded="true" />
+                    <element signature="e#4029#4030#0" expanded="true" />
+                    <element signature="e#4058#4059#0" expanded="true" />
+                    <element signature="e#4093#4094#0" expanded="true" />
+                    <element signature="e#4125#4126#0" expanded="true" />
+                    <element signature="e#4165#4166#0" expanded="true" />
+                    <element signature="e#4202#4203#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="264">
+                  <caret line="248" selection-start-line="248" selection-end-line="248" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#6456#6457#0" expanded="true" />
+                    <element signature="e#6485#6486#0" expanded="true" />
+                    <element signature="e#6514#6515#0" expanded="true" />
+                    <element signature="e#6539#6540#0" expanded="true" />
+                    <element signature="e#6574#6575#0" expanded="true" />
+                    <element signature="e#6605#6606#0" expanded="true" />
+                    <element signature="e#6650#6651#0" expanded="true" />
+                    <element signature="e#6690#6691#0" expanded="true" />
+                    <element signature="e#6724#6725#0" expanded="true" />
+                    <element signature="e#6751#6752#0" expanded="true" />
+                    <element signature="e#6730#6731#0" expanded="true" />
+                    <element signature="e#6762#6763#0" expanded="true" />
+                    <element signature="e#6859#6860#0" expanded="true" />
+                    <element signature="e#6891#6892#0" expanded="true" />
+                    <element signature="e#6812#6813#0" expanded="true" />
+                    <element signature="e#6854#6855#0" expanded="true" />
+                    <element signature="e#7021#7022#0" expanded="true" />
+                    <element signature="e#7055#7056#0" expanded="true" />
+                    <element signature="e#6908#6909#0" expanded="true" />
+                    <element signature="e#6954#6955#0" expanded="true" />
+                    <element signature="e#7193#7194#0" expanded="true" />
+                    <element signature="e#7227#7228#0" expanded="true" />
+                    <element signature="e#7008#7009#0" expanded="true" />
+                    <element signature="e#7054#7055#0" expanded="true" />
+                    <element signature="e#7363#7364#0" expanded="true" />
+                    <element signature="e#7395#7396#0" expanded="true" />
+                    <element signature="e#7104#7105#0" expanded="true" />
+                    <element signature="e#7146#7147#0" expanded="true" />
+                    <element signature="e#7519#7520#0" expanded="true" />
+                    <element signature="e#7547#7548#0" expanded="true" />
+                    <element signature="e#7188#7189#0" expanded="true" />
+                    <element signature="e#7222#7223#0" expanded="true" />
+                    <element signature="e#7660#7661#0" expanded="true" />
+                    <element signature="e#7692#7693#0" expanded="true" />
+                    <element signature="e#7273#7274#0" expanded="true" />
+                    <element signature="e#7315#7316#0" expanded="true" />
+                    <element signature="e#7820#7821#0" expanded="true" />
+                    <element signature="e#7851#7852#0" expanded="true" />
+                    <element signature="e#7363#7364#0" expanded="true" />
+                    <element signature="e#7403#7404#0" expanded="true" />
+                    <element signature="e#7974#7975#0" expanded="true" />
+                    <element signature="e#8005#8006#0" expanded="true" />
+                    <element signature="e#7451#7452#0" expanded="true" />
+                    <element signature="e#7491#7492#0" expanded="true" />
+                    <element signature="e#8128#8129#0" expanded="true" />
+                    <element signature="e#8159#8160#0" expanded="true" />
+                    <element signature="e#7539#7540#0" expanded="true" />
+                    <element signature="e#7579#7580#0" expanded="true" />
+                    <element signature="e#8282#8283#0" expanded="true" />
+                    <element signature="e#8313#8314#0" expanded="true" />
+                    <element signature="e#7627#7628#0" expanded="true" />
+                    <element signature="e#7667#7668#0" expanded="true" />
+                    <element signature="e#8439#8440#0" expanded="true" />
+                    <element signature="e#8473#8474#0" expanded="true" />
+                    <element signature="e#7721#7722#0" expanded="true" />
+                    <element signature="e#7767#7768#0" expanded="true" />
+                    <element signature="e#8612#8613#0" expanded="true" />
+                    <element signature="e#8647#8648#0" expanded="true" />
+                    <element signature="e#7823#7824#0" expanded="true" />
+                    <element signature="e#7871#7872#0" expanded="true" />
+                    <element signature="e#8788#8789#0" expanded="true" />
+                    <element signature="e#8821#8822#0" expanded="true" />
+                    <element signature="e#7923#7924#0" expanded="true" />
+                    <element signature="e#7967#7968#0" expanded="true" />
+                    <element signature="e#8958#8959#0" expanded="true" />
+                    <element signature="e#8995#8996#0" expanded="true" />
+                    <element signature="e#8027#8028#0" expanded="true" />
+                    <element signature="e#8079#8080#0" expanded="true" />
+                    <element signature="e#9139#9140#0" expanded="true" />
+                    <element signature="e#9167#9168#0" expanded="true" />
+                    <element signature="e#8121#8122#0" expanded="true" />
+                    <element signature="e#8155#8156#0" expanded="true" />
+                    <element signature="e#9273#9274#0" expanded="true" />
+                    <element signature="e#9299#9300#0" expanded="true" />
+                    <element signature="e#8193#8194#0" expanded="true" />
+                    <element signature="e#8223#8224#0" expanded="true" />
+                    <element signature="e#9399#9400#0" expanded="true" />
+                    <element signature="e#9427#9428#0" expanded="true" />
+                    <element signature="e#8265#8266#0" expanded="true" />
+                    <element signature="e#8299#8300#0" expanded="true" />
+                    <element signature="e#9535#9536#0" expanded="true" />
+                    <element signature="e#9563#9564#0" expanded="true" />
+                    <element signature="e#9678#9679#0" expanded="true" />
+                    <element signature="e#9713#9714#0" expanded="true" />
+                    <element signature="e#8431#8432#0" expanded="true" />
+                    <element signature="e#8479#8480#0" expanded="true" />
+                    <element signature="e#9856#9857#0" expanded="true" />
+                    <element signature="e#9891#9892#0" expanded="true" />
+                    <element signature="e#8535#8536#0" expanded="true" />
+                    <element signature="e#8583#8584#0" expanded="true" />
+                    <element signature="e#10033#10034#0" expanded="true" />
+                    <element signature="e#10067#10068#0" expanded="true" />
+                    <element signature="e#8637#8638#0" expanded="true" />
+                    <element signature="e#8683#8684#0" expanded="true" />
+                    <element signature="e#10205#10206#0" expanded="true" />
+                    <element signature="e#10239#10240#0" expanded="true" />
+                    <element signature="e#10277#10278#0" expanded="true" />
+                    <element signature="e#10311#10312#0" expanded="true" />
+                    <element signature="e#10354#10355#0" expanded="true" />
+                    <element signature="e#10393#10394#0" expanded="true" />
+                    <element signature="e#8747#8748#0" expanded="true" />
+                    <element signature="e#8803#8804#0" expanded="true" />
+                    <element signature="e#10555#10556#0" expanded="true" />
+                    <element signature="e#10593#10594#0" expanded="true" />
+                    <element signature="e#8865#8866#0" expanded="true" />
+                    <element signature="e#8919#8920#0" expanded="true" />
+                    <element signature="e#10748#10749#0" expanded="true" />
+                    <element signature="e#10783#10784#0" expanded="true" />
+                    <element signature="e#10821#10822#0" expanded="true" />
+                    <element signature="e#10855#10856#0" expanded="true" />
+                    <element signature="e#8973#8974#0" expanded="true" />
+                    <element signature="e#9019#9020#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="30" selection-start-column="30" selection-end-column="30" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="466">
+                  <caret line="239" column="27" lean-forward="true" selection-start-line="239" selection-start-column="27" selection-end-line="239" selection-end-column="27" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="821">
+                  <caret line="102" column="62" selection-start-line="102" selection-start-column="62" selection-end-line="102" selection-end-column="62" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -350,14 +351,11 @@
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceUpdateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/package-info.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/package-info.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/package-info.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/SessionInfo.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/BDC.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java" />
@@ -370,16 +368,19 @@
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorBankAccountCreateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorUpdateRequestParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/VendorCreateRequestParams.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" />
-        <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/script.java" />
         <option value="$PROJECT_DIR$/java-client-library/build.gradle" />
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" />
+        <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-168" />
     <option name="y" value="-1417" />
     <option name="width" value="1889" />
@@ -402,6 +403,295 @@
               <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="param" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bill" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="test-results" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="test-results" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
@@ -442,6 +732,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="param" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
@@ -566,7 +866,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VendorTest">
+  <component name="RunManager" selected="JUnit.VendorBankAccountTest$create.should_create_a_new_bank_account">
+    <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bdc-api-bdc-api_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bill.java.api.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bill.java.api.models" />
+      <option name="MAIN_CLASS_NAME" value="com.bill.java.api.models.VendorBankAccountTest$create" />
+      <option name="METHOD_NAME" value="should_create_a_new_bank_account" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VendorTest$get.should_retrieve_a_vendor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bdc-api-bdc-api_test" />
       <extension name="coverage">
@@ -579,21 +895,6 @@
       <option name="MAIN_CLASS_NAME" value="com.bill.java.api.models.VendorTest$get" />
       <option name="METHOD_NAME" value="should_retrieve_a_vendor" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VendorTest$update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bdc-api-bdc-api_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bill.java.api.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bill.java.api.models" />
-      <option name="MAIN_CLASS_NAME" value="com.bill.java.api.models.VendorTest$update" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -647,11 +948,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.VendorBankAccountTest$create.should_create_a_new_bank_account" />
         <item itemvalue="JUnit.VendorTest" />
         <item itemvalue="JUnit.VendorTest$updateWithApiResource.should_update_the_given_resource" />
         <item itemvalue="JUnit.VendorTest$update.should_update_a_vendor_with_given_params" />
         <item itemvalue="JUnit.VendorTest$get.should_retrieve_a_vendor" />
-        <item itemvalue="JUnit.VendorTest$update" />
       </list>
     </recent_temporary>
   </component>
@@ -669,12 +970,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendorTest - 2019.08.28 at 14h 23m 36s.xml">
-      <configuration name="VendorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendorTest - 2019.08.28 at 14h 26m 53s.xml">
-      <configuration name="VendorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VendorTest - 2019.08.28 at 14h 27m 32s.xml">
       <configuration name="VendorTest" configurationId="JUnit" />
     </history-entry>
@@ -699,6 +994,12 @@
     <history-entry file="VendorTest - 2019.08.28 at 14h 53m 52s.xml">
       <configuration name="VendorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VendorBankAccountTest$create_should_create_a_new_bank_account - 2019.08.29 at 08h 38m 36s.xml">
+      <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendorBankAccountTest$create_should_create_a_new_bank_account - 2019.08.29 at 08h 39m 32s.xml">
+      <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -710,10 +1011,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-168" y="-1417" width="1889" height="1417" extended-state="0" />
+    <frame x="-874" y="-1417" width="3440" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22468868" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12213066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -723,12 +1024,12 @@
       <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32981133" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.22037736" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.22037736" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32754716" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19245283" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19245283" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32981133" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32830188" />
@@ -835,16 +1136,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/net/ExampleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -958,80 +1249,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="103" column="56" lean-forward="true" selection-start-line="103" selection-start-column="56" selection-end-line="103" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="165" column="43" lean-forward="true" selection-start-line="165" selection-start-column="43" selection-end-line="165" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5415#5416#0" expanded="true" />
-            <element signature="e#5450#5451#0" expanded="true" />
-            <element signature="e#5720#5721#0" expanded="true" />
-            <element signature="e#5671#5672#0" expanded="true" />
-            <element signature="e#5714#5715#0" expanded="true" />
-            <element signature="e#5829#5830#0" expanded="true" />
-            <element signature="e#5863#5864#0" expanded="true" />
-            <element signature="e#5912#5913#0" expanded="true" />
-            <element signature="e#5946#5947#0" expanded="true" />
-            <element signature="e#5989#5990#0" expanded="true" />
-            <element signature="e#6040#6041#0" expanded="true" />
-            <element signature="e#5992#5993#0" expanded="true" />
-            <element signature="e#6030#6031#0" expanded="true" />
-            <element signature="e#5832#5833#0" expanded="true" />
-            <element signature="e#5886#5887#0" expanded="true" />
-            <element signature="e#5917#5918#0" expanded="true" />
-            <element signature="e#5970#5971#0" expanded="true" />
-            <element signature="e#6005#6006#0" expanded="true" />
-            <element signature="e#6061#6062#0" expanded="true" />
-            <element signature="e#6096#6097#0" expanded="true" />
-            <element signature="e#6147#6148#0" expanded="true" />
-            <element signature="e#6214#6215#0" expanded="true" />
-            <element signature="e#6241#6242#0" expanded="true" />
-            <element signature="e#6271#6272#0" expanded="true" />
-            <element signature="e#6317#6318#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="true" />
-            <element signature="e#6388#6389#0" expanded="true" />
-            <element signature="e#6437#6438#0" expanded="true" />
-            <element signature="e#6474#6475#0" expanded="true" />
-            <element signature="e#6509#6510#0" expanded="true" />
-            <element signature="e#6530#6531#0" expanded="true" />
-            <element signature="e#6595#6596#0" expanded="true" />
-            <element signature="e#6651#6652#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="e#6710#6711#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1100,16 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="39" lean-forward="true" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/ApiResourceUpdateRequestParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1140,16 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/AuthenticationParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -1176,16 +1375,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1295,26 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-957">
-          <caret line="142" column="52" selection-start-line="142" selection-start-column="52" selection-end-line="142" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="89" column="48" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1322,17 +1491,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="832">
+          <caret line="195" column="30" lean-forward="true" selection-start-line="172" selection-start-column="12" selection-end-line="195" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/build/classes/java/main/com/bill/java/api/param/MFAStatusRequestParams.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="116" column="12" selection-start-line="116" selection-start-column="12" selection-end-line="116" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="978">
+          <caret line="119" column="5" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3419#3420#0" expanded="true" />
+            <element signature="e#3448#3449#0" expanded="true" />
+            <element signature="e#3478#3479#0" expanded="true" />
+            <element signature="e#3503#3504#0" expanded="true" />
+            <element signature="e#3538#3539#0" expanded="true" />
+            <element signature="e#3569#3570#0" expanded="true" />
+            <element signature="e#3607#3608#0" expanded="true" />
+            <element signature="e#3641#3642#0" expanded="true" />
+            <element signature="e#3679#3680#0" expanded="true" />
+            <element signature="e#3713#3714#0" expanded="true" />
+            <element signature="e#3749#3750#0" expanded="true" />
+            <element signature="e#3780#3781#0" expanded="true" />
+            <element signature="e#3820#3821#0" expanded="true" />
+            <element signature="e#3856#3857#0" expanded="true" />
+            <element signature="e#3896#3897#0" expanded="true" />
+            <element signature="e#3932#3933#0" expanded="true" />
+            <element signature="e#3966#3967#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
+            <element signature="e#4029#4030#0" expanded="true" />
+            <element signature="e#4058#4059#0" expanded="true" />
+            <element signature="e#4093#4094#0" expanded="true" />
+            <element signature="e#4125#4126#0" expanded="true" />
+            <element signature="e#4165#4166#0" expanded="true" />
+            <element signature="e#4202#4203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAChallengeRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="64" lean-forward="true" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/MFAAuthenticateRequestParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="259" column="47" lean-forward="true" selection-start-line="259" selection-start-column="47" selection-end-line="259" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Vendor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        <state relative-caret-position="264">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6456#6457#0" expanded="true" />
@@ -1451,36 +1716,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/VendorBankAccount.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3419#3420#0" expanded="true" />
-            <element signature="e#3448#3449#0" expanded="true" />
-            <element signature="e#3478#3479#0" expanded="true" />
-            <element signature="e#3503#3504#0" expanded="true" />
-            <element signature="e#3538#3539#0" expanded="true" />
-            <element signature="e#3569#3570#0" expanded="true" />
-            <element signature="e#3607#3608#0" expanded="true" />
-            <element signature="e#3641#3642#0" expanded="true" />
-            <element signature="e#3679#3680#0" expanded="true" />
-            <element signature="e#3713#3714#0" expanded="true" />
-            <element signature="e#3749#3750#0" expanded="true" />
-            <element signature="e#3780#3781#0" expanded="true" />
-            <element signature="e#3820#3821#0" expanded="true" />
-            <element signature="e#3856#3857#0" expanded="true" />
-            <element signature="e#3896#3897#0" expanded="true" />
-            <element signature="e#3932#3933#0" expanded="true" />
-            <element signature="e#3966#3967#0" expanded="true" />
-            <element signature="e#3996#3997#0" expanded="true" />
-            <element signature="e#4029#4030#0" expanded="true" />
-            <element signature="e#4058#4059#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#4125#4126#0" expanded="true" />
-            <element signature="e#4165#4166#0" expanded="true" />
-            <element signature="e#4202#4203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="102" column="62" selection-start-line="102" selection-start-column="62" selection-end-line="102" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="239" column="27" lean-forward="true" selection-start-line="239" selection-start-column="27" selection-end-line="239" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

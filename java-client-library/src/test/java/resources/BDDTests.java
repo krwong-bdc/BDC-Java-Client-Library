@@ -2,8 +2,12 @@ package resources;
 
 import com.bill.java.api.BDC;
 import com.bill.java.api.exception.BDCException;
+import com.bill.java.api.models.MFA;
+import com.bill.java.api.models.MFAChallenge;
 import com.bill.java.api.models.Session;
 import com.bill.java.api.models.SessionInfo;
+import com.bill.java.api.param.MFAAuthenticateRequestParams;
+import com.bill.java.api.param.MFAChallengeRequestParams;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.*;
 
@@ -12,6 +16,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.lang.reflect.Method;
 import java.util.Random;
+import java.util.Scanner;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -237,6 +242,32 @@ public abstract class BDDTests {
         BDC.password = TestEnv.password;
         BDC.setApiBase(BDC.Env.SANDBOX);
         Session.login(TestEnv.orgId);
+    }
+
+    public void mfaLogin() throws BDCException, IOException {
+        BDC.devKey = TestEnv.devKey;
+        BDC.userName = TestEnv.userName;
+        BDC.password = TestEnv.password;
+        BDC.setApiBase(BDC.Env.SANDBOX);
+        Session.login(TestEnv.orgId);
+
+        MFAChallenge challenge = Session.requestMFAChallenge(MFAChallengeRequestParams.builder()
+                .with($ -> {
+                    $.useBackup = true;
+                })
+                .build());
+        Scanner reader = new Scanner(System.in);  // Reading from System.in
+        System.out.println("Enter a number: ");
+        String token = reader.nextLine();
+        reader.close();
+        Session.MFAAuthenticate(MFAAuthenticateRequestParams.builder()
+                .with($ -> {
+                    $.challengeId = challenge.getId();
+                    $.token = token;
+                    $.deviceId = "777";
+                    $.machineName = "Keiths Testbook";
+                    $.rememberMe = true;
+                }).build());
     }
 
 }

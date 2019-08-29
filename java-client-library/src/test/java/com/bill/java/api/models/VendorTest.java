@@ -1,8 +1,11 @@
 package com.bill.java.api.models;
 
+import com.bill.java.api.exception.BDCException;
+import com.bill.java.api.param.VendorBankAccountCreateRequestParams;
 import com.bill.java.api.param.VendorCreateRequestParams;
 import com.bill.java.api.param.VendorGetRequestParams;
 import com.bill.java.api.param.VendorUpdateRequestParams;
+import jdk.nashorn.internal.objects.annotations.Function;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import resources.BDDTests;
@@ -112,7 +115,7 @@ class VendorTest extends BDDTests {
                 assertEquals(companyName, vendor.getCompanyName());
                 assertEquals(accNumber, vendor.getAccNumber());
                 assertEquals(taxId, vendor.getTaxId());
-                assertEquals(track1099, vendor.getTrack1099());
+                assertEquals(track1099, vendor.isTrack1099());
                 assertEquals(address1, vendor.getAddress1());
                 assertEquals(address2, vendor.getAddress2());
                 assertEquals(address3, vendor.getAddress3());
@@ -132,6 +135,16 @@ class VendorTest extends BDDTests {
                 assertEquals(accountType, vendor.getAccountType());
             });
         }
+
+        @Condition
+        class When_given_bad_input {
+            @FunctionalTest
+            void should_throw_BDCException() {
+                assertThrows(BDCException.class, () -> {
+                    Vendor.create(VendorCreateRequestParams.builder().build());
+                });
+            }
+        }
     }
 
     @Interface
@@ -146,6 +159,15 @@ class VendorTest extends BDDTests {
             assertAll(() -> assertEquals(TestEnv.testVendorId, vendor.getId()));
         }
 
+        @Condition
+        class When_given_bad_input{
+            @FunctionalTest
+            void should_throw_BDCException() {
+                assertThrows(BDCException.class, () -> {
+                    Vendor.get(VendorGetRequestParams.builder().build());
+                });
+            }
+        }
     }
 
     @Interface
@@ -192,7 +214,7 @@ class VendorTest extends BDDTests {
                 assertEquals(companyName, vendor.getCompanyName());
                 assertEquals(accNumber, vendor.getAccNumber());
                 assertEquals(taxId, vendor.getTaxId());
-                assertEquals(track1099, vendor.getTrack1099());
+                assertEquals(track1099, vendor.isTrack1099());
                 assertEquals(address1, vendor.getAddress1());
                 assertEquals(address2, vendor.getAddress2());
                 assertEquals(address3, vendor.getAddress3());
@@ -211,6 +233,16 @@ class VendorTest extends BDDTests {
                 assertEquals(contactLastName, vendor.getContactLastName());
                 assertEquals(accountType, vendor.getAccountType());
             });
+        }
+
+        @Condition
+        class When_given_bad_input{
+            @FunctionalTest
+            void should_throw_BDCException() {
+                assertThrows(BDCException.class, () -> {
+                    Vendor.update(VendorUpdateRequestParams.builder().build());
+                });
+            }
         }
     }
 
@@ -262,7 +294,7 @@ class VendorTest extends BDDTests {
                 assertEquals(companyName, updatedVendor.getCompanyName());
                 assertEquals(accNumber, updatedVendor.getAccNumber());
                 assertEquals(taxId, updatedVendor.getTaxId());
-                assertEquals(track1099, updatedVendor.getTrack1099());
+                assertEquals(track1099, updatedVendor.isTrack1099());
                 assertEquals(address1, updatedVendor.getAddress1());
                 assertEquals(address2, updatedVendor.getAddress2());
                 assertEquals(address3, updatedVendor.getAddress3());

@@ -127,11 +127,11 @@ public class VendorBankAccount extends ApiResource {
         return status;
     }
 
-    public Boolean getSavings() {
+    public Boolean isSavings() {
         return isSavings;
     }
 
-    public Boolean getPersonalAcct() {
+    public Boolean isPersonalAcct() {
         return isPersonalAcct;
     }
 }
