@@ -1,4 +1,5 @@
 java-client-library/src/test/java/resources/TestEnv.java
 java-client-library/src/main/java/script.java
 java-client-library/src/main/java/com/bill/java/api/param/ExampleParam.java
-.idea/workspace.xml
+.idea/*
+.gradle/*
