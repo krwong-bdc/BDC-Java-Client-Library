@@ -87,6 +87,15 @@ public class Vendor extends ApiResource {
     @SerializedName("phone")
     private String phone;
 
+    /**
+     * <p>Payment method for Bill.com payments. You can filter by this field on the List call.
+     * 0. check
+     * 1. ach
+     * 2. rpps
+     * 5. intlEPmt
+     * 6. offline
+     * </p>
+     */
     @SerializedName("payBy")
     private String payBy;
 
@@ -340,10 +349,6 @@ public class Vendor extends ApiResource {
 
     public String getPayBy() {
         return payBy;
-    }
-
-    public void setPayBy(String payBy) {
-        this.payBy = payBy;
     }
 
     public String getPaymentEmail() {
