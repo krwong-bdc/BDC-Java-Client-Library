@@ -2,80 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab7c437-22ea-4cdf-83e0-1c70b06e703d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/main/script.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/main/script.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$MFAAuthenticate.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$MFAAuthenticate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getApiEndPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getApiEndPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getMFAStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getMFAStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getOrgId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getOrgId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getSessionId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getSessionId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getSessionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getSessionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getUsersId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$getUsersId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$listOrgs.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$listOrgs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login$and_mfaId_and_deviceId_are_set.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login$and_mfaId_and_deviceId_are_set.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login$and_orgId_is_valid.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login$and_orgId_is_valid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login$and_org_id_is_invalid.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login$and_org_id_is_invalid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$logout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$requestMFAChallenge.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC$requestMFAChallenge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_credentials_are_properly_set_on_BDC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$MFAAuthenticate.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$MFAAuthenticate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getApiEndPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getApiEndPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getMFAStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getMFAStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getOrgId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getOrgId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getSessionId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getSessionId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getSessionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getSessionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getUsersId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$getUsersId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$listOrgs.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$listOrgs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$login.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$logout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$requestMFAChallenge.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid$requestMFAChallenge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_devKey_is_invalid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$MFAAuthenticate.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$MFAAuthenticate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getApiEndPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getApiEndPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getMFAStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getMFAStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getOrgId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getOrgId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getSessionId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getSessionId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getSessionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getSessionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getUsersId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$getUsersId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$listOrgs.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$listOrgs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$login.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$logout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$requestMFAChallenge.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid$requestMFAChallenge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_password_is_invalid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$MFAAuthenticate.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$MFAAuthenticate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getApiEndPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getApiEndPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getMFAStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getMFAStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getOrgId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getOrgId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getSessionId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getSessionId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getSessionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getSessionInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getUsersId.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$getUsersId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$listOrgs.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$listOrgs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$login.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$logout.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$logout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$requestMFAChallenge.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid$requestMFAChallenge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest$When_username_is_invalid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/SessionTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorBankAccountTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/com/bill/java/api/models/VendorBankAccountTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Behaviors.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Behaviors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Conditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Conditions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Initializers.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Initializers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Methods.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests$Methods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/BDDTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/TestEnv.class" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/build/classes/java/test/resources/TestEnv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -87,6 +16,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="366" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -109,88 +41,29 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1932">
-                  <caret line="4" selection-start-line="4" selection-end-line="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="806">
-                  <caret line="215" column="53" selection-start-line="215" selection-start-column="53" selection-end-line="215" selection-end-column="53" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/exception/BDCException.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="674">
-                  <caret line="67" column="106" selection-start-line="67" selection-start-column="106" selection-end-line="67" selection-end-column="106" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3284">
-                  <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="921">
+              <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -233,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/InvoiceCreateParams.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/MFAStatus.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/HttpResponse.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/exception/BDCExceptionTest.java" />
@@ -284,6 +156,7 @@
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/BDDTests.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java" />
         <option value="$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -305,6 +178,24 @@
             <path>
               <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="4.10.3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="java-client-library" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".gradle" type="462c0819:PsiDirectoryNode" />
+              <item name="4.10.3" type="462c0819:PsiDirectoryNode" />
+              <item name="fileHashes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bdc-api" type="b2602c69:ProjectViewProjectNode" />
@@ -575,8 +466,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in bdc-api-bdc-api_test" />
-        <item itemvalue="JUnit.VendorBankAccountTest$get.should_retrieve_the_specified_bank_account" />
         <item itemvalue="JUnit.VendorBankAccountTest$create.should_create_a_new_bank_account" />
+        <item itemvalue="JUnit.VendorBankAccountTest$get.should_retrieve_the_specified_bank_account" />
         <item itemvalue="Application.script" />
         <item itemvalue="JUnit.VendorBankAccountTest" />
       </list>
@@ -596,15 +487,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VendorBankAccountTest$create_should_create_a_new_bank_account - 2019.08.29 at 09h 59m 33s.xml">
-      <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendorBankAccountTest$create_should_create_a_new_bank_account - 2019.08.29 at 10h 00m 11s.xml">
-      <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VendorBankAccountTest$create_should_create_a_new_bank_account - 2019.08.29 at 10h 58m 13s.xml">
-      <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_bdc-api-bdc-api_test - 2019.08.29 at 11h 01m 29s.xml">
       <configuration name="All in bdc-api-bdc-api_test" configurationId="JUnit" />
     </history-entry>
@@ -624,6 +506,15 @@
       <configuration name="VendorBankAccountTest$get.should_retrieve_the_specified_bank_account" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_bdc-api-bdc-api_test - 2019.08.29 at 11h 14m 33s.xml">
+      <configuration name="All in bdc-api-bdc-api_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VendorBankAccountTest$create_should_create_a_new_bank_account - 2019.08.29 at 11h 15m 31s.xml">
+      <configuration name="VendorBankAccountTest$create.should_create_a_new_bank_account" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_bdc-api-bdc-api_test - 2019.08.29 at 11h 46m 46s.xml">
+      <configuration name="All in bdc-api-bdc-api_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_bdc-api-bdc-api_test - 2019.08.29 at 11h 49m 35s.xml">
       <configuration name="All in bdc-api-bdc-api_test" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -650,12 +541,12 @@
       <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32981133" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.2581132" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.2581132" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32754716" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.18113208" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18113208" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32981133" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32830188" />
@@ -705,6 +596,7 @@
     <SUITE FILE_PATH="coverage/bdc_api$VendorBankAccountTest_create_should_create_a_new_bank_account.ic" NAME="VendorBankAccountTest$create.should_create_a_new_bank_account Coverage Results" MODIFIED="1567097943548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.bill.java.api.models.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/bdc_api$All_in_bdc_api_bdc_api_test.ic" NAME="All in bdc-api-bdc-api_test Coverage Results" MODIFIED="1567104526737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -857,9 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -970,32 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Invoice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1445#1446#0" expanded="true" />
-            <element signature="e#1489#1490#0" expanded="true" />
-            <element signature="e#1529#1530#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1711#1712#0" expanded="true" />
-            <element signature="e#1745#1746#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1879#1880#0" expanded="true" />
-            <element signature="e#1909#1910#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#1993#1994#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/param/BDCParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1049,16 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,30 +1176,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state relative-caret-position="-3284">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/script.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
+        <state relative-caret-position="3225">
           <caret line="215" column="53" selection-start-line="215" selection-start-column="53" selection-end-line="215" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/SessionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3284">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1367,17 +1217,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/resources/TestEnv.java">
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/models/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+        <state relative-caret-position="540">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorBankAccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="67" column="106" selection-start-line="67" selection-start-column="106" selection-end-line="67" selection-end-column="106" />
+        <state relative-caret-position="344">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/test/java/com/bill/java/api/models/VendorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java-client-library/src/main/java/com/bill/java/api/net/ApiResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
     </entry>
