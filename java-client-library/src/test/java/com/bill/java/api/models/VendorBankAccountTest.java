@@ -3,6 +3,7 @@ package com.bill.java.api.models;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.VendorBankAccountCreateRequestParams;
 import com.bill.java.api.param.VendorBankAccountGetRequestParams;
+import com.bill.java.api.param.VendorCreateRequestParams;
 import jdk.nashorn.internal.objects.annotations.Function;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,12 +29,12 @@ class VendorBankAccountTest extends BDDTests {
 
     @BeforeEach
     void setup() throws Exception {
-        mfaLogin();
+        login();
 
-        isActive = genNumAsString(1, 2);
+        isActive = "1";
         vendorId = TestEnv.testVendorId;
         accountNumber = genNumAsString(7);
-        routingNumber = genNumAsString(9);
+        routingNumber = "322271627";
         usersId = TestEnv.userId;
         isSavings = genBool();
         isPersonalAcct = genBool();
@@ -43,10 +44,15 @@ class VendorBankAccountTest extends BDDTests {
     class create {
         @FunctionalTest
         void should_create_a_new_bank_account() throws Exception {
+            Vendor newvendor = Vendor.create(VendorCreateRequestParams.builder()
+                    .with($ -> {
+                        $.name = "NewTestVendor";
+                    }).build());
+
             VendorBankAccountCreateRequestParams params = VendorBankAccountCreateRequestParams.builder()
                     .with($ -> {
                         $.isActive = isActive;
-                        $.vendorId = vendorId;
+                        $.vendorId = newvendor.getId();
                         $.accountNumber = accountNumber;
                         $.routingNumber = routingNumber;
                         $.usersId = usersId;
@@ -57,9 +63,9 @@ class VendorBankAccountTest extends BDDTests {
             VendorBankAccount vendorBankAccount = VendorBankAccount.create(params);
             assertAll(() -> {
                  assertEquals(entity, vendorBankAccount.getEntity());
-                 assertEquals(isActive, vendorBankAccount.getIsActive());
-                 assertEquals(vendorId, vendorBankAccount.getVendorId());
-                 assertEquals(accountNumber, vendorBankAccount.getAccountNumber());
+                 assertEquals("1", vendorBankAccount.getIsActive());
+                 assertEquals(newvendor.getId(), vendorBankAccount.getVendorId());
+                 assertEquals(accountNumber.substring(3), vendorBankAccount.getAccountNumber().substring(3));
                  assertEquals(routingNumber, vendorBankAccount.getRoutingNumber());
                  assertEquals(usersId, vendorBankAccount.getUsersId());
                  assertEquals(isSavings, vendorBankAccount.isSavings());
@@ -81,7 +87,7 @@ class VendorBankAccountTest extends BDDTests {
     @Interface
     class get {
         @FunctionalTest
-        void should_retrieve_the_specified_vendor() throws Exception {
+        void should_retrieve_the_specified_bank_account() throws Exception {
             VendorBankAccountGetRequestParams.Builder builder;
             VendorBankAccountGetRequestParams params;
 
