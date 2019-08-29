@@ -44,18 +44,19 @@ public class Session extends ApiResource {
     /**
      * Logs in and creates a session for further API usage
      *
-     * TODO: Switch to params and allow for mfaId and DeviceId to be passed on
-     *
-     * @param orgId id of the organization to be associated with the session, user must be associated with the organization
+     * @param sessionLoginRequestParams Parameters required to make the request
      * @return a Session object containing the response values from the API
      * @throws BDCException when the response from the API is unsuccessful
      * @throws IOException when an I/O exception occurs on the underlying request
      */
-    public static Session login(String orgId) throws BDCException, IOException {
+    public static Session login(SessionLoginRequestParams sessionLoginRequestParams) throws BDCException, IOException {
         /** Handles passing in the credentials instead of the user */
         AuthenticationParams authParams = AuthenticationParams.builder()
-                .withOrgId(orgId)
-                .build();
+                .with($ -> {
+                    $.orgId = sessionLoginRequestParams.getOrgId();
+                    $.mfaId = sessionLoginRequestParams.getMfaId();
+                    $.deviceId = sessionLoginRequestParams.getDeviceId();
+                }).build();
 
         Session session = create(LOGIN_URL, authParams, Session.class);
 
