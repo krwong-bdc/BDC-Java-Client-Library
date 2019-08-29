@@ -2,10 +2,8 @@ package resources;
 
 import com.bill.java.api.BDC;
 import com.bill.java.api.exception.BDCException;
-import com.bill.java.api.models.MFA;
 import com.bill.java.api.models.MFAChallenge;
 import com.bill.java.api.models.Session;
-import com.bill.java.api.models.SessionInfo;
 import com.bill.java.api.param.MFAAuthenticateRequestParams;
 import com.bill.java.api.param.MFAChallengeRequestParams;
 import com.github.javafaker.Faker;
@@ -253,7 +251,7 @@ public abstract class BDDTests {
 
         MFAChallenge challenge = Session.requestMFAChallenge(MFAChallengeRequestParams.builder()
                 .with($ -> {
-                    $.useBackup = true;
+                    $.useBackup = TestEnv.useBackup;
                 })
                 .build());
         Scanner reader = new Scanner(System.in);  // Reading from System.in
