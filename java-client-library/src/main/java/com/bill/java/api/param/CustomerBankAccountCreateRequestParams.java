@@ -4,10 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for creating a CustomerBankAccount
+ */
 public class CustomerBankAccountCreateRequestParams extends ApiResourceParams {
-    /** Holds the actual api resource variables for creation */
+    /* Holds the actual api resource variables for creation */
     @SerializedName("obj")
-    protected Params params;
+    protected final Params params;
 
     @SerializedName("agreedWithTOS")
     private final Boolean agreedWithTOS;
@@ -17,21 +20,58 @@ public class CustomerBankAccountCreateRequestParams extends ApiResourceParams {
         this.agreedWithTOS = agreedWithTOS;
     }
 
+    /**
+     * Makes a new Builder for CustomerBankAccountCreateRequestParams
+     *
+     * @return a builder for CustomerBankAccountCreateRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a CustomerBankAccountCreateRequestParams instance
+     */
     public static class Builder {
+        /**
+         * Denotes if bank account is active or inactive
+         * <p>
+         * "1" - Active
+         * "2" - Inactive
+         */
         public String isActive;
+
+        /** Id of the customer this bank account if for */
         public String customerId;
+
+        /** Name of individual on the account */
         public String nameOnAccount;
+
+        /** Alternate name of individual on the account */
         public String nickname;
+
+        /** Routing number of the bank account */
         public String routingNumber;
+
+        /** Account number of the bank account */
         public String accountNumber;
+
+        /** Denotes whether the bank account can be edited or deleted
+         * <p>
+         * Edits must be done through the Bill.com portal
+         */
         public Boolean isLockedByOrg;
+
+        /** Denotes whether the bank account is a savings account */
         public Boolean isSavings;
+
+        /** Denotes whether the bank account is a personal account */
         public Boolean isPersonalAcct;
+
+        /** */
         public Boolean isWrittenAuth;
+
+        /** Customer has been presented with the Terms of Service and have submitted their agreement */
         public Boolean agreedWithTOS;
 
         public Builder with(Consumer<Builder> builderFunction) {
@@ -39,6 +79,11 @@ public class CustomerBankAccountCreateRequestParams extends ApiResourceParams {
             return this;
         }
 
+        /**
+         * Builds a CustomerBankAccountCreateRequestParams instance with the set parameters
+         *
+         * @return CustomerBankAccountCreateRequestParams
+         */
         public CustomerBankAccountCreateRequestParams build() {
             return new CustomerBankAccountCreateRequestParams(
                     new Params(

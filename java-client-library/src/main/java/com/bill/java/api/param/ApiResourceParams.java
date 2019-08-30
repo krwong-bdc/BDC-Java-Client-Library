@@ -8,15 +8,14 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 
-/**
+/*
  * Gives params classes ability to encode themselves into properly formatted URLEncoded params.
  * Subject to change as BDC API changes
  *
- * @author      Keith Wong <krwong@hq.bill.com>
  * @since       0.0.1
  */
 public abstract class ApiResourceParams implements BDCParams {
-    /**
+    /*
      * Transforms the instanced ApiResourceParams object into a JSON representation
      *
      * @return String of the JSON representation of the instanced ApiResourceParams object
@@ -25,7 +24,7 @@ public abstract class ApiResourceParams implements BDCParams {
         return new Gson().toJson(this);
     }
 
-    /**
+    /*
      * URL encodes passed in string
      *
      * @param resourceParams data required by the calling method to make a request to a BDC API endpoint
@@ -36,7 +35,7 @@ public abstract class ApiResourceParams implements BDCParams {
         return URLEncoder.encode(resourceParams, StandardCharsets.UTF_8.toString());
     }
 
-    /**
+    /*
      * Transforms the instanced ApiResourceParams object into a string to be appended onto a Http request
      *
      * @return string representation of the request data

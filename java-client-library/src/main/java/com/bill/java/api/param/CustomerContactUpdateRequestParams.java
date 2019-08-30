@@ -5,24 +5,62 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 public class CustomerContactUpdateRequestParams extends ApiResourceParams {
-    /** Holds the actual api resource variables for creation */
+    /* Holds the actual api resource variables for creation */
     @SerializedName("obj")
-    protected Params params;
+    protected final Params params;
 
     private CustomerContactUpdateRequestParams(Params params) { this.params = params; }
 
+    /**
+     * Makes a new Builder for CustomerContactUpdateRequestParams
+     *
+     * @return a builder for CustomerContactUpdateRequestParams
+     */
     public static Builder builder() { return new Builder(); }
 
+    /**
+     * Builds a CustomerContactUpdateRequestParams instance
+     */
     public static class Builder {
+        /** BDC-assigned unique identifier of the Customer Contact */
         public String id;
+
+        /**
+         * Denotes if the contact is active
+         * <p>
+         * "1" - Active
+         * "2" - Inactive
+         */
         public String isActive;
+
+        /** ID of the Customer this contact is for */
         public String customerId;
+
+        /** First name of the contact */
         public String firstName;
+
+        /** Last name of the contact */
         public String lastName;
+
+        /** Email of the contact */
         public String email;
+
+        /** Phone number for the contact */
         public String phone;
+
+        /** Alternate phone number for the contact */
         public String altPhone;
+
+        /** Fax number for the contact */
         public String fax;
+
+        /** The time zone of the contact
+         * <p>
+         * "3" - PST
+         * "4" - MST
+         * "5" - CST
+         * "6" - EST
+         */
         public String timezoneId;
 
         public Builder with(Consumer<Builder> builderFunction) {
@@ -30,6 +68,11 @@ public class CustomerContactUpdateRequestParams extends ApiResourceParams {
             return this;
         }
 
+        /**
+         * Builds a CustomerContactUpdateRequestParams instance with the set parameters
+         *
+         * @return CustomerContactUpdateRequestParams
+         */
         public CustomerContactUpdateRequestParams build() {
             return new CustomerContactUpdateRequestParams(
                     new Params(

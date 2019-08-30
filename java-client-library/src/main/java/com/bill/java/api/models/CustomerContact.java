@@ -22,63 +22,91 @@ public class CustomerContact extends ApiResource {
     public static final String DELETE_URL = "/Crud/Delete/CustomerContact.json";
     public static final String UNDELETE_URL = "/Crud/Undelete/CustomerContact.json";
 
+    /** CustomerContact */
     @Getter
     @Setter
     @SerializedName("entity")
     private String entity;
 
+    /** System generated Unique Identifier */
     @Getter
     @SerializedName("id")
     private String id;
 
+    /**
+     * Denotes if the contact is active
+     * <p>
+     * "1" - Active
+     * "2" - Inactive
+     */
     @Getter
     @Setter
     @SerializedName("isActive")
     private String isActive;
 
+    /**
+     * Timestamp when this record was created in Bill.com
+     */
     @Getter
     @SerializedName("createdTime")
     private String createdTime;
 
+    /**
+     * Timestamp when this record was last updated in Bill.com
+     */
     @Getter
     @SerializedName("updatedTime")
     private String updatedTime;
 
+    /** ID of the Customer this contact is for */
     @Getter
     @Setter
     @SerializedName("customerId")
     private String customerId;
 
+    /** First name of the contact */
     @Getter
     @Setter
     @SerializedName("firstName")
     private String firstName;
 
+    /** Last name of the contact */
     @Getter
     @Setter
     @SerializedName("lastName")
     private String lastName;
 
+    /** Email of the contact */
     @Getter
     @Setter
     @SerializedName("email")
     private String email;
 
+    /** Phone number for the contact */
     @Getter
     @Setter
     @SerializedName("phone")
     private String phone;
 
+    /** Alternate phone number for the contact */
     @Getter
     @Setter
     @SerializedName("altPhone")
     private String altPhone;
 
+    /** Fax number for the contact */
     @Getter
     @Setter
     @SerializedName("fax")
     private String fax;
 
+    /** The time zone of the contact
+     * <p>
+     * "3" - PST
+     * "4" - MST
+     * "5" - CST
+     * "6" - EST
+     */
     @Getter
     @Setter
     @SerializedName("timezoneId")

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters needed to fetch a Customer Bank Account through the BDC API
+ * Parameters for retrieving a Customer Bank Account through the BDC API
  */
 public class CustomerBankAccountGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
@@ -15,11 +15,20 @@ public class CustomerBankAccountGetRequestParams extends ApiResourceParams {
         this.id = id;
     }
 
+    /**
+     * Makes a new Builder for CustomerBankAccountGetRequestParams
+     *
+     * @return a builder for CustomerBankAccountGetRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a CustomerBankAccountGetRequestParams instance
+     */
     public static class Builder {
+        /** BDC-assigned unique identifier for the bank account */
         public String id;
 
         public Builder with(Consumer<Builder> builderFunction) {
@@ -27,6 +36,11 @@ public class CustomerBankAccountGetRequestParams extends ApiResourceParams {
             return this;
         }
 
+        /**
+         * Builds a CustomerBankAccountGetRequestParams instance with the set parameters
+         *
+         * @return CustomerBankAccountGetRequestParams
+         */
         public CustomerBankAccountGetRequestParams build() {
             return new CustomerBankAccountGetRequestParams(id);
         }

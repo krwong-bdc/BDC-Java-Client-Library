@@ -4,45 +4,136 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for creating a Customer through the BDC API
+ */
 public class CustomerCreateRequestParams extends ApiResourceParams {
+    /* Holds the actual api resource variables for creation */
     @SerializedName("obj")
-    protected Params params;
+    protected final Params params;
 
     private CustomerCreateRequestParams(Params params) { this.params = params; }
 
+    /**
+     * Makes a new Builder for CustomerCreateRequestParams
+     *
+     * @return a builder for CustomerCreateRequestParams
+     */
     public static Builder builder() { return new Builder(); }
 
+    /**
+     * Builds a CustomerCreateRequestParams object
+     */
     public static class Builder {
+        /**
+         * Denotes if a Customer is active or inactive
+         * <p>
+         * "1" - Active
+         * "2" - Inactive
+         */
         public String isActive;
+
+        /** Name of Customer
+         * <p>
+         * Displayed in lists.
+         * You can filter by this field on the List call
+         */
         public String name;
+
+        /** User-friendly identifer defined by user and/or third-party system */
         public String shortName;
+
+        /** ID of parent object (denotes this object as child object). You can filter by this field on the List call */
         public String parentCustomerId;
+
+        /** Full name of the customer's company */
         public String companyName;
+
+        /** Primary contact's first name */
         public String contactFirstName;
+
+        /** Primary contact's last name */
         public String contactLastName;
+
+        /**
+         * Optional identification of the customer's account
+         * <p>Visible in the invoice and on the customer portal home page
+         */
         public String accNumber;
+
+        /** Billing address line */
         public String billAddress1;
+
+        /** Additional billing address line */
         public String billAddress2;
+
+        /** Additional billing address line */
         public String billAddress3;
+
+        /** Additional billing address line */
         public String billAddress4;
+
+        /** Billing address city */
         public String billAddressCity;
+
+        /** Billing address state */
         public String billAddressState;
+
+        /** Billing address country */
         public String billAddressCountry;
+
+        /** Billing address zip */
         public String billAddressZip;
+
+        /** Shipping address */
         public String shipAddress1;
+
+        /** Additional shipping address line */
         public String shipAddress2;
+
+        /** Additional shipping address line */
         public String shipAddress3;
+
+        /** Additional shipping address line */
         public String shipAddress4;
+
+        /** Shipping address city */
         public String shipAddressCity;
+
+        /** Shipping address state */
         public String shipAddressState;
+
+        /** Shipping address Country */
         public String shipAddressCountry;
+
+        /** Shipping address zip */
         public String shipAddressZip;
+
+        /** Customer's email */
         public String email;
+
+        /** Main phone number for the customer */
         public String phone;
+
+        /** Alternate phone number for the customer */
         public String altPhone;
+
+        /** Fax number for the customer */
         public String fax;
+
+        /** User-assigned description of the customer */
         public String description;
+
+        /**  */
         public String printAs;
+
+        /**
+         * Type of Customer account
+         * <p>
+         * "0" - none
+         * "1" - business
+         * "2" - person
+         */
         public String accountType;
 
         public Builder with(Consumer<Builder> builderFunction) {
@@ -50,6 +141,11 @@ public class CustomerCreateRequestParams extends ApiResourceParams {
             return this;
         }
 
+        /**
+         * Builds a CustomerCreateRequestParams instance with the set parameters
+         *
+         * @return CustomerCreateRequestParams
+         */
         public CustomerCreateRequestParams build() {
             return new CustomerCreateRequestParams(
                     new Params(
@@ -88,6 +184,7 @@ public class CustomerCreateRequestParams extends ApiResourceParams {
         }
     }
 
+    /* Holds request data. Will be nested in <tt>obj</tt> */
     private static class Params {
         @SerializedName("entity")
         private String entity = "Customer";
