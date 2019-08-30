@@ -89,7 +89,6 @@ public class VendorBankAccount extends ApiResource {
         return entity;
     }
 
-
     public String getId() {
         return id;
     }
@@ -105,8 +104,7 @@ public class VendorBankAccount extends ApiResource {
     public String getUpdatedTime() {
         return updatedTime;
     }
-
-
+    
     public String getVendorId() {
         return vendorId;
     }
