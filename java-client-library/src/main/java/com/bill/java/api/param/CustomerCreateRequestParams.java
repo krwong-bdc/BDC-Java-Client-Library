@@ -50,7 +50,7 @@ public class CustomerCreateRequestParams extends ApiResourceParams {
             return this;
         }
 
-        public CustomerCreateRequestParams builder() {
+        public CustomerCreateRequestParams build() {
             return new CustomerCreateRequestParams(
                     new Params(
                             isActive,
