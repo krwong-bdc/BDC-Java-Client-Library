@@ -13,7 +13,7 @@ public class MFAStatusRequestParams extends ApiResourceParams {
     @SerializedName("deviceId")
     private String deviceId;
 
-    public MFAStatusRequestParams(String mfaId, String deviceId) {
+    private MFAStatusRequestParams(String mfaId, String deviceId) {
         this.mfaId = mfaId;
         this.deviceId = deviceId;
     }

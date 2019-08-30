@@ -4,6 +4,7 @@ import com.bill.java.api.BDC;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.MFAChallengeRequestParams;
 import com.bill.java.api.param.MFAStatusRequestParams;
+import com.bill.java.api.param.SessionLoginRequestParams;
 import org.junit.jupiter.api.DisplayName;
 import resources.BDDTests;
 import org.junit.jupiter.api.BeforeEach;
@@ -41,7 +42,11 @@ class SessionTest extends BDDTests {
                 @FunctionalTest
                 void should_log_in_the_user() throws IOException {
                     try {
-                        Session session = Session.login(TestEnv.orgId);
+                        SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                                .with($ -> {
+                                    $.orgId = TestEnv.orgId;
+                                }).build();
+                        Session session = Session.login(params);
                         assertEquals(BDC.sessionId, session.getSessionId());
                         assertEquals(BDC.userId, session.getUserId());
                         assertEquals(session.getOrgId(), TestEnv.orgId);
@@ -56,7 +61,13 @@ class SessionTest extends BDDTests {
             class and_org_id_is_invalid {
                 @FunctionalTest
                 void should_throw_a_BDCException() {
-                    assertThrows(BDCException.class, () -> Session.login("nope"));
+                    assertThrows(BDCException.class, () ->{
+                        SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                                .with($ -> {
+                                    $.orgId = "nope";
+                                }).build();
+                        Session.login(params);
+                    });
                 }
             }
 
@@ -87,7 +98,11 @@ class SessionTest extends BDDTests {
         class logout {
             @FunctionalTest
             void should_clear_credentials() throws Exception {
-                Session.login(TestEnv.orgId);
+                SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                        .with($ -> {
+                            $.orgId = TestEnv.orgId;
+                        }).build();
+                Session.login(params);
                 assertTrue(BDC.sessionId.length() > 1);
                 Session.logout();
                 assertNull(BDC.sessionId);
@@ -114,7 +129,11 @@ class SessionTest extends BDDTests {
 
             @FunctionalTest
             void should_return_users_session_info() throws Exception {
-                Session session = Session.login(TestEnv.orgId);
+                SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                        .with($ -> {
+                            $.orgId = TestEnv.orgId;
+                        }).build();
+                Session session = Session.login(params);
                 String orgId = session.getOrgId();
                 String userId = session.getUserId();
                 SessionInfo info = Session.getSessionInfo();
@@ -132,7 +151,12 @@ class SessionTest extends BDDTests {
 
             @FunctionalTest
             void should_return_the_challenge_id() throws Exception {
-                Session session = Session.login(TestEnv.orgId);
+                SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                        .with($ -> {
+                            $.orgId = TestEnv.orgId;
+                        }).build();
+                Session.login(params);
+                Session session = Session.login(params);
                 assertTrue(Session.requestMFAChallenge(MFAChallengeRequestParams.builder()
                         .with($ -> {
                             $.useBackup = true;
@@ -153,7 +177,11 @@ class SessionTest extends BDDTests {
 
             @FunctionalTest
             void should_return_an_MFA_object() throws Exception {
-                Session.login(TestEnv.orgId);
+                SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                        .with($ -> {
+                            $.orgId = TestEnv.orgId;
+                        }).build();
+                Session.login(params);
                 MFAStatus obj = Session.getMFAStatus(MFAStatusRequestParams.builder()
                         .with($ -> {
                             $.deviceId = TestEnv.deviceId;
@@ -195,7 +223,13 @@ class SessionTest extends BDDTests {
         class login {
             @FunctionalTest
             void should_throw_a_BDCException() {
-                assertThrows(BDCException.class, () -> Session.login(TestEnv.orgId));
+                assertThrows(BDCException.class, () -> {
+                    SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                            .with($ -> {
+                                $.orgId = TestEnv.orgId;
+                            }).build();
+                    Session.login(params);
+                });
             }
         }
         @Interface
@@ -259,7 +293,13 @@ class SessionTest extends BDDTests {
         class login {
             @FunctionalTest
             void should_throw_a_BDCException() {
-                assertThrows(BDCException.class, () -> Session.login(TestEnv.orgId));
+                assertThrows(BDCException.class, () -> {
+                    SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                            .with($ -> {
+                                $.orgId = TestEnv.orgId;
+                            }).build();
+                    Session.login(params);
+                });
             }
         }
         @Interface
@@ -323,7 +363,13 @@ class SessionTest extends BDDTests {
         class login {
             @FunctionalTest
             void should_throw_a_BDCException() {
-                assertThrows(BDCException.class, () -> Session.login(TestEnv.orgId));
+                assertThrows(BDCException.class, () -> {
+                    SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                            .with($ -> {
+                                $.orgId = TestEnv.orgId;
+                            }).build();
+                    Session.login(params);
+                });
             }
         }
         @Interface

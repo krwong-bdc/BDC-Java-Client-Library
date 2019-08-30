@@ -13,7 +13,6 @@ import java.util.List;
 /**
  * The Session class represents a user's session credentials and includes all methods for Authentication
  *
- * @author      Keith Wong <krwong@hq.bill.com>
  * @since       0.0.1
  */
 public class Session extends ApiResource {
@@ -45,16 +44,19 @@ public class Session extends ApiResource {
     /**
      * Logs in and creates a session for further API usage
      *
-     * @param orgId id of the organization to be associated with the session, user must be associated with the organization
+     * @param sessionLoginRequestParams Parameters required to make the request
      * @return a Session object containing the response values from the API
      * @throws BDCException when the response from the API is unsuccessful
      * @throws IOException when an I/O exception occurs on the underlying request
      */
-    public static Session login(String orgId) throws BDCException, IOException {
+    public static Session login(SessionLoginRequestParams sessionLoginRequestParams) throws BDCException, IOException {
         /** Handles passing in the credentials instead of the user */
         AuthenticationParams authParams = AuthenticationParams.builder()
-                .withOrgId(orgId)
-                .build();
+                .with($ -> {
+                    $.orgId = sessionLoginRequestParams.getOrgId();
+                    $.mfaId = sessionLoginRequestParams.getMfaId();
+                    $.deviceId = sessionLoginRequestParams.getDeviceId();
+                }).build();
 
         Session session = create(LOGIN_URL, authParams, Session.class);
 

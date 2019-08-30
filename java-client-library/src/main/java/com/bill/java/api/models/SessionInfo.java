@@ -2,6 +2,9 @@ package com.bill.java.api.models;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Represents the response from {@link Session#getSessionInfo() getSessionInfo()}
+ */
 public class SessionInfo {
     /** TODO: change all orgId getters to match across all endpoints */
     /** Id of the organization associated with the session */

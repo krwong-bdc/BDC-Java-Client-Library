@@ -1,7 +1,6 @@
 package com.bill.java.api.exception;
 
 /**
- * @author      Keith Wong <krwong@hq.bill.com>
  * @since       0.0.1          (the version of the package this class was first added to)
  *
  * TODO: Extend BDCException to encapsulate different BDC Error Code categories (e.g. AuthorizationException, SystemException).
