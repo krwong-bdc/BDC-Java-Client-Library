@@ -8,14 +8,14 @@ import java.util.function.Consumer;
  * Parameters for recording a customer's authorization to charge
  */
 public class CustomerSetAuthorizationRequestParams extends ApiResourceParams {
-    @SerializedName("id")
-    private final String id;
+    @SerializedName("customerId")
+    private final String customerId;
 
     @SerializedName("hasAuthorizedToCharge")
     private final Boolean hasAuthorized;
 
-    private CustomerSetAuthorizationRequestParams(String id, Boolean hasAuthorized) {
-        this.id = id;
+    private CustomerSetAuthorizationRequestParams(String customerId, Boolean hasAuthorized) {
+        this.customerId = customerId;
         this.hasAuthorized = hasAuthorized;
     }
 
@@ -37,7 +37,7 @@ public class CustomerSetAuthorizationRequestParams extends ApiResourceParams {
          * <p>
          * It is used to retrieve and refer the object in subsequent API calls. You can filter by this field on the List call
          */
-        public String id;
+        public String customerId;
 
         /** Customer has authorized user to charge their bank account. Must be set using {@link com.bill.java.api.models.Customer#setAuthorization(CustomerSetAuthorizationRequestParams) setAuthorization()} */
         public Boolean hasAuthorized;
@@ -52,6 +52,6 @@ public class CustomerSetAuthorizationRequestParams extends ApiResourceParams {
          *
          * @return CustomerSetAuthorizationRequestParams
          */
-        public CustomerSetAuthorizationRequestParams build() { return new CustomerSetAuthorizationRequestParams(id, hasAuthorized); }
+        public CustomerSetAuthorizationRequestParams build() { return new CustomerSetAuthorizationRequestParams(customerId, hasAuthorized); }
     }
 }
