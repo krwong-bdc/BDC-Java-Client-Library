@@ -7,6 +7,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import static java.util.stream.Collectors.joining;
 
@@ -21,11 +22,23 @@ public class AuthenticationParams implements BDCParams {
      * Developer key must be included on every request. SessionId will be passed on cookies
      * @see com.bill.java.api.net.BDCHttpClient #createAuthCookie
      */
-    public AuthenticationParams(String userName, String password, String orgId, String devKey) {
-        setParam("userName", userName);
-        setParam("password", password);
-        setParam("orgId", orgId);
-        setParam("devKey", devKey);
+    private AuthenticationParams(String orgId, String mfaId, String deviceId) {
+        setParam("userName", BDC.userName);
+        setParam("password", BDC.password);
+        setParam("devKey", BDC.devKey);
+
+        /* TODO: If included in params the nulls get printed to console because of the way parameters are encoded onto the URL. Figure out how to mitigate */
+        if(orgId != null){
+            setParam("orgId", orgId);
+        }
+
+        if(mfaId != null) {
+            setParam("mfaId", mfaId);
+        }
+
+        if(deviceId != null) {
+            setParam("deviceId", deviceId);
+        }
     }
 
     /*
@@ -95,47 +108,30 @@ public class AuthenticationParams implements BDCParams {
         }
     }
 
-    public static AuthenticationParamsBuilder builder() {
-        return new AuthenticationParamsBuilder();
+    /**
+     * Returns a builder for the AuthenticationParams class
+     *
+     * @return A builder for the AuthenticationParams class
+     */
+    public static Builder builder() {
+        return new Builder();
     }
 
-    public static class AuthenticationParamsBuilder {
-        private String userName = "";
-        private String password = "";
-        private String orgId = "";
-        private String devKey = "";
+    /**
+     * Builds an instance of the AuthenticationParams class
+     */
+    public static class Builder {
+        public String orgId;
+        public String mfaId;
+        public String deviceId;
+
+        public Builder with(Consumer<Builder> builderFunction) {
+            builderFunction.accept(this);
+            return this;
+        }
 
         public AuthenticationParams build() {
-            if(devKey == "") {
-                devKey = BDC.devKey;
-            }
-            if(userName == "") {
-                userName = BDC.userName;
-            }
-            if(password == "") {
-                password = BDC.password;
-            }
-            return new AuthenticationParams(userName, password, orgId, devKey);
-        }
-
-        public AuthenticationParamsBuilder withUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-
-        public AuthenticationParamsBuilder withPassword(String password) {
-            this.password = password;
-            return this;
-        }
-
-        public AuthenticationParamsBuilder withOrgId(String orgId) {
-            this.orgId = orgId;
-            return this;
-        }
-
-        public AuthenticationParamsBuilder withDevKey(String devKey) {
-            this.devKey = devKey;
-            return this;
+            return new AuthenticationParams(orgId, mfaId, deviceId);
         }
     }
 }

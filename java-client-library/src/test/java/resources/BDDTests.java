@@ -1,16 +1,25 @@
 package resources;
 
+import com.bill.java.api.BDC;
+import com.bill.java.api.exception.BDCException;
+import com.bill.java.api.models.Session;
+import com.bill.java.api.param.SessionLoginRequestParams;
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.*;
 
-import java.lang.annotation.ElementType;
+import java.io.IOException;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.lang.reflect.Method;
+import java.util.Random;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 public abstract class BDDTests {
+    Faker faker = new Faker();
+    Random rand = new Random();
+
 
     /** This Tag denotes a functional test and tester should be wary of dependencies within the test subject*/
     @Target(METHOD)
@@ -147,5 +156,93 @@ public abstract class BDDTests {
             String name = testMethod.getName();
             return name.replace('_', ' ') + '.';
         }
+    }
+
+    public String genNumAsString(int start, int end) {
+        return String.valueOf(rand.nextInt(end) + start);
+    }
+
+    // Length can't be longer than 19
+    public String genNumAsString(int len) {
+        return String.valueOf(faker.number().randomNumber(len, true));
+    }
+
+    public Boolean genBool() {
+        return rand.nextInt(1) == 1;
+    }
+
+    public String genFName() {
+        return faker.name().firstName();
+    }
+
+    public String genLName() {
+        return faker.name().lastName();
+    }
+
+    public String genFullName() {
+        return genFName() + " " + genLName();
+    }
+
+    public String genCompanyName() {
+        return faker.company().name();
+    }
+
+    public String genAddress1() {
+        return faker.address().streetAddress();
+    }
+
+    public String genAddress2() {
+        return faker.address().secondaryAddress();
+    }
+
+    public String genAddress4() {
+        return faker.address().streetAddressNumber();
+    }
+
+    public String genAddress3() {
+        return faker.address().buildingNumber();
+    }
+
+    public String genCity() {
+        return faker.address().city();
+    }
+
+    public String genState() {
+        return faker.address().stateAbbr();
+    }
+
+    public String genZip() {
+        return faker.address().zipCode();
+    }
+
+    public String genCountry() {
+        return faker.address().countryCode();
+    }
+
+    public String genEmail() {
+        return faker.internet().emailAddress();
+    }
+
+    public String genPhone() {
+        return faker.phoneNumber().phoneNumber();
+    }
+
+    public String genDescription() {
+        return faker.lorem().paragraph(2);
+    }
+
+    public void login() throws BDCException, IOException {
+        BDC.devKey = TestEnv.devKey;
+        BDC.userName = TestEnv.userName;
+        BDC.password = TestEnv.password;
+        BDC.setApiBase(BDC.Env.SANDBOX);
+
+        SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                .with($ -> {
+                    $.orgId = TestEnv.orgId;
+                    $.mfaId = TestEnv.mfaId;
+                    $.deviceId = TestEnv.deviceId;
+                }).build();
+        Session.login(params);
     }
 }

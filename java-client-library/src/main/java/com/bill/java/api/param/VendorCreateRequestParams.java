@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for creating a Vendor through the BDC API
+ */
 public class VendorCreateRequestParams extends ApiResourceParams {
     /** Holds the actual api resource variables for creation */
     @SerializedName("obj")
@@ -13,10 +16,18 @@ public class VendorCreateRequestParams extends ApiResourceParams {
         this.params = params;
     }
 
+    /**
+     * Makes a new Builder for VendorCreateRequestParams
+     *
+     * @return a builder for VendorCreateRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a VendorCreateRequestParams object
+     */
     public static class Builder {
         public String isActive;
         public String name;
@@ -81,6 +92,7 @@ public class VendorCreateRequestParams extends ApiResourceParams {
         }
     }
 
+    /* Holds request data. Will be nested in <tt>obj</tt> */
     private static class Params {
         @SerializedName("entity")
         private final String entity = "Vendor";
@@ -160,7 +172,7 @@ public class VendorCreateRequestParams extends ApiResourceParams {
         @SerializedName("accountType")
         private final String accountType;
 
-        public Params(String isActive,
+        Params(String isActive,
                       String name,
                       String shortName,
                       String nameOnCheck,

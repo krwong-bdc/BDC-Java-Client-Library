@@ -2,7 +2,7 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.VendorBankAcccountGetRequestParams;
+import com.bill.java.api.param.VendorBankAccountGetRequestParams;
 import com.bill.java.api.param.VendorBankAccountCreateRequestParams;
 import com.google.gson.annotations.SerializedName;
 
@@ -77,7 +77,7 @@ public class VendorBankAccount extends ApiResource {
      * @throws BDCException when the response from the API is unsuccessful
      * @throws IOException when an I/O exception occurs on the underlying request
      */
-    public static VendorBankAccount get(VendorBankAcccountGetRequestParams vendorBankAcccountGetRequestParams) throws BDCException, IOException {
+    public static VendorBankAccount get(VendorBankAccountGetRequestParams vendorBankAcccountGetRequestParams) throws BDCException, IOException {
         if(vendorBankAcccountGetRequestParams == null) {
             throw new NullPointerException("VendorCreateRequestParams required");
         }
@@ -88,7 +88,6 @@ public class VendorBankAccount extends ApiResource {
     public String getEntity() {
         return entity;
     }
-
 
     public String getId() {
         return id;
@@ -105,8 +104,7 @@ public class VendorBankAccount extends ApiResource {
     public String getUpdatedTime() {
         return updatedTime;
     }
-
-
+    
     public String getVendorId() {
         return vendorId;
     }
@@ -127,11 +125,11 @@ public class VendorBankAccount extends ApiResource {
         return status;
     }
 
-    public Boolean getSavings() {
+    public Boolean isSavings() {
         return isSavings;
     }
 
-    public Boolean getPersonalAcct() {
+    public Boolean isPersonalAcct() {
         return isPersonalAcct;
     }
 }

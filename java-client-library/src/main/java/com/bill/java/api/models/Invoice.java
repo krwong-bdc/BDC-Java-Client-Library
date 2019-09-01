@@ -5,11 +5,8 @@ import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.InvoiceCreateParams;
 import com.google.gson.annotations.SerializedName;
 
-
+/* Ignore class for now. Written just as a reference */
 public class Invoice extends ApiResource {
-// TODO: Serialize variable names to match what they are in the API (also may protect user when they obfuscate code)
-// Do member variables need to be public in order for GSON to deserialize?
-//    Stripe lets everything be package-private
     public static final String CREATE_URL = "/CRUD/create";
 
     @SerializedName("entity")

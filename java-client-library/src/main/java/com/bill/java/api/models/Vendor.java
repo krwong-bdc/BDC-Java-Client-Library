@@ -27,6 +27,9 @@ public class Vendor extends ApiResource {
     @SerializedName("id")
     private String id;
 
+    /**
+     * Will be '1' for active, '2' for not active
+     */
     @SerializedName("isActive")
     private String isActive;
 
@@ -84,6 +87,15 @@ public class Vendor extends ApiResource {
     @SerializedName("phone")
     private String phone;
 
+    /**
+     * <p>Payment method for Bill.com payments. You can filter by this field on the List call.
+     * 0. check
+     * 1. ach
+     * 2. rpps
+     * 5. intlEPmt
+     * 6. offline
+     * </p>
+     */
     @SerializedName("payBy")
     private String payBy;
 
@@ -130,7 +142,7 @@ public class Vendor extends ApiResource {
     }
 
     /**
-     * Retrives a vendor from the BDC
+     * Retrieves a vendor from the BDC
      *
      * @param vendorGetRequestParams data for Vendor read request
      * @return the Vendor specified in the request
@@ -139,7 +151,7 @@ public class Vendor extends ApiResource {
      */
     public static Vendor get(VendorGetRequestParams vendorGetRequestParams) throws BDCException, IOException {
         if(vendorGetRequestParams == null) {
-            throw new NullPointerException("VendorCreateRequestParams required");
+            throw new NullPointerException("VendorGetRequestParams required");
         }
         return create(READ_URL, vendorGetRequestParams, Vendor.class);
     }
@@ -239,7 +251,7 @@ public class Vendor extends ApiResource {
         this.taxId = taxId;
     }
 
-    public Boolean getTrack1099() {
+    public Boolean isTrack1099() {
         return track1099;
     }
 
@@ -339,10 +351,6 @@ public class Vendor extends ApiResource {
         return payBy;
     }
 
-    public void setPayBy(String payBy) {
-        this.payBy = payBy;
-    }
-
     public String getPaymentEmail() {
         return paymentEmail;
     }
@@ -393,10 +401,6 @@ public class Vendor extends ApiResource {
 
     public String getMergedIntoId() {
         return mergedIntoId;
-    }
-
-    public void setMergedIntoId(String mergedIntoId) {
-        this.mergedIntoId = mergedIntoId;
     }
 
     public String getAccountType() {

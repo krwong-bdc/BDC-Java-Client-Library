@@ -5,27 +5,27 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters for retrieving a Vendor through the BDC API
+ * Parameters for retrieving a Vendor Bank Account through the BDC API
  */
-public class VendorGetRequestParams extends ApiResourceParams {
+public class VendorBankAccountGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
     private final String id;
 
-    private VendorGetRequestParams(String id) {
+    private VendorBankAccountGetRequestParams(String id) {
         this.id = id;
     }
 
     /**
-     * Makes a new Builder for VendorGetRequestParams
+     * Makes a new Builder for VendorBankAccountGetRequestParams
      *
-     * @return a builder for VendorGetRequestParams
+     * @return a builder for VendorBankAccountGetRequestParams
      */
     public static Builder builder() {
         return new Builder();
     }
 
     /**
-     * Builds a new VendorGetRequestParams object
+     * Builds a new VendorBankAccountGetRequestParams object
      */
     public static class Builder {
         public String id;
@@ -35,8 +35,8 @@ public class VendorGetRequestParams extends ApiResourceParams {
             return this;
         }
 
-        public VendorGetRequestParams build() {
-            return new VendorGetRequestParams(id);
+        public VendorBankAccountGetRequestParams build() {
+            return new VendorBankAccountGetRequestParams(id);
         }
     }
 }

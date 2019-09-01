@@ -4,19 +4,30 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for creating a Vendor Bank Account through the BDC API
+ */
 public class VendorBankAccountCreateRequestParams extends ApiResourceParams {
     /** Holds the actual api resource variables for creation */
     @SerializedName("obj")
-    private Params params;
+    protected Params params;
 
     private VendorBankAccountCreateRequestParams(Params params) {
         this.params = params;
     }
 
+    /**
+     * Makes a new Builder for VendorBankAccountCreateRequestParams
+     *
+     * @return a builder for VendorBankAccountCreateRequestParams
+     */
     public static Builder builder() {
         return new Builder();
     }
 
+    /**
+     * Builds a new VendorBankAccountCreateRequestParams object
+     */
     public static class Builder {
         public String id;
         public String isActive;
@@ -42,6 +53,7 @@ public class VendorBankAccountCreateRequestParams extends ApiResourceParams {
         }
     }
 
+    /* Holds request data. Will be nested in <tt>obj</tt> */
     private static class Params {
         @SerializedName("entity")
         private String entity = "VendorBankAccount";
@@ -79,7 +91,7 @@ public class VendorBankAccountCreateRequestParams extends ApiResourceParams {
         @SerializedName("isPersonalAcct")
         private Boolean isPersonalAcct;
 
-        public Params(String id, String isActive, String createdTime, String updatedTime, String vendorId, String accountNumber, String routingNumber, String usersId, String status, Boolean isSavings, Boolean isPersonalAcct) {
+        Params(String id, String isActive, String createdTime, String updatedTime, String vendorId, String accountNumber, String routingNumber, String usersId, String status, Boolean isSavings, Boolean isPersonalAcct) {
             this.id = id;
             this.isActive = isActive;
             this.createdTime = createdTime;
