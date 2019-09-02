@@ -163,13 +163,7 @@ class CustomerTest extends BDDTests {
     class update {
         @FunctionalTest
         void should_update_customer_with_given_params() throws Exception {
-            CustomerGetRequestParams params = CustomerGetRequestParams.builder()
-                    .with($ -> {
-                        $.id = TestEnv.testCustomerId;
-                    }).build();
-            Customer customer = Customer.get(params);
-
-            customer = Customer.update(CustomerUpdateRequestParams.builder()
+            Customer customer = Customer.update(CustomerUpdateRequestParams.builder()
                     .with($ -> {
                         $.isActive = isActive;
                         $.id = TestEnv.testCustomerId;
