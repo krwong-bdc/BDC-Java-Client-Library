@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters for retrieving a Customer through the BDC API
+ * Parameters for retrieving a Customer through the BDC API.
  */
 public class CustomerGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
@@ -16,7 +16,7 @@ public class CustomerGetRequestParams extends ApiResourceParams {
     }
 
     /**
-     * Makes a new Builder for CustomerGetRequestParams
+     * Makes a new Builder for CustomerGetRequestParams.
      *
      * @return a builder for CustomerGetRequestParams
      */
@@ -25,7 +25,7 @@ public class CustomerGetRequestParams extends ApiResourceParams {
     }
 
     /**
-     * Builds an CustomerGetRequestParams object
+     * Builds an CustomerGetRequestParams object.
      */
     public static class Builder {
         /**
@@ -41,7 +41,7 @@ public class CustomerGetRequestParams extends ApiResourceParams {
         }
 
         /**
-         * Builds a CustomerGetRequestParams instance with the set parameters
+         * Builds a CustomerGetRequestParams instance with the set parameters.
          *
          * @return CustomerGetRequestParams
          */

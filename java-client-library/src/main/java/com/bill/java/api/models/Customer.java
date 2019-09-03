@@ -300,7 +300,7 @@ public class Customer extends ApiResource {
     }
 
     /**
-     * Retrieves a customer from the BDC
+     * Retrieves a customer from the BDC database
      *
      * @param customerGetRequestParams data for Customer read request
      * @return the Customer specified in the request
