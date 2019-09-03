@@ -4,6 +4,7 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.ItemCreateRequestParams;
 import com.bill.java.api.param.ItemGetRequestParams;
+import com.bill.java.api.param.ItemUpdateRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.Setter;
@@ -186,7 +187,7 @@ public class Item extends ApiResource {
     private String shortName;
 
     /**
-     * This id contains the id of the parent that this object got merged into
+     * This id contains the id of the parent that this object got merged into.
      */
     @Getter
     @Setter
@@ -194,7 +195,7 @@ public class Item extends ApiResource {
     private String mergedIntoId;
 
     /**
-     * Creates an item in BDC
+     * Creates an item in BDC.
      *
      * @param  itemCreateRequestParams data for Vendor creation
      * @return                         the Customer that has been created through the BDC API
@@ -209,7 +210,7 @@ public class Item extends ApiResource {
     }
 
     /**
-     * Retrieves an item from the BDC database
+     * Retrieves an item from the BDC database.
      *
      * @param  itemGetRequestParams data for Customer read request
      * @return                      the Customer specified in the request
@@ -221,5 +222,35 @@ public class Item extends ApiResource {
             throw new NullPointerException("CustomerGetRequestParams required");
         }
         return create(READ_URL, itemGetRequestParams, Item.class);
+    }
+
+    /**
+     * Updates a item in the BDC database.
+     *
+     * @param  itemUpdateRequestparams data for Item update request
+     * @return                         the Item specified in the request
+     * @throws BDCException            when the response from the API is unsuccessful
+     * @throws IOException             when an I/O exception occurs on the underlying request
+     */
+    public static Item update(ItemUpdateRequestParams itemUpdateRequestparams) throws BDCException, IOException {
+        if(itemUpdateRequestparams == null) {
+            throw new NullPointerException("ItemUpdateRequestParams required");
+        }
+        return create(UPDATE_URL, itemUpdateRequestparams, Item.class);
+    }
+
+    /**
+     * Updates a item in the BDC database.
+     *
+     * @param  item         Item object to be updated to the BDC database
+     * @return the          Item specified in the request
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException  when an I/O exception occurs on the underlying request
+     */
+    public static Item update(Item item) throws BDCException, IOException {
+        if(item == null) {
+            throw new NullPointerException("Item required");
+        }
+        return create(UPDATE_URL, item, Item.class);
     }
 }
