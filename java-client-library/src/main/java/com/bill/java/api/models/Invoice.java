@@ -3,6 +3,8 @@ package com.bill.java.api.models;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.InvoiceCreateRequestParams;
+import com.bill.java.api.param.InvoiceGetRequestParams;
+import com.bill.java.api.param.InvoiceUpdateRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -152,6 +154,9 @@ public class Invoice extends ApiResource {
     @SerializedName("isToBeEmailed")
     private Boolean isToBeEmailed;
 
+    /**
+     *
+     */
     @SerializedName("lastSentTime")
     private String lastSentTime;
 
@@ -248,18 +253,63 @@ public class Invoice extends ApiResource {
     private List<InvoiceLineItem> invoiceLineItems;
 
     /**
-     * Creates a invoice in BDC
+     * Creates an invoice in BDC
      *
      * @param invoiceCreateRequestParams data for Invoice creation
-     * @return the Invoice that has been created through the BDC API
-     * @throws BDCException when the response from the API is unsuccessful
-     * @throws IOException when an I/O exception occurs on the underlying request
+     * @return                           the Invoice that has been created through the BDC API
+     * @throws BDCException              when the response from the API is unsuccessful
+     * @throws IOException               when an I/O exception occurs on the underlying request
      */
     public static Invoice create(InvoiceCreateRequestParams invoiceCreateRequestParams) throws BDCException, IOException {
         if(invoiceCreateRequestParams == null) {
             throw new NullPointerException("InvoiceCreateRequestParams required");
         }
         return create(CREATE_URL, invoiceCreateRequestParams, Invoice.class);
+    }
+
+    /**
+     * Retrieves an invoice from the BDC database
+     *
+     * @param invoiceGetRequestParams data for Invoice read request
+     * @return                        the Invoice specified in the request
+     * @throws BDCException           when the response from the API is unsuccessful
+     * @throws IOException            when an I/O exception occurs on the underlying request
+     */
+    public static Invoice get(InvoiceGetRequestParams invoiceGetRequestParams) throws BDCException, IOException {
+        if(invoiceGetRequestParams == null) {
+            throw new NullPointerException("InvoiceGetRequestParams required");
+        }
+        return create(READ_URL, invoiceGetRequestParams, Invoice.class);
+    }
+
+    /**
+     * Updates an invoice in the BDC database
+     *
+     * @param invoiceUpdateRequestparams data for Invoice update request
+     * @return                           the Invoice specified in the request
+     * @throws BDCException              when the response from the API is unsuccessful
+     * @throws IOException               when an I/O exception occurs on the underlying request
+     */
+    public static Invoice update(InvoiceUpdateRequestParams invoiceUpdateRequestparams) throws BDCException, IOException {
+        if(invoiceUpdateRequestparams == null) {
+            throw new NullPointerException("InvoiceUpdateRequestParams required");
+        }
+        return create(UPDATE_URL, invoiceUpdateRequestparams, Invoice.class);
+    }
+
+    /**
+     * Updates an invoice in the BDC database
+     *
+     * @param invoice       Invoice object to be updated to the BDC database
+     * @return              the Invoice specified in the request
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException  when an I/O exception occurs on the underlying request
+     */
+    public static Invoice update(Invoice invoice) throws BDCException, IOException {
+        if(invoice == null) {
+            throw new NullPointerException("Invoice required");
+        }
+        return create(UPDATE_URL, invoice, Invoice.class);
     }
 
     /**

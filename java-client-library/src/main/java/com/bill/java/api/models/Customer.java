@@ -287,10 +287,10 @@ public class Customer extends ApiResource {
     /**
      * Creates a customer in BDC
      *
-     * @param customerCreateRequestParams data for Vendor creation
-     * @return the Customer that has been created through the BDC API
-     * @throws BDCException when the response from the API is unsuccessful
-     * @throws IOException when an I/O exception occurs on the underlying request
+     * @param customerCreateRequestParams data for Customer creation
+     * @return                            the Customer that has been created through the BDC API
+     * @throws BDCException               when the response from the API is unsuccessful
+     * @throws IOException                when an I/O exception occurs on the underlying request
      */
     public static Customer create(CustomerCreateRequestParams customerCreateRequestParams) throws BDCException, IOException {
         if(customerCreateRequestParams == null) {
@@ -303,9 +303,9 @@ public class Customer extends ApiResource {
      * Retrieves a customer from the BDC database
      *
      * @param customerGetRequestParams data for Customer read request
-     * @return the Customer specified in the request
-     * @throws BDCException when the response from the API is unsuccessful
-     * @throws IOException when an I/O exception occurs on the underlying request
+     * @return                         the Customer specified in the request
+     * @throws BDCException            when the response from the API is unsuccessful
+     * @throws IOException             when an I/O exception occurs on the underlying request
      */
     public static Customer get(CustomerGetRequestParams customerGetRequestParams) throws BDCException, IOException {
         if(customerGetRequestParams == null) {
@@ -332,10 +332,10 @@ public class Customer extends ApiResource {
     /**
      * Updates a customer in the BDC database
      *
-     * @param customer Customer object to be updated to the BDC database
-     * @return the Customer specified in the request
+     * @param customer      Customer object to be updated to the BDC database
+     * @return              the Customer specified in the request
      * @throws BDCException when the response from the API is unsuccessful
-     * @throws IOException when an I/O exception occurs on the underlying request
+     * @throws IOException  when an I/O exception occurs on the underlying request
      */
     public static Customer update(Customer customer) throws BDCException, IOException {
         if(customer == null) {
@@ -347,10 +347,10 @@ public class Customer extends ApiResource {
     /**
      * Set customer Authorization in the BDC database
      *
-     * @param customerSetAuthorizationRequestParams
-     * @return the Customer specified in the request
-     * @throws BDCException
-     * @throws IOException
+     * @param customerSetAuthorizationRequestParams data for request to set authorization
+     * @return                                      the Customer specified in the request
+     * @throws BDCException                         when the response from the API is unsuccessful
+     * @throws IOException                          when an I/O exception occurs on the underlying request
      */
     public static Customer setAuthorization(CustomerSetAuthorizationRequestParams customerSetAuthorizationRequestParams) throws BDCException, IOException {
         if(customerSetAuthorizationRequestParams == null) {
