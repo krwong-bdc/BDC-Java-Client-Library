@@ -1,11 +1,14 @@
 package com.bill.java.api.models;
 
+import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.InvoiceCreateRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.function.Consumer;
@@ -243,6 +246,21 @@ public class Invoice extends ApiResource {
      */
     @SerializedName("invoiceLineItems")
     private List<InvoiceLineItem> invoiceLineItems;
+
+    /**
+     * Creates a invoice in BDC
+     *
+     * @param invoiceCreateRequestParams data for Invoice creation
+     * @return the Invoice that has been created through the BDC API
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException when an I/O exception occurs on the underlying request
+     */
+    public static Invoice create(InvoiceCreateRequestParams invoiceCreateRequestParams) throws BDCException, IOException {
+        if(invoiceCreateRequestParams == null) {
+            throw new NullPointerException("InvoiceCreateRequestParams required");
+        }
+        return create(CREATE_URL, invoiceCreateRequestParams, Invoice.class);
+    }
 
     /**
      * Represents a product or service
