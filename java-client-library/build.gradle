@@ -1,10 +1,7 @@
 plugins {
     id 'java'
+    id "io.franzbecker.gradle-lombok" version "3.1.0"
 }
-
-//tasks.withType(JavaCompile).configureEach {
-//    options.fork(javaHome: project.getProperty("jdk11home"))
-//}
 
 group 'com.bill.java.api'
 version '0.0.1'
@@ -27,6 +24,10 @@ dependencies {
     implementation 'com.github.javafaker:javafaker:1.0.1'
 }
 
+lombok {
+    version = "1.18.8"
+    sha256 = ""
+}
 
 test {
     useJUnitPlatform()

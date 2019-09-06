@@ -15,13 +15,13 @@ import static java.util.stream.Collectors.joining;
  * Wrapper around the credentials passed in on each BDC API call
  */
 public class AuthenticationParams implements BDCParams {
-    /** Authentication parameters to be included on the POST request to the BDC API */
+    /* Authentication parameters to be included on the POST request to the BDC API */
     protected Map<String, Param> params = new HashMap<String, Param>();
 
-    /**
+    /*
      * Developer key must be included on every request. SessionId will be passed on cookies
      * @see com.bill.java.api.net.BDCHttpClient #createAuthCookie
-     * */
+     */
     private AuthenticationParams(String orgId, String mfaId, String deviceId) {
         setParam("userName", BDC.userName);
         setParam("password", BDC.password);
@@ -39,10 +39,9 @@ public class AuthenticationParams implements BDCParams {
         if(deviceId != null) {
             setParam("deviceId", deviceId);
         }
-
     }
 
-    /**
+    /*
      * URL encodes passed in string
      *
      * @param authParam data required by the calling method to make a request to a BDC API endpoint
@@ -53,7 +52,7 @@ public class AuthenticationParams implements BDCParams {
         return URLEncoder.encode(authParam, StandardCharsets.UTF_8.toString());
     }
 
-    /**
+    /*
      * URL-encodes the credentials required for a request to a BDC API endpoint
      *
      * @return String representation of credentials required for a request to a BDC API endpoint
@@ -74,7 +73,7 @@ public class AuthenticationParams implements BDCParams {
         return encodedURL;
     }
 
-    /**
+    /*
      * Transforms the instanced AuthenticationParams object into a string to be appended onto a Http request
      * @return string representation of the request credentials
      */
@@ -82,7 +81,7 @@ public class AuthenticationParams implements BDCParams {
         return urlEncodeParams();
     }
 
-    /**
+    /*
      * Sets a credential on the instanced AuthenticationParams object
      *
      * @param key name of credential

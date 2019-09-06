@@ -159,7 +159,7 @@ public abstract class BDDTests {
     }
 
     public String genNumAsString(int start, int end) {
-        return String.valueOf(rand.nextInt(end) + start);
+        return String.valueOf(new Random().ints(1, start, end + 1).toArray()[0]);
     }
 
     // Length can't be longer than 19
