@@ -17,7 +17,7 @@ import java.util.function.Consumer;
 
 /**
  * <p>Represents products and/or services purchased by a {@link com.bill.java.api.models.Customer Customer} from your organization.
- * A nested {@link InvoiceLineItem InvoiceLineItem} object records products or services.
+ * The nested {@link #invoiceLineItems invoiceLineItems} array records products or services.
  */
 @Getter
 @Setter
@@ -316,6 +316,7 @@ public class Invoice extends ApiResource {
      * Represents a product or service
      */
     @Getter
+    @Setter
     public static class InvoiceLineItem {
         /**
          * InvoiceLineItem
@@ -465,6 +466,11 @@ public class Invoice extends ApiResource {
             this.taxCode = taxCode;
         }
 
+        /**
+         * Makes a new Builder for InvoiceLineItem
+         *
+         * @return a builder for InvoiceLineItem
+         */
         public static Builder builder() {
             return new Builder();
         }
