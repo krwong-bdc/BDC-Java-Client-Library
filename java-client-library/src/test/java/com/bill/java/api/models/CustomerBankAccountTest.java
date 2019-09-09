@@ -6,12 +6,14 @@ import com.bill.java.api.param.CustomerBankAccountGetRequestParams;
 import com.bill.java.api.param.CustomerCreateRequestParams;
 import com.bill.java.api.param.CustomerSetAuthorizationRequestParams;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import resources.BDDTests;
 import resources.TestEnv;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DisplayName("@CustomerBankAccount")
 class CustomerBankAccountTest extends BDDTests {
     private String entity = "CustomerBankAccount";
     private String isActive;

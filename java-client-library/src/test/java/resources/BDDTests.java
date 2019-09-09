@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
@@ -165,6 +167,12 @@ public abstract class BDDTests {
     // Length can't be longer than 19
     public String genNumAsString(int len) {
         return String.valueOf(faker.number().randomNumber(len, true));
+    }
+
+    public String genFutureDate() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+        return format.format(faker.date().future(10, TimeUnit.DAYS));
     }
 
     public Boolean genBool() {

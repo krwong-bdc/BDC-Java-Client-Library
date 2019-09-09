@@ -6,12 +6,14 @@ import com.bill.java.api.param.CustomerContactGetRequestParams;
 import com.bill.java.api.param.CustomerContactUpdateRequestParams;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import resources.BDDTests;
 import resources.TestEnv;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DisplayName("@CustomerContact")
 class CustomerContactTest extends BDDTests {
     private String entity = "CustomerContact";
     private String isActive;

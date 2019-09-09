@@ -4,6 +4,7 @@ import com.bill.java.api.models.Invoice;
 import com.bill.java.api.models.Item;
 import com.google.gson.annotations.SerializedName;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -90,7 +91,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
         /**
          * Read only. Total amount of sales tax applied to this invoice (sales tax percentage times the taxable line items amounts)
          */
-        public Integer salesTaxTotal;
+        public BigDecimal salesTaxTotal;
 
         /**
          * Payment terms chosen for this invoice.
@@ -151,7 +152,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
         /**
          * List of line items that make up this Invoice
          */
-        public List<Item> invoiceLineItems;
+        public List<Invoice.InvoiceLineItem> invoiceLineItems;
 
         public Builder with(Consumer<Builder> builderFunction) {
             builderFunction.accept(this);
@@ -198,7 +199,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
     /* Holds request data. Will be nested in <tt>obj</tt> */
     private static class Params {
         @SerializedName("entity")
-        private String entity = "InvoiceCreateRequestParams";
+        private String entity = "Invoice";
 
         @SerializedName("isActive")
         private String isActive;
@@ -234,7 +235,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
         private String itemSalesTax;
 
         @SerializedName("salesTaxTotal")
-        private Integer salesTaxTotal;
+        private BigDecimal salesTaxTotal;
 
         @SerializedName("terms")
         private String terms;
@@ -270,7 +271,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
         private String payToChartOfAccountId;
 
         @SerializedName("invoiceLineItems")
-        private List<Item> invoiceLineItems;
+        private List<Invoice.InvoiceLineItem> invoiceLineItems;
 
         Params(String isActive,
                String customerId,
@@ -283,7 +284,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
                Boolean isToBePrinted,
                Boolean isToBeEmailed,
                String itemSalesTax,
-               Integer salesTaxTotal,
+               BigDecimal salesTaxTotal,
                String terms,
                String salesRep,
                String FOB,
@@ -295,7 +296,7 @@ public class InvoiceCreateRequestParams extends ApiResourceParams {
                String jobId,
                String payToBankAccountId,
                String payToChartOfAccountId,
-               List<Item> invoiceLineItems) {
+               List<Invoice.InvoiceLineItem> invoiceLineItems) {
             this.isActive = isActive;
             this.customerId = customerId;
             this.invoiceNumber = invoiceNumber;

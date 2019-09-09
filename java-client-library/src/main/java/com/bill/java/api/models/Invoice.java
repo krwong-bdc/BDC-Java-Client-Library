@@ -465,6 +465,10 @@ public class Invoice extends ApiResource {
             this.taxCode = taxCode;
         }
 
+        public static Builder builder() {
+            return new Builder();
+        }
+
         /**
          * Builds a InvoiceLineItem instance to be passed in when making an Invoice
          */
