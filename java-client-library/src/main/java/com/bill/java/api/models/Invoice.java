@@ -2,9 +2,7 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.InvoiceCreateRequestParams;
-import com.bill.java.api.param.InvoiceGetRequestParams;
-import com.bill.java.api.param.InvoiceUpdateRequestParams;
+import com.bill.java.api.param.*;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -23,20 +21,26 @@ import java.util.function.Consumer;
 @Setter
 public class Invoice extends ApiResource {
     /* Resource endpoints for everything vendor related */
-    /** The URI for creating a Customer through the BDC API {@value} */
+    /** The URI for creating an Invoice through the BDC API {@value} */
     public static final String CREATE_URL = "/Crud/Create/Invoice.json";
 
-    /** The URI for retrieving a Invoice through the BDC API {@value} */
+    /** The URI for retrieving an Invoice through the BDC API {@value} */
     public static final String READ_URL = "/Crud/Read/Invoice.json";
 
-    /** The URI for updating a Invoice through the BDC API {@value} */
+    /** The URI for updating an Invoice through the BDC API {@value} */
     public static final String UPDATE_URL = "/Crud/Update/Invoice.json";
 
-    /** The URI for disabling a Invoice through the BDC API {@value} */
+    /** The URI for disabling an Invoice through the BDC API {@value} */
     public static final String DELETE_URL = "/Crud/Delete/Invoice.json";
 
-    /** The URI for undisabling a Invoice through the BDC API {@value} */
+    /** The URI for undisabling an Invoice through the BDC API {@value} */
     public static final String UNDELETE_URL = "/Crud/Undelete/Invoice.json";
+
+    /** The URI for Emailing an Invoice to customers through the BDC API {@value} */
+    public static final String SEND_INVOICE_URL = "/SendInvoice.json";
+
+    /** The URI for sending an Invoice via mail to customers through the BDC API {@value} */
+    public static final String MAIL_INVOICE_URL = "/MailInvoice.json";
 
     /* All retrievable attributes of a Customer */
     /** "Invoice" */
@@ -310,6 +314,58 @@ public class Invoice extends ApiResource {
             throw new NullPointerException("Invoice required");
         }
         return create(UPDATE_URL, invoice, Invoice.class);
+    }
+
+    /**
+     *  Emails an invoice to emails specified in the request params. The email ("headers" and "content") are customized with template tokens. If tokens are not specified in the call, parameters are pulled from the Default Email Template.
+     *  <p>
+     *  NOTE: the API cannot change the Default Email Template. Edits to the template MUST be made on the Bill.com UI.
+     *
+     *  Use tokens (exactly as shown) to dynamically populate information in the email body. When sent, tokens are replaced with data.
+     *
+     * {:Customer.Name:} – customer for the invoice.
+     *
+     * {:Invoice.Number:} – invoice # for the invoice
+     *
+     * {:Invoice.AmountDue:} – amount due
+     *
+     * {:Invoice.DueDate:} – invoice due date
+     *
+     * {:Link_Pay_Invoice:} – URL of your company’s Bill.com Customer Portal.
+     *
+     * @param sendInvoiceRequestParams data for sending an Invoice
+     * @return                         true if emails sent successfully
+     * @throws BDCException            when the response from the API is unsuccessful
+     * @throws IOException             when an I/O exception occurs on the underlying request
+     */
+    public static Boolean sendInvoice(SendInvoiceRequestParams sendInvoiceRequestParams) throws BDCException, IOException {
+        if(sendInvoiceRequestParams == null) {
+            throw new NullPointerException("SendInvoiceRequestParams required");
+        }
+
+        httpClient.request(SEND_INVOICE_URL, sendInvoiceRequestParams).getJsonData();
+
+        return true;
+    }
+
+    /**
+     * If your Customer is not part of the Bill.com network, use this call to send invoices via US mail.
+     * <p>
+     * The specified invoice will be printed and mailed from Bill.com to the Customer. On the Bill.com UI, this is applied on the Invoice option to "Send via US Mail".
+     *
+     * @param mailInvoiceRequestParams data for sending an Invoice via mail
+     * @return                         true if emails sent successfully
+     * @throws BDCException            when the response from the API is unsuccessful
+     * @throws IOException             when an I/O exception occurs on the underlying request
+     */
+    public static Boolean mailInvoice(MailInvoiceRequestParams mailInvoiceRequestParams) throws BDCException, IOException {
+        if(mailInvoiceRequestParams == null) {
+            throw new NullPointerException("MailInvoiceRequestParams required");
+        }
+
+        httpClient.request(MAIL_INVOICE_URL, mailInvoiceRequestParams).getJsonData();
+
+        return true;
     }
 
     /**
