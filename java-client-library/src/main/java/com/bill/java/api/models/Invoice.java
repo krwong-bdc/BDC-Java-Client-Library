@@ -285,16 +285,16 @@ public class Invoice extends ApiResource {
     /**
      * Updates an invoice in the BDC database
      *
-     * @param invoiceUpdateRequestparams data for Invoice update request
+     * @param invoiceUpdateRequestParams data for Invoice update request
      * @return                           the Invoice specified in the request
      * @throws BDCException              when the response from the API is unsuccessful
      * @throws IOException               when an I/O exception occurs on the underlying request
      */
-    public static Invoice update(InvoiceUpdateRequestParams invoiceUpdateRequestparams) throws BDCException, IOException {
-        if(invoiceUpdateRequestparams == null) {
+    public static Invoice update(InvoiceUpdateRequestParams invoiceUpdateRequestParams) throws BDCException, IOException {
+        if(invoiceUpdateRequestParams == null) {
             throw new NullPointerException("InvoiceUpdateRequestParams required");
         }
-        return create(UPDATE_URL, invoiceUpdateRequestparams, Invoice.class);
+        return create(UPDATE_URL, invoiceUpdateRequestParams, Invoice.class);
     }
 
     /**

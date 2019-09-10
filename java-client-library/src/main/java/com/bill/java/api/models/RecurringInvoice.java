@@ -244,16 +244,16 @@ public class RecurringInvoice extends ApiResource {
     /**
      * Updates an recurringInvoice in the BDC database
      *
-     * @param recurringInvoiceUpdateRequestparams data for RecurringInvoice update request
+     * @param recurringInvoiceUpdateRequestParams data for RecurringInvoice update request
      * @return                           the RecurringInvoice specified in the request
      * @throws BDCException              when the response from the API is unsuccessful
      * @throws IOException               when an I/O exception occurs on the underlying request
      */
-    public static RecurringInvoice update(RecurringInvoiceUpdateRequestParams recurringInvoiceUpdateRequestparams) throws BDCException, IOException {
-        if(recurringInvoiceUpdateRequestparams == null) {
+    public static RecurringInvoice update(RecurringInvoiceUpdateRequestParams recurringInvoiceUpdateRequestParams) throws BDCException, IOException {
+        if(recurringInvoiceUpdateRequestParams == null) {
             throw new NullPointerException("RecurringInvoiceUpdateRequestParams required");
         }
-        return create(UPDATE_URL, recurringInvoiceUpdateRequestparams, RecurringInvoice.class);
+        return create(UPDATE_URL, recurringInvoiceUpdateRequestParams, RecurringInvoice.class);
     }
 
     /**
