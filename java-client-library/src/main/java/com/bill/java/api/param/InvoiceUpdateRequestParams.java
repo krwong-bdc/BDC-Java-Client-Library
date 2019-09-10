@@ -6,6 +6,9 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 import java.util.function.Consumer;
 
+/**
+ * Parameters for updating an Invoice through the BDC API
+ */
 public class InvoiceUpdateRequestParams extends ApiResourceParams {
     /* Holds the actual api resource variables for creation */
     @SerializedName("obj")
@@ -162,6 +165,11 @@ public class InvoiceUpdateRequestParams extends ApiResourceParams {
             return this;
         }
 
+        /**
+         * Builds an InvoiceUpdateRequestParams instance with the set parameters.
+         *
+         * @return InvoiceUpdateRequestParams
+         */
         public InvoiceUpdateRequestParams build() {
             return new InvoiceUpdateRequestParams(
                     new Params(

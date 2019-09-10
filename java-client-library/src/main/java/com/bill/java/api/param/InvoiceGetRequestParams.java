@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.function.Consumer;
 
+/**
+ * Parameters for retrieving an Invoice through the BDC API
+ */
 public class InvoiceGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
     private final String id;
