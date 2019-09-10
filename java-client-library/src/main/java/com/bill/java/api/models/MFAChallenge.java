@@ -3,13 +3,19 @@ package com.bill.java.api.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The MFAChallenge class represents the return value from the /MFAChallenge.json endpoint
+ * An object of this class is returned when the {@link Session#requestMFAChallenge(MFAChallengeRequestParams) requestMFAChallenge method}
+ * is called.
  */
 public class MFAChallenge {
-    /** The challengeId returned on a successful Http request to be used in a subsequent MFAAuthenticate request */
+    /** the ID that is returned after successfully calling the {@link Session#requestMFAChallenge(MFAChallengeRequestParams) requestMFAChallenge method}*/
     @SerializedName("challengeId")
     private String id;
 
+    /**
+    * Gets the challenge ID.
+    *
+    * @return the ID that is returned after successfully calling the requestMFAChallenge method
+    */
     public String getId() {
         return id;
     }

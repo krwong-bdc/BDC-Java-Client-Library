@@ -5,9 +5,14 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters for initiating a MFA challenge through the BDC API
+ * Contains the parameters used in the {@link com.bill.java.api.models.Session#requestMFAChallenge(MFAChallengeRequestParams) requestMFAChallenge method} to generate
+ * and return a challenge ID, and send a token to the user’s registered mobile device.
  */
 public class MFAChallengeRequestParams extends ApiResourceParams {
+
+    /** the argument which determines whether the token needs to be sent to the primary mobile device
+    *[value = false] or back up mobile device [value = true]
+    */
     @SerializedName("useBackup")
     private final Boolean useBackup;
 
@@ -16,7 +21,7 @@ public class MFAChallengeRequestParams extends ApiResourceParams {
     }
 
     /**
-     * Makes a new Builder for MFAChallengeRequestParams
+     * Makes a new Builder for MFAChallengeRequestParams method.
      *
      * @return a builder for MFAChallengeRequestParams
      */
@@ -25,21 +30,26 @@ public class MFAChallengeRequestParams extends ApiResourceParams {
     }
 
     /**
-     * Builds a MFAChallengeRequestParams instance
+     * Builds an MFAChallengeRequestParams instance.
      */
     public static class Builder {
-        /** Specifies whether the MFA token will be sent to the primary/backup phone of the user */
+        /** the argument which determines whether the token needs to be sent to the primary mobile device
+        * [value = false] or back up mobile device [value = true]
+        */
         public Boolean useBackup;
 
+        /**
+        * the new MFAChallengeRequestParams instance is assigned to this parameter
+        */
         public Builder with(Consumer<Builder> builderFunction) {
             builderFunction.accept(this);
             return this;
         }
 
         /**
-         * Builds a MFAChallengeRequestParams instance with the set parameters
+         * Builds an MFAChallengeRequestParams instance with the set parameters.
          *
-         * @return MFAChallengeRequestParams
+         * @return the MFAChallengeRequestParams
          */
         public MFAChallengeRequestParams build() {
             return new MFAChallengeRequestParams(useBackup);
