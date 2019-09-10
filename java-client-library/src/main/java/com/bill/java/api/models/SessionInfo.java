@@ -3,23 +3,32 @@ package com.bill.java.api.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Represents the response from {@link Session#getSessionInfo() getSessionInfo()}
+ * An object of this class is returned when the {@link Session#getSessionInfo() getSessionInfo method} is called.
  */
 public class SessionInfo {
-    /** TODO: change all orgId getters to match across all endpoints */
-    /** Id of the organization associated with the session */
+
+    /** the system generated ID of the organization that the user has logged into */
     @SerializedName("organizationId")
     private String organizationId;
 
-    /** Id of the user associated with the session */
+    /** the system generated ID of the user who is logged into the system */
     @SerializedName("userId")
     private String userId;
 
-    /** Getter methods for the SessionInfo member variables */
+    /**
+    * Gets the system generated ID of the organization that the user has logged into.
+    *
+    * @return  the organization ID that is currently associated with the session
+    */
     public String getOrganizationId() {
         return organizationId;
     }
 
+    /**
+    * Gets the ID of the user who is logged into the system.
+    *
+    * @return  the system generated ID of the user who is logged into the system
+    */
     public String getUserId() {
         return userId;
     }

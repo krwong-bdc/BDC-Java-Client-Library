@@ -1,4 +1,4 @@
 /**
- * Main component for setting user-credentials
+ * The pacakge includes the main component for setting user-credentials.
  */
 package com.bill.java.api;

@@ -1,64 +1,67 @@
 package com.bill.java.api;
 
 /**
- * @since       0.0.1
+ * This class contains the parameters required for user authentication and the method to validate the
+ * API base URL.
  */
 public abstract class BDC {
+
+    /**
+    * the enum that contains the sandbox, production, and alternate sandbox constants
+    */
     public enum Env { SANDBOX, PRODUCTION, ALT }
 
     /**
-     * The current version of the Java Client Library: {@value #VERSION}
+     * the current version of the Java Client Library: {@value #VERSION}
      */
     public static final String VERSION = "0.0.1";
 
     /**
-     * The base url of Bill.com's sandbox environment: {@value #SANDBOX_BASE}
+     * the base URL of the sandbox environment: {@value #SANDBOX_BASE}
      * <p>
-     *     For use in development and testing.
-     *     Actions done through the library while set to Sandbox will not incur real-world transactions.
+     *    The sandbox environment is very similar to the production environment. Money movement is disabled within the environment.
+     *    Therefore, actions done through the library while set to Sandbox does not incur real-world transactions.
      * </p>
      */
     public static final String SANDBOX_BASE = "https://api-sandbox.bill.com/api/v2";
 
     /**
-     * The base url of Bill.com's alternate sandbox Environment: {@value #ALT_SANDBOX_BASE}
-     * <p>
-     *     Users should use {@value #SANDBOX_BASE} unless instructed otherwise
-     * </p>
+     * the base URL of the alternate sandbox environment: {@value #ALT_SANDBOX_BASE}
+     * <p>Users should use {@value #SANDBOX_BASE} unless instructed otherwise.</p>
      */
     public static final String ALT_SANDBOX_BASE = "https://api-stage.bill.com/api/v2";
 
     /**
-     * The base url of Bill.com's Production environment
+     * the base URL of the production environment: {@value #PRODUCTION_BASE}
      * <p>
-     *     For live use. Actions taken through the library will affect real-world accounts.
+     *     The production environment is used for real-world deployments. Money movement is enabled within the environment.
+     *     Therefore, actions taken through the library affects real-world accounts.
      * </p>
      */
     public static final String PRODUCTION_BASE = "https://api.bill.com/api/v2";
 
-
     /* User-set Credentials */
     /**
-     * Key obtained from Bill.com to authorize API usage
-     * <p>Required to be set before making any calls through the library</p>
+     * the developer key that is shared when the sandbox account is provisioned.
+     * It is required to authorize API usage. Therefore, it needs to be set before making any calls through the library.
      */
     public static volatile String devKey;
 
     /**
-     * Email associated with user's Bill.com account
-     * <p>Required to be set before making any calls through the library</p>
+     * email associated with user's Bill.com account.
+     * It needs to be set before making any calls through the library.
      */
     public static volatile String userName;
 
     /**
-     * Password associated with the user's Bill.com account
-     * <p>Required to be set before making any calls through the library</p>
+     * password associated with the user's Bill.com account.
+     * It needs to be set before making any calls through the library.
      */
     public static volatile String password;
 
     /**
-     * SessionId obtained from logging in.
-     * <p>Will be set automatically upon logging in. Modification is discouraged.</p>
+     * the session ID obtained from logging in.
+     * It is automatically set upon logging in. Modification is discouraged.
      */
     public static volatile String sessionId;
 
@@ -68,24 +71,33 @@ public abstract class BDC {
     public static volatile String orgId;
 
     /**
-     * Id of the user logged in
-     * <p>Will be set automatically upon logging in. Modification is discouraged.</p>
+     * the system generated ID of the user that logged in.
+     * It is automatically set upon logging in. Modification is discouraged.
      */
     public static volatile String userId;
 
     /**
-     * Base url that will be used for all requests.
-     * <p>
-     *     By default set to Sandbox: {@value #SANDBOX_BASE}
-     * </p>
+     * base URL used for all requests.
+     * By default, it is set to the sandbox environment: {@value #SANDBOX_BASE}
      */
     public static volatile String apiBase = SANDBOX_BASE;
 
 
+    /**
+    * Gets the API base URL.
+    *
+    * @return   returns the sandbox, production, or the alternative sandbox API base URL
+    */
     public static String getApiBase() {
         return apiBase;
     }
 
+    /**
+    * Sets the API base URL.
+    *
+    * @param Env  the environment URL that was defined when using the client library
+    *
+    */
     public static void setApiBase(Env env) {
         switch (env) {
             case PRODUCTION:
