@@ -33,7 +33,10 @@ public class Services extends ApiResource {
         if(chargeCustomerRequestParams == null) {
             throw new NullPointerException("ChargeCustomerRequestParams required.");
         }
-            return create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.class);
+
+        ReceivedPay.ChargedReceivedPay chargedReceivedPay = create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.ChargedReceivedPay.class);
+
+        return chargedReceivedPay.getReceivedPay();
     }
 
     /**
