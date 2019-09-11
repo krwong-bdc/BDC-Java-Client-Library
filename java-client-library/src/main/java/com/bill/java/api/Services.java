@@ -1,6 +1,7 @@
 package com.bill.java.api;
 
 import com.bill.java.api.exception.BDCException;
+import com.bill.java.api.models.AccountsReceivableSummary;
 import com.bill.java.api.models.ReceivedPay;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.ChargeCustomerRequestParams;
@@ -33,5 +34,16 @@ public class Services extends ApiResource {
             throw new NullPointerException("ChargeCustomerRequestParams required.");
         }
             return create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.class);
+    }
+
+    /**
+     * This returns a summary of accounts receivable invoices and received payments. Use this as a review of current outstanding receivables and received payments.
+     *
+     * @return              an AccountsReceivableSummary object
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException  when an I/O exception occurs on the underlying request
+     */
+    public static AccountsReceivableSummary getARSummary() throws IOException, BDCException {
+        return create(GET_AR_SUMMARY_URL, AccountsReceivableSummary.class);
     }
 }
