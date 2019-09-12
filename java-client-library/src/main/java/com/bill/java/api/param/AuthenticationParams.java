@@ -19,7 +19,7 @@ public class AuthenticationParams implements BDCParams {
     protected Map<String, Param> params = new HashMap<String, Param>();
 
     /* For tracking purposes */
-    private final String LIBRARY_VERSION = "JAVA_VERSION_0.0.1";
+    private final String CLIENT_LIBRARY = "JAVA8_v" + BDC.VERSION;
 
     /*
      * Developer key must be included on every request. SessionId will be passed on cookies
@@ -31,7 +31,7 @@ public class AuthenticationParams implements BDCParams {
         setParam("userName", BDC.userName);
         setParam("password", BDC.password);
         setParam("devKey", BDC.devKey);
-        setParam("client_library", LIBRARY_VERSION);
+        setParam("client_library", CLIENT_LIBRARY);
 
         /* TODO: If included in params the nulls get printed to console because of the way parameters are encoded onto the URL. Figure out how to mitigate */
         if(orgId != null){
