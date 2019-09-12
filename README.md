@@ -7,8 +7,13 @@ This library is a wrapper around the [BDC API](https://developer.bill.com/hc/en-
 
 The BDC Java Client Library is currently **Under Development**
 
-Meanning– please expect frequent changes and check the release notes for what's changed.
+Meaning– please expect frequent changes and check the release notes for what's changed.
 
+# Conventions
+##DataTypes and their uses:
+BigDecimal - all dollar/monetary amounts
+BigInteger - all non-string identifiers
+String - all dates (plan to use LocalDate in the future)
 
 # Contributing
 ## Testing

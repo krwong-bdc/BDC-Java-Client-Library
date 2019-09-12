@@ -1,12 +1,10 @@
 package com.bill.java.api;
 
 import com.bill.java.api.exception.BDCException;
-import com.bill.java.api.models.AccountsPayableSummary;
-import com.bill.java.api.models.AccountsReceivableSummary;
-import com.bill.java.api.models.ReceivedPay;
-import com.bill.java.api.models.SentPay;
+import com.bill.java.api.models.*;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.ChargeCustomerRequestParams;
+import com.bill.java.api.param.GetDisbursementDataRequestParams;
 import com.bill.java.api.param.PayBillsRequestParams;
 import com.bill.java.api.param.RecordAPPaymentRequestParams;
 
@@ -27,11 +25,14 @@ public class Services extends ApiResource {
     /** The URI for paying a vendor through the BDC API {@value} */
     public static final String PAY_BILLS_URL = "/PayBills.json";
 
-    /** The URI for paying a vendor through the BDC API {@value} */
+    /** The URI for recording a payment made outside of Bill.com to a Vendor through the BDC API {@value} */
     public static final String RECORD_AR_PAYMENT_URL = "/RecordAPPayment.json";
 
     /** The URI for retrieving a summary of the user's accounts receivable invoices and received payments {@value}*/
     public static final String GET_AP_SUMMARY_URL = "/GetAPSummary.json";
+
+    /** The URI for retrieving a payment and applied vendor credit details for any SentPay issued via PayBills request to a vendor.  {@value}*/
+    public static final String GET_DISBURSMENT_DATA_URL = "/GetDisbursementData.json";
 
     /**
      * This processes a receipt from a customer to withdraw funds from the authorized CustomerBankAccount.
@@ -105,5 +106,22 @@ public class Services extends ApiResource {
      */
     public static AccountsPayableSummary getAccountsPayableSummary() throws IOException, BDCException {
         return create(GET_AR_SUMMARY_URL, AccountsPayableSummary.class);
+    }
+
+    /**
+     * This request provides payment and applied vendor credit details for any SentPay issued via PayBills request to a vendor.  The parameter disbursementStatus is empty until MoneyMovement for the SentPay is debited to be paid to the vendor
+     * <p>
+     * Response depends on how payment was sent to vendor: check, ePayment via ACH, ePayment to Large Billers, or via PayPal.
+     *
+     * @param getDisbursementDataRequestParams data required to make the request
+     * @return                                 data about the status of outgoing payments
+     * @throws BDCException                    when the response from the API is unsuccessful
+     * @throws IOException                     when an I/O exception occurs on the underlying request
+     */
+    public static DisbursementData getDisbursementData(GetDisbursementDataRequestParams getDisbursementDataRequestParams) throws IOException, BDCException {
+        if(getDisbursementDataRequestParams == null) {
+            throw new NullPointerException("GetDisbursementDataRequestParams required.");
+        }
+        return create(GET_DISBURSMENT_DATA_URL, getDisbursementDataRequestParams, DisbursementData.class);
     }
 }
