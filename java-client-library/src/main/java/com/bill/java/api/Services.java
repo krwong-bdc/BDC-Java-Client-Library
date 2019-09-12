@@ -8,6 +8,7 @@ import com.bill.java.api.models.SentPay;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.ChargeCustomerRequestParams;
 import com.bill.java.api.param.PayBillsRequestParams;
+import com.bill.java.api.param.RecordAPPaymentRequestParams;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,7 +25,10 @@ public class Services extends ApiResource {
     public static final String GET_AR_SUMMARY_URL = "/GetARSummary.json";
 
     /** The URI for paying a vendor through the BDC API {@value} */
-    public static final String PAY_BILLS_URL = "PayBills.json";
+    public static final String PAY_BILLS_URL = "/PayBills.json";
+
+    /** The URI for paying a vendor through the BDC API {@value} */
+    public static final String RECORD_AR_PAYMENT_URL = "/RecordAPPayment.json";
 
     /** The URI for retrieving a summary of the user's accounts receivable invoices and received payments {@value}*/
     public static final String GET_AP_SUMMARY_URL = "/GetAPSummary.json";
@@ -63,16 +67,33 @@ public class Services extends ApiResource {
      * The user that uses this API MUST be verified ("pay bills" function enabled in the assigned user role - Administrator, Payer, customized). If not, an error is returned.
      *
      * @param payBillsRequestParams data required to make the request
-     * @return                      a SentPay record
+     * @return                      a list of SentPay records
      * @throws BDCException         when the response from the API is unsuccessful
      * @throws IOException          when an I/O exception occurs on the underlying request
      */
-    public static List<SentPay> chargeCustomer(PayBillsRequestParams payBillsRequestParams) throws IOException, BDCException {
+    public static List<SentPay> payBills(PayBillsRequestParams payBillsRequestParams) throws IOException, BDCException {
         if(payBillsRequestParams == null) {
             throw new NullPointerException("PayBillsRequestParams required.");
         }
         SentPay.SentPays sentPays = create(PAY_BILLS_URL, payBillsRequestParams, SentPay.SentPays.class);
         return sentPays.getSentPays();
+    }
+
+    /**
+     * Use this API to issue Bill.com payments (one or more bills and one or more bill credits) to a designated vendor. These are paid from a specified bank account.
+     * <p>
+     * The user that uses this API MUST be verified ("pay bills" function enabled in the assigned user role - Administrator, Payer, customized). If not, an error is returned.
+     *
+     * @param recordARPaymentRequestParams data required to make the request
+     * @return                             a SentPay record
+     * @throws BDCException                when the response from the API is unsuccessful
+     * @throws IOException                 when an I/O exception occurs on the underlying request
+     */
+    public static SentPay recordArPayment(RecordAPPaymentRequestParams recordARPaymentRequestParams) throws IOException, BDCException {
+        if(recordARPaymentRequestParams == null) {
+            throw new NullPointerException("RecordAPPaymentRequestParams required.");
+        }
+        return create(RECORD_AR_PAYMENT_URL, recordARPaymentRequestParams, SentPay.class);
     }
 
     /**
