@@ -10,6 +10,7 @@ import com.bill.java.api.param.ChargeCustomerRequestParams;
 import com.bill.java.api.param.PayBillsRequestParams;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Contains resources for accessing Bill.com services
@@ -66,11 +67,12 @@ public class Services extends ApiResource {
      * @throws BDCException         when the response from the API is unsuccessful
      * @throws IOException          when an I/O exception occurs on the underlying request
      */
-    public static SentPay chargeCustomer(PayBillsRequestParams payBillsRequestParams) throws IOException, BDCException {
+    public static List<SentPay> chargeCustomer(PayBillsRequestParams payBillsRequestParams) throws IOException, BDCException {
         if(payBillsRequestParams == null) {
             throw new NullPointerException("PayBillsRequestParams required.");
         }
-        return create(PAY_BILLS_URL, payBillsRequestParams, SentPay.class);
+        SentPay.SentPays sentPays = create(PAY_BILLS_URL, payBillsRequestParams, SentPay.SentPays.class);
+        return sentPays.getSentPays();
     }
 
     /**

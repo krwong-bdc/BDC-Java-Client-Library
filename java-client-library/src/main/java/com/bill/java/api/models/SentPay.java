@@ -168,4 +168,16 @@ public class SentPay extends ApiResource {
         }
         return create(READ_URL, sentPayGetRequestParams, SentPay.class);
     }
+
+    @Getter
+    public static class SentPays {
+        @SerializedName("sentPays")
+        private List<SentPay> sentPays;
+    }
+
+    @Getter
+    public static class Payments {
+        @SerializedName("payments")
+        private List<SentPay> sentPays;
+    }
 }
