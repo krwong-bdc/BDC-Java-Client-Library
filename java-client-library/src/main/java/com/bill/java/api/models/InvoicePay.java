@@ -2,10 +2,12 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.net.ApiResource;
 import com.google.gson.annotations.SerializedName;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.function.Consumer;
 
+@Getter
 public class InvoicePay extends ApiResource {
     /** "InvoicePay" */
     @SerializedName("entity")
