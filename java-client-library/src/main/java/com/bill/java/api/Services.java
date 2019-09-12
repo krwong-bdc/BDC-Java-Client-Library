@@ -3,10 +3,7 @@ package com.bill.java.api;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.models.*;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.ChargeCustomerRequestParams;
-import com.bill.java.api.param.GetDisbursementDataRequestParams;
-import com.bill.java.api.param.PayBillsRequestParams;
-import com.bill.java.api.param.RecordAPPaymentRequestParams;
+import com.bill.java.api.param.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -31,8 +28,11 @@ public class Services extends ApiResource {
     /** The URI for retrieving a summary of the user's accounts receivable invoices and received payments {@value}*/
     public static final String GET_AP_SUMMARY_URL = "/GetAPSummary.json";
 
-    /** The URI for retrieving a payment and applied vendor credit details for any SentPay issued via PayBills request to a vendor.  {@value}*/
+    /** The URI for retrieving a payment and applied vendor credit details for any SentPay issued via PayBills request to a vendor {@value}*/
     public static final String GET_DISBURSMENT_DATA_URL = "/GetDisbursementData.json";
+
+    /** the URI for retrieving a list of payments based on a SentPay's specified disbursementStatus value {@value}*/
+    public static final String LIST_PAYMENTS_URL = "/ListPayments.json";
 
     /**
      * This processes a receipt from a customer to withdraw funds from the authorized CustomerBankAccount.
@@ -48,7 +48,7 @@ public class Services extends ApiResource {
         if(chargeCustomerRequestParams == null) {
             throw new NullPointerException("ChargeCustomerRequestParams required.");
         }
-            return create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.class);
+        return create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.class);
     }
 
     /**
@@ -123,5 +123,21 @@ public class Services extends ApiResource {
             throw new NullPointerException("GetDisbursementDataRequestParams required.");
         }
         return create(GET_DISBURSMENT_DATA_URL, getDisbursementDataRequestParams, DisbursementData.class);
+    }
+
+    /**
+     * This returns list of payments based on a SentPay's specified disbursementStatus value.
+     *
+     * @param listPaymentsRequestParams data required to make the request
+     * @return                          List of sentPays with a disbursement status specified in the params
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<SentPay> listPayments(ListPaymentsRequestParams listPaymentsRequestParams) throws IOException, BDCException {
+        if(listPaymentsRequestParams == null) {
+            throw new NullPointerException("ListPaymentsRequestParams required.");
+        }
+        SentPay.Payments payments = create(LIST_PAYMENTS_URL, listPaymentsRequestParams, SentPay.Payments.class);
+        return payments.getSentPays();
     }
 }
