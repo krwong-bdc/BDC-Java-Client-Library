@@ -5,6 +5,7 @@ import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.BillCreateRequestParams;
 import com.bill.java.api.param.BillGetRequestParams;
 import com.bill.java.api.param.BillUpdateRequestParams;
+import com.bill.java.api.param.ListApproversRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 /**
  * Represents an amount owed for goods or services provided by a Vendor. Nested BillLineItem objects record expenses to be paid. Each line item can be assigned to either a Chart Of Account or a product/service Item along with additional Account Tracking.
@@ -38,6 +40,9 @@ public class Bill extends ApiResource {
 
     /** The URI for undisabling an Bill through the BDC API {@value} */
     public static final String UNDELETE_URL = "/Crud/Undelete/Bill.json";
+
+    /** The URI for retrieving a list of all approvers for a Bill through the BDC API {@value} */
+    public static final String LIST_APPROVERS_URL = "/ListApprovers.json";
 
     /* All retrievable attributes of a Bill */
     /** "Bill" */
@@ -234,7 +239,7 @@ public class Bill extends ApiResource {
     /**
      * Updates an bill in the BDC database
      *
-     * @param bill       Bill object to be updated to the BDC database
+     * @param bill          Bill object to be updated to the BDC database
      * @return              the Bill specified in the request
      * @throws BDCException when the response from the API is unsuccessful
      * @throws IOException  when an I/O exception occurs on the underlying request
@@ -244,6 +249,30 @@ public class Bill extends ApiResource {
             throw new NullPointerException("Bill required");
         }
         return create(UPDATE_URL, bill, Bill.class);
+    }
+
+    public static List<BillApprover> listApprovers(ListApproversRequestParams listApproversRequestParams) throws BDCException, IOException {
+        if (listApproversRequestParams == null) {
+            throw new NullPointerException("ListApproversRequestParams required");
+        }
+        List<BillApprover> billApprovers = createCollection(LIST_APPROVERS_URL, listApproversRequestParams, BillApprover.class);
+
+        return billApprovers.stream()
+                .map(billApprover -> billApprover.getBillApprover())
+                .collect(Collectors.toList());
+    }
+
+    public static List<BillApprover> listApprovers(Bill bill) throws BDCException, IOException {
+        if (bill == null) {
+            throw new NullPointerException("Bill required");
+        }
+
+        ListApproversRequestParams params = ListApproversRequestParams.builder()
+                .with($ -> {
+                    $.billId = bill.getId();
+                }).build();
+
+        return listApprovers(params);
     }
 
     /**

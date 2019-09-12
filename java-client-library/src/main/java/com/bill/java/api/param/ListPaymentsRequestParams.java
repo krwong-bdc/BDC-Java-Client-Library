@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Data required to retrieve Payments from the {@link com.bill.java.api.Services#ListPayments(ListPaymentsRequestParams) ListPayments call }
+ * Data required to retrieve Payments from the {@link com.bill.java.api.Services#listPayments(ListPaymentsRequestParams)} listPayments call }
  */
 public class ListPaymentsRequestParams extends ApiResourceParams {
     @SerializedName("disbursementStatus")
