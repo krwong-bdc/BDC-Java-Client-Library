@@ -2,10 +2,7 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.BillCreateRequestParams;
-import com.bill.java.api.param.BillGetRequestParams;
-import com.bill.java.api.param.BillUpdateRequestParams;
-import com.bill.java.api.param.ListApproversRequestParams;
+import com.bill.java.api.param.*;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -43,6 +40,18 @@ public class Bill extends ApiResource {
 
     /** The URI for retrieving a list of all approvers for a Bill through the BDC API {@value} */
     public static final String LIST_APPROVERS_URL = "/ListApprovers.json";
+
+    /** The URI for retrieving a list of approvals for a given user through the BDC API {@value} */
+    public static final String LIST_USER_APPROVALS_URL = "/ListUserApprovals.json";
+
+    /** The URI for setting approvers for a given Bill through the BDC API {@value} */
+    public static final String SET_APPROVERS_URL = "/SetApprovers.json";
+
+    /** The URI for approving a bill */
+    public static final String APPROVE_URL = "/Approve.json";
+
+    /** The URI for denying a bill */
+    public static final String DENY_URL = "/Deny.json";
 
     /* All retrievable attributes of a Bill */
     /** "Bill" */
@@ -251,6 +260,13 @@ public class Bill extends ApiResource {
         return create(UPDATE_URL, bill, Bill.class);
     }
 
+    /**
+     *
+     * @param listApproversRequestParams
+     * @return
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException  when an I/O exception occurs on the underlying request
+     */
     public static List<BillApprover> listApprovers(ListApproversRequestParams listApproversRequestParams) throws BDCException, IOException {
         if (listApproversRequestParams == null) {
             throw new NullPointerException("ListApproversRequestParams required");
@@ -262,6 +278,13 @@ public class Bill extends ApiResource {
                 .collect(Collectors.toList());
     }
 
+    /**
+     *
+     * @param bill
+     * @return
+     * @throws BDCException when the response from the API is unsuccessful
+     * @throws IOException  when an I/O exception occurs on the underlying request
+     */
     public static List<BillApprover> listApprovers(Bill bill) throws BDCException, IOException {
         if (bill == null) {
             throw new NullPointerException("Bill required");
@@ -273,6 +296,49 @@ public class Bill extends ApiResource {
                 }).build();
 
         return listApprovers(params);
+    }
+
+    public static UserApprovals listUserApprovals(ListUserApprovalsRequestParams listUserApprovalsRequestParams) throws BDCException, IOException {
+        if(listUserApprovalsRequestParams == null) {
+            throw new NullPointerException("ListUserApprovalsRequestParams required");
+        }
+
+        listUserApprovalsRequestParams.setEntity("Bill");
+
+        return create(LIST_USER_APPROVALS_URL, listUserApprovalsRequestParams, UserApprovals.class);
+    }
+
+    public static Boolean setApprovers(SetApproversRequestParams setApproversRequestParams) throws BDCException, IOException{
+        if(setApproversRequestParams == null) {
+            throw new NullPointerException("SetApproversRequestParams required");
+        }
+
+        setApproversRequestParams.setEntity("Bill");
+        httpClient.request(SET_APPROVERS_URL, setApproversRequestParams).getJsonData();
+
+        return true;
+    }
+
+    public static Boolean approve(ApproveRequestParams approveRequestParams) throws BDCException, IOException{
+        if(approveRequestParams == null) {
+            throw new NullPointerException("ApproveRequestParams required");
+        }
+
+        approveRequestParams.setEntity("Bill");
+        httpClient.request(APPROVE_URL, approveRequestParams).getJsonData();
+
+        return true;
+    }
+
+    public static Boolean deny(DenyRequestParams denyRequestParams) throws BDCException, IOException{
+        if(denyRequestParams == null) {
+            throw new NullPointerException("DenyRequestParams required");
+        }
+
+        denyRequestParams.setEntity("Bill");
+        httpClient.request(DENY_URL, denyRequestParams).getJsonData();
+
+        return true;
     }
 
     /**
@@ -559,5 +625,14 @@ public class Bill extends ApiResource {
                 );
             }
         }
+    }
+
+    @Getter
+    public static class UserApprovals {
+        @SerializedName("marker")
+        private String marker;
+
+        @SerializedName("approvals")
+        private List<Bill> bills;
     }
 }
