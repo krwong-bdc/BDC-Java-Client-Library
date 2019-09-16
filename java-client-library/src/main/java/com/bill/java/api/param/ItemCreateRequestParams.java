@@ -41,6 +41,14 @@ public class ItemCreateRequestParams extends ApiResourceParams {
         public String type;
 
         /**
+         * Denotes if object is active or inactive. Inactive objects are hidden by default and are only visible in UI when user clicks
+         * <p>
+         * "1" - Active
+         * "2" - Inactive
+         */
+        public String isActive;
+
+        /**
          * Description of item.
          */
         public String description;
@@ -108,6 +116,7 @@ public class ItemCreateRequestParams extends ApiResourceParams {
         public ItemCreateRequestParams build() {
             return new ItemCreateRequestParams(
                     new Params(
+                            isActive,
                             name,
                             type,
                             description,
@@ -130,6 +139,9 @@ public class ItemCreateRequestParams extends ApiResourceParams {
     private static class Params {
         @SerializedName("entity")
         public String entity = "Item";
+
+        @SerializedName("isActive")
+        public String isActive;
 
         @SerializedName("name")
         public String name;
@@ -173,7 +185,8 @@ public class ItemCreateRequestParams extends ApiResourceParams {
         @SerializedName("mergedIntoId")
         public String mergedIntoId;
 
-        Params(String name,
+        Params(String isActive,
+               String name,
                String type,
                String description,
                BigDecimal price,
@@ -187,6 +200,7 @@ public class ItemCreateRequestParams extends ApiResourceParams {
                Boolean taxable,
                String shortName,
                String mergedIntoId) {
+            this.isActive = isActive;
             this.name = name;
             this.type = type;
             this.description = description;
