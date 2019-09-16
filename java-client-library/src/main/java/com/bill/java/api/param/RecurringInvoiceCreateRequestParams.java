@@ -180,7 +180,7 @@ public class RecurringInvoiceCreateRequestParams extends ApiResourceParams {
 
     /* Holds request data. Will be nested in <tt>obj</tt> */
     private static class Params {
-        @SerializedName("entity ")
+        @SerializedName("entity")
         private String entity = "RecurringInvoice";
 
         @SerializedName("isActive")

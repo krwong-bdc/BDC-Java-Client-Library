@@ -7,13 +7,36 @@ This library is a wrapper around the [BDC API](https://developer.bill.com/hc/en-
 
 Download the jar file and add it as an external dependency to your project.
 
-# Contributing
-
 ## Requirements
 
 Please make sure that the Lombok plugin is installed for Intellij with annotation
 
 # Usage
+
+## Setup: Things to do **first**
+
+Set your credentials on the BDC class. Once set, you will never need to enter them again.
+
+```java
+BDC.devKey = "***********";
+BDC.userName = "JohnDoe@gmail.com";
+BDC.password = "************";
+BDC.setApiBase(BDC.Env.Sandbox)
+```
+
+## Login & MFA authenticate
+
+First you need to get an organization ID
+
+```java
+SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+        .with($ -> {
+            $.orgId = TestEnv.orgId;
+            $.mfaId = TestEnv.mfaId;
+            $.deviceId = TestEnv.deviceId;
+        }).build();
+Session.login(params);
+```
 
 # Technologies used
 
