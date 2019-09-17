@@ -254,81 +254,81 @@ public class Bill extends ApiResource {
     public static class BillLineItem {
         /** "Bill" */
         @Setter(AccessLevel.NONE)
-        @SerializedName("entity;")
+        @SerializedName("entity")
         private String entity;
 
         /**
          * System generated Unique Identifier. It is used to retrieve and refer the object in subsequent API calls. You can filter by this field on the List call.
          */
-        @SerializedName("id;")
+        @SerializedName("id")
         private String id;
 
         /**
          * 	Read-only. Refers to the Id of the bill that this line item is associated with
          */
-        @SerializedName("billId;")
+        @SerializedName("billId")
         private String billId;
 
         /**
          * Total amount due for the bill
          */
-        @SerializedName("amount;")
+        @SerializedName("amount")
         private BigDecimal amount;
 
         /**
          * Id of the account that the bill line item is coded to.
          */
-        @SerializedName("chartOfAccountId;")
+        @SerializedName("chartOfAccountId")
         private String chartOfAccountId;
 
         /**
          * Id of the department that the bill line item is coded to.
          */
-        @SerializedName("departmentId;")
+        @SerializedName("departmentId")
         private String departmentId;
 
         /**
          * Id of the location that the bill line item is coded to.
          */
-        @SerializedName("locationId;")
+        @SerializedName("locationId")
         private String locationId;
 
         /**
          * 	Id of the department that the bill line item is coded to.
          */
-        @SerializedName("jobId;")
+        @SerializedName("jobId")
         private String jobId;
 
         /**
          * Id of the customer that the bill line item is coded to.
          */
-        @SerializedName("customerId;")
+        @SerializedName("customerId")
         private String customerId;
 
         /**
          * Id of the job / project that the bill line item is coded to. Depending on the accounting system, job may be specified in addition to the customer record. For Bill.com accounts syncing with QuickBooks this field is not used because jobs are sub-customers.
          */
-        @SerializedName("jobBillable;")
+        @SerializedName("jobBillable")
         private Boolean jobBillable;
 
         /**
          * 	Line item description / memo
          */
-        @SerializedName("description;")
+        @SerializedName("description")
         private String description;
 
         /**
          * Timestamp when this record was created in Bill.com.
          */
         @Setter(AccessLevel.NONE)
-        @SerializedName("createdTime;")
+        @SerializedName("createdTime")
         private String createdTime;
 
         /**
          * Timestamp when this record was last updated in Bill.com.
          */
         @Setter(AccessLevel.NONE)
-        @SerializedName("updatedTime;")
+        @SerializedName("updatedTime")
         private String updatedTime;
 
         /**
@@ -337,37 +337,37 @@ public class Bill extends ApiResource {
          * "1" - expense
          * "2" - item
          */
-        @SerializedName("lineType;")
+        @SerializedName("lineType")
         private String lineType;
 
         /**
          * Id of the item that the bill line item is coded to.
          */
-        @SerializedName("itemId;")
+        @SerializedName("itemId")
         private String itemId;
 
         /**
          * Quantity of the item(s) purchased. Only used if line item type is item. If you don't use this field, either don't send this field or use value
          */
-        @SerializedName("quantity;")
+        @SerializedName("quantity")
         private Integer quantity;
 
         /**
          * Unit price of the item purchased. Only used if line item type is item.
          */
-        @SerializedName("unitPrice;")
+        @SerializedName("unitPrice")
         private BigDecimal unitPrice;
 
         /**
          * 	Id of the employee that the bill line item is coded to.
          */
-        @SerializedName("employeeId;")
+        @SerializedName("employeeId")
         private String employeeId;
 
         /**
          * Id of the accounting class that the bill line item is coded to.
          */
-        @SerializedName("actgClassId;")
+        @SerializedName("actgClassId")
         private String actgClassId;
 
         private BillLineItem(String id,
