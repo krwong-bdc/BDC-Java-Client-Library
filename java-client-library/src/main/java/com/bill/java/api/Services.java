@@ -23,7 +23,7 @@ public class Services extends ApiResource {
     public static final String PAY_BILLS_URL = "/PayBills.json";
 
     /** The URI for recording a payment made outside of Bill.com to a Vendor through the BDC API {@value} */
-    public static final String RECORD_AR_PAYMENT_URL = "/RecordAPPayment.json";
+    public static final String RECORD_AP_PAYMENT_URL = "/RecordAPPayment.json";
 
     /** The URI for retrieving a summary of the user's accounts receivable invoices and received payments {@value}*/
     public static final String GET_AP_SUMMARY_URL = "/GetAPSummary.json";
@@ -85,16 +85,16 @@ public class Services extends ApiResource {
      * <p>
      * The user that uses this API MUST be verified ("pay bills" function enabled in the assigned user role - Administrator, Payer, customized). If not, an error is returned.
      *
-     * @param recordARPaymentRequestParams data required to make the request
+     * @param recordAPPaymentRequestParams data required to make the request
      * @return                             a SentPay record
      * @throws BDCException                when the response from the API is unsuccessful
      * @throws IOException                 when an I/O exception occurs on the underlying request
      */
-    public static SentPay recordArPayment(RecordAPPaymentRequestParams recordARPaymentRequestParams) throws IOException, BDCException {
-        if(recordARPaymentRequestParams == null) {
+    public static SentPay recordAPPayment(RecordAPPaymentRequestParams recordAPPaymentRequestParams) throws IOException, BDCException {
+        if(recordAPPaymentRequestParams == null) {
             throw new NullPointerException("RecordAPPaymentRequestParams required.");
         }
-        return create(RECORD_AR_PAYMENT_URL, recordARPaymentRequestParams, SentPay.class);
+        return create(RECORD_AP_PAYMENT_URL, recordAPPaymentRequestParams, SentPay.class);
     }
 
     /**
