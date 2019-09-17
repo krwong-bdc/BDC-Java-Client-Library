@@ -73,7 +73,7 @@ class InvoiceTest extends BDDTests {
         BDC.password = TestEnv.password;
         BDC.devKey = TestEnv.devKey;
 
-        login();
+        login(1);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
         quantity = new Random().nextInt(10) + 1;

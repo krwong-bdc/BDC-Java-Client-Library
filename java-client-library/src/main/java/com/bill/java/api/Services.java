@@ -5,6 +5,7 @@ import com.bill.java.api.models.AccountsReceivableSummary;
 import com.bill.java.api.models.ReceivedPay;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.ChargeCustomerRequestParams;
+import com.bill.java.api.param.RecordARPaymentRequestParams;
 
 import java.io.IOException;
 
@@ -18,6 +19,9 @@ public class Services extends ApiResource {
 
     /** The URI for retrieving a summary of the user's accounts receivable invoices and received payments */
     public static final String GET_AR_SUMMARY_URL = "/GetARSummary.json";
+
+    /** The URI for applying an invoice receipt made outside of Bill.com */
+    public static final String RECORD_AR_PAYMENT_URL = "/RecordARPayment.json";
 
     /**
      * This processes a receipt from a customer to withdraw funds from the authorized CustomerBankAccount.
@@ -48,5 +52,18 @@ public class Services extends ApiResource {
      */
     public static AccountsReceivableSummary getARSummary() throws IOException, BDCException {
         return create(GET_AR_SUMMARY_URL, AccountsReceivableSummary.class);
+    }
+
+    /**
+     * Use this API to record payments from a Customer made outside of Bill.com.
+     * <p>
+     *
+     * @param recordARPaymentRequestParams data required to make the request
+     * @return                             a SentPay record
+     * @throws BDCException                when the response from the API is unsuccessful
+     * @throws IOException                 when an I/O exception occurs on the underlying request
+     */
+    public static ReceivedPay recordARPayment(RecordARPaymentRequestParams recordARPaymentRequestParams) throws IOException, BDCException {
+        return create(RECORD_AR_PAYMENT_URL, recordARPaymentRequestParams, ReceivedPay.class);
     }
 }
