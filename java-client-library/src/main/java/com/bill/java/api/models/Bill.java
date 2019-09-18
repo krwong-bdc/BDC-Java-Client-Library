@@ -261,11 +261,12 @@ public class Bill extends ApiResource {
     }
 
     /**
+     * Returns a list of all approvers and status of approval for a specified bill or vendor credit.
      *
-     * @param listApproversRequestParams
-     * @return
-     * @throws BDCException when the response from the API is unsuccessful
-     * @throws IOException  when an I/O exception occurs on the underlying request
+     * @param listApproversRequestParams data required to make the request
+     * @return                           list of users set as approvers for the Bill
+     * @throws BDCException              when the response from the API is unsuccessful
+     * @throws IOException               when an I/O exception occurs on the underlying request
      */
     public static List<BillApprover> listApprovers(ListApproversRequestParams listApproversRequestParams) throws BDCException, IOException {
         if (listApproversRequestParams == null) {
@@ -279,9 +280,10 @@ public class Bill extends ApiResource {
     }
 
     /**
+     * Returns a list of all approvers and status of approval for a specified bill or vendor credit.
      *
-     * @param bill
-     * @return
+     * @param bill          the Bill which data is being requested for
+     * @return              list of users set as approvers for the Bill
      * @throws BDCException when the response from the API is unsuccessful
      * @throws IOException  when an I/O exception occurs on the underlying request
      */
@@ -298,6 +300,15 @@ public class Bill extends ApiResource {
         return listApprovers(params);
     }
 
+    /* TODO: This should probably move to be under the Users model once made */
+    /**
+     * Returns a Bill or VendCredit list that the specified user is assigned to review and approve/deny as part of an approval process.
+     *
+     * @param listUserApprovalsRequestParams data required to make the request
+     * @return                               UserApprovals object listing which approvals are assigned to a user
+     * @throws BDCException                  when the response from the API is unsuccessful
+     * @throws IOException                   when an I/O exception occurs on the underlying request
+     */
     public static UserApprovals listUserApprovals(ListUserApprovalsRequestParams listUserApprovalsRequestParams) throws BDCException, IOException {
         if(listUserApprovalsRequestParams == null) {
             throw new NullPointerException("ListUserApprovalsRequestParams required");
@@ -308,6 +319,14 @@ public class Bill extends ApiResource {
         return create(LIST_USER_APPROVALS_URL, listUserApprovalsRequestParams, UserApprovals.class);
     }
 
+    /**
+     * This specifies users (one or more) to be assigned as approvers to review and approve a bill or vendor credit. Each assigned user must have the necessary user permissions to approve.
+     *
+     * @param setApproversRequestParams the data required to make the request
+     * @return                          true if the request succeeds
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
     public static Boolean setApprovers(SetApproversRequestParams setApproversRequestParams) throws BDCException, IOException{
         if(setApproversRequestParams == null) {
             throw new NullPointerException("SetApproversRequestParams required");
@@ -319,6 +338,14 @@ public class Bill extends ApiResource {
         return true;
     }
 
+    /**
+     * When a user with approver permissions is assigned to review a bill or vendor credit. This call is made when the bill or vendor credit is approved. If another approver is required, the Bill.com system emails a notification to the next approver.
+     *
+     * @param approveRequestParams the data required to make the request
+     * @return                     true if the request succeeds
+     * @throws BDCException        when the response from the API is unsuccessful
+     * @throws IOException         when an I/O exception occurs on the underlying request
+     */
     public static Boolean approve(ApproveRequestParams approveRequestParams) throws BDCException, IOException{
         if(approveRequestParams == null) {
             throw new NullPointerException("ApproveRequestParams required");
@@ -330,6 +357,14 @@ public class Bill extends ApiResource {
         return true;
     }
 
+    /**
+     * This is called when an Approver (user with approval permissions and assigned to a bill) rejects the bill or vendor credit for some reason (incorrect amounts, wrong details, etc.). The comment field can describe the approver's reason for rejection.
+     *
+     * @param denyRequestParams the data required to make the request
+     * @return                  true if the request succeeds
+     * @throws BDCException     when the response from the API is unsuccessful
+     * @throws IOException      when an I/O exception occurs on the underlying request
+     */
     public static Boolean deny(DenyRequestParams denyRequestParams) throws BDCException, IOException{
         if(denyRequestParams == null) {
             throw new NullPointerException("DenyRequestParams required");
