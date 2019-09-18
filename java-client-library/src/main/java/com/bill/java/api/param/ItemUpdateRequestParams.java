@@ -24,6 +24,14 @@ public class ItemUpdateRequestParams extends ApiResourceParams {
         public String id;
 
         /**
+         * Denotes if object is active or inactive. Inactive objects are hidden by default and are only visible in UI when user clicks
+         * <p>
+         * "1" - Active
+         * "2" - Inactive
+         */
+        public String isActive;
+
+        /**
          * Name of object; displayed in lists.
          */
         public String name;
@@ -112,6 +120,7 @@ public class ItemUpdateRequestParams extends ApiResourceParams {
             return new ItemUpdateRequestParams(
                     new Params(
                             id,
+                            isActive,
                             name,
                             type,
                             description,
@@ -136,6 +145,9 @@ public class ItemUpdateRequestParams extends ApiResourceParams {
 
         @SerializedName("id")
         public String id;
+
+        @SerializedName("isActive")
+        public String isActive;
 
         @SerializedName("name")
         public String name;
@@ -177,6 +189,7 @@ public class ItemUpdateRequestParams extends ApiResourceParams {
         public String mergedIntoId;
 
         Params(String id,
+               String isActive,
                String name,
                String type,
                String description,
@@ -191,6 +204,7 @@ public class ItemUpdateRequestParams extends ApiResourceParams {
                String shortName,
                String mergedIntoId) {
             this.id = id;
+            this.isActive = isActive;
             this.name = name;
             this.type = type;
             this.description = description;

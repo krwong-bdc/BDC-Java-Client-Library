@@ -3,13 +3,19 @@ package com.bill.java.api.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Represents the return values from the /MFAStatus.json endpoint
+ * An object of this class is returned when the {@link Session#getMFAStatus(MFAStatusRequestParams) getMFAStatus method}
+ * is called.
  */
 public class MFAStatus {
-    /** True if session is MFA Authenticated, otherwise false */
+    /** indicates if the session is Multi Factor Authentication (MFA) trusted [value=true] or not [value=false]*/
     @SerializedName("isTrusted")
     private Boolean status;
 
+    /**
+    * Gets the Multi Factor Authentication (MFA) status of the session.
+    *
+    * @return  true if the session is MFA trusted
+    */
     public Boolean getStatus() {
         return status;
     }
