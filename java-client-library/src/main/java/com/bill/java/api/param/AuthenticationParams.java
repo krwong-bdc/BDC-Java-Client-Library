@@ -18,14 +18,20 @@ public class AuthenticationParams implements BDCParams {
     /* Authentication parameters to be included on the POST request to the BDC API */
     protected Map<String, Param> params = new HashMap<String, Param>();
 
+    /* For tracking purposes */
+    private final String LIBRARY_VERSION = "JAVA_VERSION_0.0.1";
+
     /*
      * Developer key must be included on every request. SessionId will be passed on cookies
      * @see com.bill.java.api.net.BDCHttpClient #createAuthCookie
      */
     private AuthenticationParams(String orgId, String mfaId, String deviceId) {
+
+
         setParam("userName", BDC.userName);
         setParam("password", BDC.password);
         setParam("devKey", BDC.devKey);
+        setParam("client_library", LIBRARY_VERSION);
 
         /* TODO: If included in params the nulls get printed to console because of the way parameters are encoded onto the URL. Figure out how to mitigate */
         if(orgId != null){

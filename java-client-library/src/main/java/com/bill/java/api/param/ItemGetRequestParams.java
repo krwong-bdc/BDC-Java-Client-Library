@@ -5,27 +5,27 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters for retrieving a Customer through the BDC API.
+ * Parameters for retrieving an Item through the BDC API.
  */
-public class CustomerGetRequestParams extends ApiResourceParams {
+public class ItemGetRequestParams extends ApiResourceParams {
     @SerializedName("id")
     private final String id;
 
-    private CustomerGetRequestParams(String id) {
+    private ItemGetRequestParams(String id) {
         this.id = id;
     }
 
     /**
-     * Makes a new Builder for CustomerGetRequestParams.
+     * Makes a new Builder for ItemGetRequestParams.
      *
-     * @return a builder for CustomerGetRequestParams
+     * @return a builder for ItemGetRequestParams
      */
     public static Builder builder() {
         return new Builder();
     }
 
     /**
-     * Builds an CustomerGetRequestParams object.
+     * Builds an ItemGetRequestParams object.
      */
     public static class Builder {
         /**
@@ -41,12 +41,12 @@ public class CustomerGetRequestParams extends ApiResourceParams {
         }
 
         /**
-         * Builds a CustomerGetRequestParams instance with the set parameters.
+         * Builds a ItemGetRequestParams instance with the set parameters.
          *
-         * @return CustomerGetRequestParams
+         * @return ItemGetRequestParams
          */
-        public CustomerGetRequestParams build() {
-            return new CustomerGetRequestParams(id);
+        public ItemGetRequestParams build() {
+            return new ItemGetRequestParams(id);
         }
     }
 }

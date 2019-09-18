@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
 /**
- * Parameters for creating a Customer through the BDC API
+ * Parameters for creating a Customer through the BDC API.
  */
 public class CustomerCreateRequestParams extends ApiResourceParams {
     /* Holds the actual api resource variables for creation */
@@ -15,120 +15,123 @@ public class CustomerCreateRequestParams extends ApiResourceParams {
     private CustomerCreateRequestParams(Params params) { this.params = params; }
 
     /**
-     * Makes a new Builder for CustomerCreateRequestParams
+     * Makes a new Builder for CustomerCreateRequestParams.
      *
      * @return a builder for CustomerCreateRequestParams
      */
     public static Builder builder() { return new Builder(); }
 
     /**
-     * Builds a CustomerCreateRequestParams object
+     * Builds a CustomerCreateRequestParams object.
      */
     public static class Builder {
         /**
-         * Denotes if a Customer is active or inactive
+         * Denotes if a Customer is active or inactive.
          * <p>
          * "1" - Active
          * "2" - Inactive
          */
         public String isActive;
 
-        /** Name of Customer
+        /**
+         * Name of Customer.
          * <p>
-         * Displayed in lists.
-         * You can filter by this field on the List call
+         * You can filter by this field on the List call.
          */
         public String name;
 
-        /** User-friendly identifer defined by user and/or third-party system */
+        /** User-friendly identifer defined by user and/or third-party system. */
         public String shortName;
 
-        /** ID of parent object (denotes this object as child object). You can filter by this field on the List call */
+        /**
+         * ID of parent object (denotes this object as child object).
+         * <p>
+         * You can filter by this field on the List call.
+         */
         public String parentCustomerId;
 
-        /** Full name of the customer's company */
+        /** Full name of the customer's company. */
         public String companyName;
 
-        /** Primary contact's first name */
+        /** Primary contact's first name. */
         public String contactFirstName;
 
-        /** Primary contact's last name */
+        /** Primary contact's last name. */
         public String contactLastName;
 
         /**
-         * Optional identification of the customer's account
-         * <p>Visible in the invoice and on the customer portal home page
+         * Optional identification of the customer's account. Visible in the invoice and on the customer portal home page.
          */
         public String accNumber;
 
-        /** Billing address line */
+        /** Billing address line. */
         public String billAddress1;
 
-        /** Additional billing address line */
+        /** Additional billing address line. */
         public String billAddress2;
 
-        /** Additional billing address line */
+        /** Additional billing address line. */
         public String billAddress3;
 
-        /** Additional billing address line */
+        /** Additional billing address line. */
         public String billAddress4;
 
-        /** Billing address city */
+        /** Billing address city. */
         public String billAddressCity;
 
-        /** Billing address state */
+        /** Billing address state.*/
         public String billAddressState;
 
-        /** Billing address country */
+        /** Billing address country. */
         public String billAddressCountry;
 
-        /** Billing address zip */
+        /** Billing address zip. */
         public String billAddressZip;
 
-        /** Shipping address */
+        /** Shipping address. */
         public String shipAddress1;
 
-        /** Additional shipping address line */
+        /** Additional shipping address line. */
         public String shipAddress2;
 
-        /** Additional shipping address line */
+        /** Additional shipping address line. */
         public String shipAddress3;
 
-        /** Additional shipping address line */
+        /** Additional shipping address line. */
         public String shipAddress4;
 
-        /** Shipping address city */
+        /** Shipping address city. */
         public String shipAddressCity;
 
-        /** Shipping address state */
+        /** Shipping address state. */
         public String shipAddressState;
 
-        /** Shipping address Country */
+        /** Shipping address country. */
         public String shipAddressCountry;
 
-        /** Shipping address zip */
+        /** Shipping address zip. */
         public String shipAddressZip;
 
-        /** Customer's email */
+        /** Customer's email. */
         public String email;
 
-        /** Main phone number for the customer */
+        /** Main phone number for the customer. */
         public String phone;
 
-        /** Alternate phone number for the customer */
+        /** Alternate phone number for the customer. */
         public String altPhone;
 
-        /** Fax number for the customer */
+        /** Fax number for the customer. */
         public String fax;
 
-        /** User-assigned description of the customer */
+        /** User-assigned description of the customer. */
         public String description;
 
         /**  */
         public String printAs;
 
         /**
-         * Type of Customer account
+         * Type of Customer account.
          * <p>
          * "0" - none
          * "1" - business
@@ -142,7 +145,7 @@ public class CustomerCreateRequestParams extends ApiResourceParams {
         }
 
         /**
-         * Builds a CustomerCreateRequestParams instance with the set parameters
+         * Builds a CustomerCreateRequestParams instance with the set parameters.
          *
          * @return CustomerCreateRequestParams
          */

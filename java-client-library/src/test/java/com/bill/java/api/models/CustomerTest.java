@@ -4,12 +4,14 @@ import com.bill.java.api.BDC;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.*;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import resources.BDDTests;
 import resources.TestEnv;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@DisplayName("@Customer")
 class CustomerTest extends BDDTests {
     private String entity = "Customer";
     private String isActive;

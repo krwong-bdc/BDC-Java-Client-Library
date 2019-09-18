@@ -6,7 +6,6 @@ import java.io.UnsupportedEncodingException;
  * Base interface for different types of parameters required on POST requests to the BDC API
  */
 interface BDCParams {
-
     /* Implementing classes must be able to URL encode themselves */
     String encodeValue(String value) throws UnsupportedEncodingException;
 

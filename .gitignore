@@ -10,3 +10,7 @@ java-client-library/src/main/java/com/bill/java/api/param/ExampleParam.java
 
 .gradle/*
 java-client-library/build/*
+
+.DS_Store
+gradle/.DS_Store
+java-client-library/out
