@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Getter
 public class ReceivedPay extends ApiResource {
-    /* Resource endpoints for everything vendor related */
+    /* Resource endpoints for everything ReceivedPay related */
     /** The URI for retrieving a ReceivedPay through the BDC API {@value} */
     public static final String READ_URL = "/Crud/Read/ReceivedPay.json";
 

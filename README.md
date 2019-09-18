@@ -13,6 +13,12 @@ Please make sure that the Lombok plugin is installed for Intellij with annotatio
 
 # Usage
 
+## Conventions
+### DataTypes and their uses:
+BigDecimal - all dollar/monetary amounts
+BigInteger - all non-string identifiers
+String - all dates (plan to use LocalDate in the future)
+
 ## Setup: Things to do **first**
 
 Set your credentials on the BDC class. Once set, you will never need to enter them again.

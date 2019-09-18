@@ -42,7 +42,7 @@ public class Invoice extends ApiResource {
     /** The URI for sending an Invoice via mail to customers through the BDC API {@value} */
     public static final String MAIL_INVOICE_URL = "/MailInvoice.json";
 
-    /* All retrievable attributes of a Customer */
+    /* All retrievable attributes of an Invoice */
     /** "Invoice" */
     @Setter(AccessLevel.NONE)
     @SerializedName("entity")
@@ -384,7 +384,6 @@ public class Invoice extends ApiResource {
         /**
          * System generated Unique Identifier. It is used to retrieve and refer the object in subsequent API calls.
          */
-        @Setter(AccessLevel.NONE)
         @SerializedName("id")
         private String id;
 
@@ -491,7 +490,8 @@ public class Invoice extends ApiResource {
         @SerializedName("taxCode")
         private String taxCode;
 
-        private InvoiceLineItem(String itemId,
+        private InvoiceLineItem(String id,
+                                String itemId,
                                 Integer quantity,
                                 BigDecimal amount,
                                 BigDecimal price,
@@ -506,6 +506,7 @@ public class Invoice extends ApiResource {
                                 Boolean taxable,
                                 String taxCode){
             this.entity = "InvoiceLineItem";
+            this.id = id;
             this.itemId = itemId;
             this.quantity = quantity;
             this.amount = amount;
@@ -535,6 +536,11 @@ public class Invoice extends ApiResource {
          * Builds a InvoiceLineItem instance to be passed in when making an Invoice
          */
         public static class Builder {
+            /**
+             * System Generated unique Identifier for the BillLineItem
+             */
+            public String id;
+
             /**
              * 	Id of the item being billed on the invoice line item.
              */
@@ -617,6 +623,7 @@ public class Invoice extends ApiResource {
              */
             public InvoiceLineItem build() {
                 return new InvoiceLineItem(
+                        id,
                         itemId,
                         quantity,
                         amount,

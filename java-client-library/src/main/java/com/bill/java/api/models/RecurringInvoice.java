@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 @Setter
 public class RecurringInvoice extends ApiResource {
     /* Resource endpoints for everything vendor related */
-    /** The URI for creating a Customer through the BDC API {@value} */
+    /** The URI for creating a RecurringInvoice through the BDC API {@value} */
     public static final String CREATE_URL = "/Crud/Create/RecurringInvoice.json";
 
     /** The URI for retrieving a RecurringInvoice through the BDC API {@value} */
@@ -215,9 +215,9 @@ public class RecurringInvoice extends ApiResource {
      * Creates an recurringInvoice in BDC
      *
      * @param recurringInvoiceCreateRequestParams data for RecurringInvoice creation
-     * @return                           the RecurringInvoice that has been created through the BDC API
-     * @throws BDCException              when the response from the API is unsuccessful
-     * @throws IOException               when an I/O exception occurs on the underlying request
+     * @return                                    the RecurringInvoice that has been created through the BDC API
+     * @throws BDCException                       when the response from the API is unsuccessful
+     * @throws IOException                        when an I/O exception occurs on the underlying request
      */
     public static RecurringInvoice create(RecurringInvoiceCreateRequestParams recurringInvoiceCreateRequestParams) throws BDCException, IOException {
         if(recurringInvoiceCreateRequestParams == null) {
@@ -230,9 +230,9 @@ public class RecurringInvoice extends ApiResource {
      * Retrieves an recurringInvoice from the BDC database
      *
      * @param recurringInvoiceGetRequestParams data for RecurringInvoice read request
-     * @return                        the RecurringInvoice specified in the request
-     * @throws BDCException           when the response from the API is unsuccessful
-     * @throws IOException            when an I/O exception occurs on the underlying request
+     * @return                                 the RecurringInvoice specified in the request
+     * @throws BDCException                    when the response from the API is unsuccessful
+     * @throws IOException                     when an I/O exception occurs on the underlying request
      */
     public static RecurringInvoice get(RecurringInvoiceGetRequestParams recurringInvoiceGetRequestParams) throws BDCException, IOException {
         if(recurringInvoiceGetRequestParams == null) {
@@ -245,9 +245,9 @@ public class RecurringInvoice extends ApiResource {
      * Updates an recurringInvoice in the BDC database
      *
      * @param recurringInvoiceUpdateRequestParams data for RecurringInvoice update request
-     * @return                           the RecurringInvoice specified in the request
-     * @throws BDCException              when the response from the API is unsuccessful
-     * @throws IOException               when an I/O exception occurs on the underlying request
+     * @return                                    the RecurringInvoice specified in the request
+     * @throws BDCException                       when the response from the API is unsuccessful
+     * @throws IOException                        when an I/O exception occurs on the underlying request
      */
     public static RecurringInvoice update(RecurringInvoiceUpdateRequestParams recurringInvoiceUpdateRequestParams) throws BDCException, IOException {
         if(recurringInvoiceUpdateRequestParams == null) {
@@ -260,9 +260,9 @@ public class RecurringInvoice extends ApiResource {
      * Updates an recurringInvoice in the BDC database
      *
      * @param recurringInvoice       RecurringInvoice object to be updated to the BDC database
-     * @return              the RecurringInvoice specified in the request
-     * @throws BDCException when the response from the API is unsuccessful
-     * @throws IOException  when an I/O exception occurs on the underlying request
+     * @return                       the RecurringInvoice specified in the request
+     * @throws BDCException          when the response from the API is unsuccessful
+     * @throws IOException           when an I/O exception occurs on the underlying request
      */
     public static RecurringInvoice update(RecurringInvoice recurringInvoice) throws BDCException, IOException {
         if(recurringInvoice == null) {
