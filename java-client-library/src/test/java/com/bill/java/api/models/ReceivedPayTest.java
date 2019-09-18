@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReceivedPayTest extends BDDTests {
     @BeforeEach
     void setup() throws Exception {
-        login(2);
+        login();
     }
 
     @Interface
@@ -21,10 +21,10 @@ class ReceivedPayTest extends BDDTests {
         void should_retrieve_the_sepcified_vendor() throws Exception {
             ReceivedPayGetRequestParams params = ReceivedPayGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.receivedPay2;
+                        $.id = TestEnv.testReceivedPay;
                     }).build();
             ReceivedPay receivePay = ReceivedPay.get(params);
-            assertAll(() -> assertEquals(TestEnv.receivedPay2, receivePay.getId()));
+            assertAll(() -> assertEquals(TestEnv.testReceivedPay, receivePay.getId()));
         }
 
         @Condition

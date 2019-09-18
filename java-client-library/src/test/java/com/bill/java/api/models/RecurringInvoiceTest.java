@@ -51,6 +51,8 @@ class RecurringInvoiceTest extends BDDTests {
     private Integer itemQuantity;
     private BigDecimal itemPrice;
 
+    private String recurringInvoiceId;
+
     @BeforeEach
     void setup() throws Exception {
         BDC.userName = TestEnv.userName;
@@ -75,6 +77,34 @@ class RecurringInvoiceTest extends BDDTests {
         frequencyPerTimePeriod = new Random().nextInt(2) + 1;
         nextDueDate = genFutureDate();
         daysInAdvance = new Random().nextInt(5) + 1;
+
+        RecurringInvoice.RecurringInvoiceLineItem item1 = RecurringInvoice.RecurringInvoiceLineItem.builder()
+                .with($ -> {
+                    $.quantity = itemQuantity;
+                    $.price = itemPrice;
+                    $.description = itemDescription;
+                }).build();
+
+        List<RecurringInvoice.RecurringInvoiceLineItem> items = new ArrayList<RecurringInvoice.RecurringInvoiceLineItem>();
+        items.add(item1);
+
+        RecurringInvoice recurringInvoice = RecurringInvoice.create(RecurringInvoiceCreateRequestParams.builder()
+                .with($ -> {
+                    $.isActive = isActive;
+                    $.customerId = customerId;
+                    $.description = description;
+                    $.poNumber = poNumber;
+                    $.isToBePrinted = isToBePrinted;
+                    $.isToBeEmailed = isToBeEmailed;
+                    $.salesRep = salesRep;
+                    $.timePeriod = timePeriod;
+                    $.frequencyPerTimePeriod = frequencyPerTimePeriod;
+                    $.nextDueDate = nextDueDate;
+                    $.daysInAdvance = daysInAdvance;
+                    $.recurringInvoiceLineItems = items;
+                }).build());
+
+        recurringInvoiceId = recurringInvoice.getId();
     }
 
 
@@ -129,10 +159,10 @@ class RecurringInvoiceTest extends BDDTests {
         void should_retrieve_the_sepcified_vendor() throws Exception {
             RecurringInvoiceGetRequestParams params = RecurringInvoiceGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testRecurringInvoiceId;
+                        $.id = recurringInvoiceId;
                     }).build();
             RecurringInvoice recurringInvoice = RecurringInvoice.get(params);
-            assertAll(() -> assertEquals(TestEnv.testRecurringInvoiceId, recurringInvoice.getId()));
+            assertAll(() -> assertEquals(recurringInvoiceId, recurringInvoice.getId()));
         }
 
         @Condition
@@ -162,7 +192,7 @@ class RecurringInvoiceTest extends BDDTests {
 
             RecurringInvoice recurringInvoice = RecurringInvoice.update(RecurringInvoiceUpdateRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testRecurringInvoiceId;
+                        $.id = recurringInvoiceId;
                         $.isActive = isActive;
                         $.customerId = customerId;
                         $.description = description;
@@ -198,7 +228,7 @@ class RecurringInvoiceTest extends BDDTests {
         void should_update_the_given_resource() throws Exception {
             RecurringInvoiceGetRequestParams params = RecurringInvoiceGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testRecurringInvoiceId;
+                        $.id = recurringInvoiceId;
                     }).build();
             RecurringInvoice recurringInvoice = RecurringInvoice.get(params);
             RecurringInvoice.RecurringInvoiceLineItem item = recurringInvoice.getRecurringInvoiceLineItems().get(0);

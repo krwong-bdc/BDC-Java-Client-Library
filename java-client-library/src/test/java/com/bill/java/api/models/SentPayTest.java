@@ -16,11 +16,11 @@ class SentPayTest extends BDDTests {
 
             SentPayGetRequestParams params = SentPayGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.sentPayId;
+                        $.id = TestEnv.testSentPayId;
                     }).build();
             SentPay sentPay = SentPay.get(params);
 
-            assertEquals(TestEnv.sentPayId, sentPay.getId());
+            assertEquals(TestEnv.testSentPayId, sentPay.getId());
         }
     }
 }

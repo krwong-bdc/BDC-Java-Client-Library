@@ -67,13 +67,15 @@ class InvoiceTest extends BDDTests {
     private Boolean taxable;
     private String taxCode;
 
+    private String invoiceId;
+
     @BeforeEach
     void setup() throws Exception {
         BDC.userName = TestEnv.userName;
         BDC.password = TestEnv.password;
         BDC.devKey = TestEnv.devKey;
 
-        login(1);
+        login();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
         quantity = new Random().nextInt(10) + 1;
@@ -99,6 +101,38 @@ class InvoiceTest extends BDDTests {
         salesRep = genFName();
         FOB = genNumAsString(10);
         shipDate = genFutureDate();
+
+        Invoice.InvoiceLineItem item1 = Invoice.InvoiceLineItem.builder()
+                .with($ -> {
+                    $.quantity = quantity;
+                    $.price = price;
+                    $.description = itemDescription;
+                }).build();
+
+        List<Invoice.InvoiceLineItem> items = new ArrayList<Invoice.InvoiceLineItem>();
+        items.add(item1);
+
+        Invoice invoice = Invoice.create(InvoiceCreateRequestParams.builder()
+                .with($ -> {
+                    $.isActive = isActive;
+                    $.customerId = customerId;
+                    $.invoiceNumber = invoiceNumber;
+                    $.invoiceDate = invoiceDate;
+                    $.dueDate = dueDate;
+                    $.glPostingDate = glPostingDate;
+                    $.description = description;
+                    $.poNumber = poNumber;
+                    $.isToBePrinted = isToBePrinted;
+                    $.isToBeEmailed = isToBeEmailed;
+                    $.terms = terms;
+                    $.salesRep = salesRep;
+                    $.FOB = FOB;
+                    $.shipDate = shipDate;
+                    $.shipMethod = shipMethod;
+                    $.invoiceLineItems = items;
+                }).build());
+
+        invoiceId = invoice.getId();
     }
 
     @Interface
@@ -157,10 +191,10 @@ class InvoiceTest extends BDDTests {
         void should_retrieve_the_sepcified_vendor() throws Exception {
             InvoiceGetRequestParams params = InvoiceGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testInvoiceId;
+                        $.id = invoiceId;
                     }).build();
             Invoice invoice = Invoice.get(params);
-            assertAll(() -> assertEquals(TestEnv.testInvoiceId, invoice.getId()));
+            assertAll(() -> assertEquals(invoiceId, invoice.getId()));
         }
 
         @Condition
@@ -191,7 +225,7 @@ class InvoiceTest extends BDDTests {
             Invoice invoice = Invoice.update(InvoiceUpdateRequestParams.builder()
                     .with($ -> {
                         $.isActive = isActive;
-                        $.id = TestEnv.testInvoiceId;
+                        $.id = invoiceId;
                         $.isActive = isActive;
                         $.customerId = customerId;
                         $.invoiceNumber = invoiceNumber;
@@ -232,7 +266,7 @@ class InvoiceTest extends BDDTests {
         void should_update_the_given_resource() throws Exception {
             InvoiceGetRequestParams params = InvoiceGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testInvoiceId;
+                        $.id = invoiceId;
                     }).build();
             Invoice invoice = Invoice.get(params);
             Invoice.InvoiceLineItem item = invoice.getInvoiceLineItems().get(0);

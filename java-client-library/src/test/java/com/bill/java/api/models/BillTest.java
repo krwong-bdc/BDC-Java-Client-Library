@@ -41,6 +41,8 @@ class BillTest extends BDDTests {
     private String itemEmployeeId;
     private String itemActgClassId;
 
+    private String billId;
+
     @BeforeEach
     void setup() throws Exception {
         login();
@@ -48,16 +50,40 @@ class BillTest extends BDDTests {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
         isActive = genNumAsString(1, 2);
-        vendorId = TestEnv.vendorId2;
-        invoiceNumber = genNumAsString(5);
+        vendorId = TestEnv.testVendorId;
+        invoiceNumber = genNumAsString(7);
         invoiceDate = format.format(new Date());
         dueDate = genFutureDate();
         glPostingDate = format.format(new Date());
         description = genDescription();
 
         itemAmount = BigDecimal.valueOf(new Random().nextInt(700), 2);
-        itemCustomerId = TestEnv.customerId2;
+        itemCustomerId = TestEnv.testCustomerId;
         itemDescription = genDescription();
+
+        Bill.BillLineItem item1 = Bill.BillLineItem.builder()
+                .with($ -> {
+                    $.amount = itemAmount;
+                    $.customerId = itemCustomerId;
+                    $.description = itemDescription;
+                }).build();
+
+        List<Bill.BillLineItem> items = new ArrayList<Bill.BillLineItem>();
+        items.add(item1);
+
+        Bill bill = Bill.create(BillCreateRequestParams.builder()
+                .with($ -> {
+                    $.isActive = isActive;
+                    $.vendorId = vendorId;
+                    $.invoiceNumber = invoiceNumber + "2";
+                    $.invoiceDate = invoiceDate;
+                    $.dueDate = dueDate;
+                    $.glPostingDate = glPostingDate;
+                    $.description = description;
+                    $.billLineItems = items;
+                }).build());
+
+        billId = bill.getId();
     }
 
     @Interface
@@ -107,10 +133,10 @@ class BillTest extends BDDTests {
         void should_retrieve_the_sepcified_vendor() throws Exception {
             BillGetRequestParams params = BillGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.billId;
+                        $.id = billId;
                     }).build();
             Bill bill = Bill.get(params);
-            assertAll(() -> assertEquals(TestEnv.billId, bill.getId()));
+            assertAll(() -> assertEquals(billId, bill.getId()));
         }
 
         @Condition
@@ -140,7 +166,7 @@ class BillTest extends BDDTests {
 
             Bill bill = Bill.update(BillUpdateRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.billId;
+                        $.id = billId;
                         $.isActive = isActive;
                         $.vendorId = vendorId;
                         $.invoiceNumber = invoiceNumber;
@@ -172,7 +198,7 @@ class BillTest extends BDDTests {
         void should_update_the_given_resource() throws Exception {
             BillGetRequestParams params = BillGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.billId;
+                        $.id = billId;
                     }).build();
             Bill bill = Bill.get(params);
             Bill.BillLineItem item = bill.getBillLineItems().get(0);
