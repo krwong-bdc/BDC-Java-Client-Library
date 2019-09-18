@@ -3,7 +3,10 @@ package com.bill.java.api;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.models.*;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.ChargeCustomerRequestParams;
+import com.bill.java.api.param.RecordARPaymentRequestParams;
 import com.bill.java.api.param.*;
+
 
 import java.io.IOException;
 import java.util.List;
@@ -18,6 +21,9 @@ public class Services extends ApiResource {
 
     /** The URI for retrieving a summary of the user's accounts receivable invoices and received payments {@value}*/
     public static final String GET_AR_SUMMARY_URL = "/GetARSummary.json";
+
+    /** The URI for applying an invoice receipt made outside of Bill.com */
+    public static final String RECORD_AR_PAYMENT_URL = "/RecordARPayment.json";
 
     /** The URI for paying a vendor through the BDC API {@value} */
     public static final String PAY_BILLS_URL = "/PayBills.json";
@@ -48,7 +54,10 @@ public class Services extends ApiResource {
         if(chargeCustomerRequestParams == null) {
             throw new NullPointerException("ChargeCustomerRequestParams required.");
         }
-        return create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.class);
+
+        ReceivedPay.ChargedReceivedPay chargedReceivedPay = create(CHARGE_CUSTOMER_URL, chargeCustomerRequestParams, ReceivedPay.ChargedReceivedPay.class);
+
+        return chargedReceivedPay.getReceivedPay();
     }
 
     /**
@@ -60,6 +69,19 @@ public class Services extends ApiResource {
      */
     public static AccountsReceivableSummary getAccountsReceivableSummary() throws IOException, BDCException {
         return create(GET_AR_SUMMARY_URL, AccountsReceivableSummary.class);
+    }
+
+    /**
+     * Use this API to record payments from a Customer made outside of Bill.com.
+     * <p>
+     *
+     * @param recordARPaymentRequestParams data required to make the request
+     * @return                             a SentPay record
+     * @throws BDCException                when the response from the API is unsuccessful
+     * @throws IOException                 when an I/O exception occurs on the underlying request
+     */
+    public static ReceivedPay recordARPayment(RecordARPaymentRequestParams recordARPaymentRequestParams) throws IOException, BDCException {
+        return create(RECORD_AR_PAYMENT_URL, recordARPaymentRequestParams, ReceivedPay.class);
     }
 
     /**
@@ -105,7 +127,7 @@ public class Services extends ApiResource {
      * @throws IOException  when an I/O exception occurs on the underlying request
      */
     public static AccountsPayableSummary getAccountsPayableSummary() throws IOException, BDCException {
-        return create(GET_AR_SUMMARY_URL, AccountsPayableSummary.class);
+        return create(GET_AP_SUMMARY_URL, AccountsPayableSummary.class);
     }
 
     /**
@@ -140,4 +162,5 @@ public class Services extends ApiResource {
         SentPay.Payments payments = create(LIST_PAYMENTS_URL, listPaymentsRequestParams, SentPay.Payments.class);
         return payments.getSentPays();
     }
+
 }

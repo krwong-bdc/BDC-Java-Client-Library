@@ -159,4 +159,11 @@ public class ReceivedPay extends ApiResource {
         }
         return create(READ_URL, receivedPayGetRequestParams, ReceivedPay.class);
     }
+
+    /* Needed to nest the response from the ChargeCustomer endpoint */
+    @Getter
+    public static class ChargedReceivedPay {
+        @SerializedName("chargedReceivedPay")
+        private ReceivedPay receivedPay;
+    }
 }

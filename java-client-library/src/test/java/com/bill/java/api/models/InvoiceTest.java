@@ -73,7 +73,7 @@ class InvoiceTest extends BDDTests {
         BDC.password = TestEnv.password;
         BDC.devKey = TestEnv.devKey;
 
-        login();
+        login(1);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
         quantity = new Random().nextInt(10) + 1;
@@ -177,7 +177,7 @@ class InvoiceTest extends BDDTests {
     @Interface
     class update{
         @FunctionalTest
-        void should_update_customer_with_given_params() throws Exception {
+        void should_update_invoice_with_given_params() throws Exception {
             Invoice.InvoiceLineItem item1 = Invoice.InvoiceLineItem.builder()
                     .with($ -> {
                         $.quantity = quantity;

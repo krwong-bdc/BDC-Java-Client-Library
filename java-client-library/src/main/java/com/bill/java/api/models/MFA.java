@@ -3,13 +3,19 @@ package com.bill.java.api.models;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * The MFA class represents the return value from the /MFAAuthenticate.json endpoint
- */
+* An object of this class is returned when the {@link Session#MFAAuthenticate(MFAAuthenticateRequestParams) MFAAuthenticate method}
+* is called.
+*/
 public class MFA {
-    /** The mfaId returned on a successful Http request to be used on subsequent Login requests */
+    /** the ID that is returned after successfully calling the {@link com.bill.java.api.models.Session#MFAAuthenticate(MFAAuthenticateRequestParams) MFAAuthenticate method} */
     @SerializedName("mfaId")
     private String mfaId;
 
+    /**
+    * Gets the Multi Factor Authentication (MFA) ID.
+    *
+    * @return  the MFA ID
+    */
     public String getMfaId() {
         return mfaId;
     }
