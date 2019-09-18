@@ -2,6 +2,7 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.ListRequestParams;
 import com.bill.java.api.param.ReceivedPayGetRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
@@ -20,6 +21,9 @@ public class ReceivedPay extends ApiResource {
     /* Resource endpoints for everything ReceivedPay related */
     /** The URI for retrieving a ReceivedPay through the BDC API {@value} */
     public static final String READ_URL = "/Crud/Read/ReceivedPay.json";
+
+    /** The URI for getting a list of ReceivedPays */
+    public static final String LIST_RECEIVEDPAYS_URL = "/List/ReceivedPay.json";
 
     /* All retrievable attributes of a Customer */
     /** "ReceivedPay" */
@@ -158,6 +162,21 @@ public class ReceivedPay extends ApiResource {
             throw new NullPointerException("ReceivedPayGetRequestParams required");
         }
         return create(READ_URL, receivedPayGetRequestParams, ReceivedPay.class);
+    }
+
+    /**
+     * Get a list of ReceivedPays
+     *
+     * @param receivedPayListRequestParams data for request to set authorization
+     * @return                          a list of receivedPays belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<ReceivedPay> list(ListRequestParams receivedPayListRequestParams) throws BDCException, IOException {
+        if(receivedPayListRequestParams == null) {
+            throw new NullPointerException("ReceivedPayListRequestParams required");
+        }
+        return createCollection(LIST_RECEIVEDPAYS_URL, receivedPayListRequestParams, ReceivedPay.class);
     }
 
     /* Needed to nest the response from the ChargeCustomer endpoint */

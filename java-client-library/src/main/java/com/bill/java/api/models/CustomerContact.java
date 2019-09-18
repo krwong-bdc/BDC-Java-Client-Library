@@ -5,11 +5,13 @@ import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.CustomerContactCreateRequestParams;
 import com.bill.java.api.param.CustomerContactGetRequestParams;
 import com.bill.java.api.param.CustomerContactUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Represents a point of contact for a customer
@@ -21,6 +23,7 @@ public class CustomerContact extends ApiResource {
     public static final String UPDATE_URL = "/Crud/Update/CustomerContact.json";
     public static final String DELETE_URL = "/Crud/Delete/CustomerContact.json";
     public static final String UNDELETE_URL = "/Crud/Undelete/CustomerContact.json";
+    public static final String LIST_CUSTOMER_CONTACTS_URL = "/List/CustomerContact.json";
 
     /** CustomerContact */
     @Getter
@@ -170,5 +173,20 @@ public class CustomerContact extends ApiResource {
             throw new NullPointerException("CustomerContact required");
         }
         return create(UPDATE_URL, customerContact, CustomerContact.class);
+    }
+
+    /**
+     * Set customer Authorization in the BDC database
+     *
+     * @param customerContactListRequestParams data for request to set authorization
+     * @return                          a list of customerContacts belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<CustomerContact> list(ListRequestParams customerContactListRequestParams) throws BDCException, IOException {
+        if(customerContactListRequestParams == null) {
+            throw new NullPointerException("CustomerContactListRequestParams required");
+        }
+        return createCollection(LIST_CUSTOMER_CONTACTS_URL, customerContactListRequestParams, CustomerContact.class);
     }
 }

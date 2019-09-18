@@ -5,12 +5,14 @@ import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.ItemCreateRequestParams;
 import com.bill.java.api.param.ItemGetRequestParams;
 import com.bill.java.api.param.ItemUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * For customers, an Item defines products or services provided by the organization.
@@ -33,6 +35,9 @@ public class Item extends ApiResource {
 
     /** The URI for undisabling a Item through the BDC API {@value #UNDELETE_URL} */
     public static final String UNDELETE_URL = "/Crud/Undelete/Item.json";
+
+    /** The URI for getting a list of items */
+    public static final String LIST_ITEMS_URL = "/List/Item.json";
 
     /* All retrievable attributes of a Item */
     /** Item. */
@@ -252,5 +257,20 @@ public class Item extends ApiResource {
             throw new NullPointerException("Item required");
         }
         return create(UPDATE_URL, item, Item.class);
+    }
+
+    /**
+     * Get a list of items
+     *
+     * @param itemListRequestParams data for request to set authorization
+     * @return                          a list of items belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<Item> list(ListRequestParams itemListRequestParams) throws BDCException, IOException {
+        if(itemListRequestParams == null) {
+            throw new NullPointerException("ItemListRequestParams required");
+        }
+        return createCollection(LIST_ITEMS_URL, itemListRequestParams, Item.class);
     }
 }

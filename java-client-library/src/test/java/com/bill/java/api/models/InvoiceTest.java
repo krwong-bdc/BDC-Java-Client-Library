@@ -5,6 +5,7 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.InvoiceCreateRequestParams;
 import com.bill.java.api.param.InvoiceGetRequestParams;
 import com.bill.java.api.param.InvoiceUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -133,6 +134,21 @@ class InvoiceTest extends BDDTests {
                 }).build());
 
         invoiceId = invoice.getId();
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                Invoice.list(params);
+            });
+        }
     }
 
     @Interface

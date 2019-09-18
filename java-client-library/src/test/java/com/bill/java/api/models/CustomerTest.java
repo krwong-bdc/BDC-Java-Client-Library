@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import resources.BDDTests;
 import resources.TestEnv;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("@Customer")
@@ -83,6 +85,21 @@ class CustomerTest extends BDDTests {
         description = genDescription();
         accountType = genNumAsString(0, 2);
 
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                           $.start = 0;
+                           $.max = 10;
+                        }).build();
+                List<Customer> customers = Customer.list(params);
+            });
+        }
     }
 
     @Interface

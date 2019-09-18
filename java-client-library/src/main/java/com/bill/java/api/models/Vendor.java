@@ -2,12 +2,14 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.ListRequestParams;
 import com.bill.java.api.param.VendorCreateRequestParams;
 import com.bill.java.api.param.VendorGetRequestParams;
 import com.bill.java.api.param.VendorUpdateRequestParams;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Represents a Vendor in the User's network
@@ -19,6 +21,9 @@ public class Vendor extends ApiResource {
     public static final String UPDATE_URL = "/Crud/Update/Vendor.json";
     public static final String DELETE_URL = "/Crud/Delete/Vendor.json";
     public static final String UNDELETE_URL = "/Crud/Undelete/Vendor.json";
+
+    /** The URI for getting a list of Vendors */
+    public static final String LIST_VENDORS_URL = "/List/Vendor.json";
 
     /* All retrievable attributes of a Vendor */
     @SerializedName("entity")
@@ -184,6 +189,21 @@ public class Vendor extends ApiResource {
             throw new NullPointerException("Vendor required");
         }
         return create(UPDATE_URL, vendor, Vendor.class);
+    }
+
+    /**
+     * Get a list of vendors
+     *
+     * @param vendorListRequestParams data for request to set authorization
+     * @return                          a list of vendors belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<Vendor> list(ListRequestParams vendorListRequestParams) throws BDCException, IOException {
+        if(vendorListRequestParams == null) {
+            throw new NullPointerException("VendorListRequestParams required");
+        }
+        return createCollection(LIST_VENDORS_URL, vendorListRequestParams, Vendor.class);
     }
 
     /* Getter-Setter methods for Vendor member variables */

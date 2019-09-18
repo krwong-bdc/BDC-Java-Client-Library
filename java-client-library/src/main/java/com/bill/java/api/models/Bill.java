@@ -5,6 +5,7 @@ import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.BillCreateRequestParams;
 import com.bill.java.api.param.BillGetRequestParams;
 import com.bill.java.api.param.BillUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -38,6 +39,9 @@ public class Bill extends ApiResource {
 
     /** The URI for undisabling an Bill through the BDC API {@value} */
     public static final String UNDELETE_URL = "/Crud/Undelete/Bill.json";
+
+    /** The URI for getting a list of bills */
+    public static final String LIST_BILLS_URL = "/List/Bill.json";
 
     /* All retrievable attributes of a Bill */
     /** "Bill" */
@@ -244,6 +248,21 @@ public class Bill extends ApiResource {
             throw new NullPointerException("Bill required");
         }
         return create(UPDATE_URL, bill, Bill.class);
+    }
+
+    /**
+     * Get a list of Bills
+     *
+     * @param billListRequestParams data for request to set authorization
+     * @return                          a list of bills belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<Bill> list(ListRequestParams billListRequestParams) throws BDCException, IOException {
+        if(billListRequestParams == null) {
+            throw new NullPointerException("BillListRequestParams required");
+        }
+        return createCollection(LIST_BILLS_URL, billListRequestParams, Bill.class);
     }
 
     /**

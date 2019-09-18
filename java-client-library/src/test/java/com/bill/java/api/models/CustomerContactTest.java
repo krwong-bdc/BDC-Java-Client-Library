@@ -4,6 +4,7 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.CustomerContactCreateRequestParams;
 import com.bill.java.api.param.CustomerContactGetRequestParams;
 import com.bill.java.api.param.CustomerContactUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import resources.BDDTests;
 import resources.TestEnv;
 
+import java.util.List;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -58,6 +60,21 @@ class CustomerContactTest extends BDDTests {
                 }).build());
 
         customerContactId = customerContact.getId();
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                CustomerContact.list(params);
+            });
+        }
     }
 
     @Interface

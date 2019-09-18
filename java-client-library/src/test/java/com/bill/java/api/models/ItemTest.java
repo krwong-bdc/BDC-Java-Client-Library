@@ -5,6 +5,7 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.ItemCreateRequestParams;
 import com.bill.java.api.param.ItemGetRequestParams;
 import com.bill.java.api.param.ItemUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import jdk.nashorn.internal.objects.annotations.Function;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -73,6 +74,21 @@ class ItemTest extends BDDTests {
         Item item = Item.create(params);
 
         itemId = item.getId();
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                Item.list(params);
+            });
+        }
     }
 
     @Interface

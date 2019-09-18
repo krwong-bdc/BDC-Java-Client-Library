@@ -88,7 +88,6 @@ class ServicesTest extends BDDTests {
     class payBills {
         @FunctionalTest
         void should_charge_a_customer() throws Exception {
-            login();
 
             BillPay billPay = BillPay.builder()
                     .with($ -> {
@@ -175,7 +174,6 @@ class ServicesTest extends BDDTests {
     class recordAPPayment {
         @FunctionalTest
         void should_charge_a_customer() throws Exception {
-            login();
 
             BillPay billPay = BillPay.builder()
                     .with($ -> {
@@ -220,7 +218,6 @@ class ServicesTest extends BDDTests {
     class getAccountsPayableSummary {
         @FunctionalTest
         void should_not_throw_BDCException() throws Exception {
-            login();
             assertDoesNotThrow(() -> {
                 AccountsPayableSummary summary = Services.getAccountsPayableSummary();
             });
@@ -231,7 +228,6 @@ class ServicesTest extends BDDTests {
     class getDisbursementData {
         @FunctionalTest
         void should_not_throw_BDCException() throws Exception {
-            login();
             assertDoesNotThrow(() -> {
                 GetDisbursementDataRequestParams params = GetDisbursementDataRequestParams.builder()
                         .with($ -> {
@@ -249,7 +245,6 @@ class ServicesTest extends BDDTests {
     class listPayments {
         @FunctionalTest
         void should_not_throw_BDCException() throws Exception {
-            login();
             assertDoesNotThrow(() -> {
                 ListPaymentsRequestParams params = ListPaymentsRequestParams.builder()
                         .with($ -> {

@@ -4,6 +4,7 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.BillCreateRequestParams;
 import com.bill.java.api.param.BillGetRequestParams;
 import com.bill.java.api.param.BillUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import resources.BDDTests;
@@ -84,6 +85,21 @@ class BillTest extends BDDTests {
                 }).build());
 
         billId = bill.getId();
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                List<Bill> bills = Bill.list(params);
+            });
+        }
     }
 
     @Interface
