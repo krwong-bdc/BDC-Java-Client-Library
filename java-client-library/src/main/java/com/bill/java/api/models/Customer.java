@@ -2,15 +2,13 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
-import com.bill.java.api.param.CustomerCreateRequestParams;
-import com.bill.java.api.param.CustomerGetRequestParams;
-import com.bill.java.api.param.CustomerSetAuthorizationRequestParams;
-import com.bill.java.api.param.CustomerUpdateRequestParams;
+import com.bill.java.api.param.*;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Represents a Customer in the User's network
@@ -34,6 +32,9 @@ public class Customer extends ApiResource {
 
     /** The URI for setting a Customer's consent to charge through the BDC API {@value #SET_AUTHORIZATION_URL} */
     public static final String SET_AUTHORIZATION_URL = "/SetCustomerAuthorization.json";
+
+    /** The URI for getting a list of customers */
+    public static final String LIST_CUSTOMERS_URL = "/List/Customer.json";
 
     /* All retrievable attributes of a Customer */
     /** Customer */
@@ -357,5 +358,20 @@ public class Customer extends ApiResource {
             throw new NullPointerException("CustomerSetAuthorizationRequestParams required");
         }
         return create(SET_AUTHORIZATION_URL, customerSetAuthorizationRequestParams, Customer.class);
+    }
+
+    /**
+     * Get a list of customers
+     *
+     * @param customerListRequestParams data for request to set authorization
+     * @return                          a list of customers belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<Customer> list(ListRequestParams customerListRequestParams) throws BDCException, IOException {
+        if(customerListRequestParams == null) {
+            throw new NullPointerException("CustomerListRequestParams required");
+        }
+        return createCollection(LIST_CUSTOMERS_URL, customerListRequestParams, Customer.class);
     }
 }

@@ -2,11 +2,13 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.ListRequestParams;
 import com.bill.java.api.param.VendorBankAccountGetRequestParams;
 import com.bill.java.api.param.VendorBankAccountCreateRequestParams;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Represents a bank account for a vendor in the user's network
@@ -16,6 +18,8 @@ public class VendorBankAccount extends ApiResource {
     public static final String CREATE_URL = "/Crud/Create/VendorBankAccount.json";
     public static final String READ_URL = "/Crud/Read/VendorBankAccount.json";
     public static final String DELETE_URL = "/Crud/Delete/VendorBankAccount.json";
+    /** The URI for getting a list of customers */
+    public static final String LIST_VENDOR_BANK_ACCOUNTS_URL = "/List/VendorBankAccount.json";
 
     /* All retrievable attributes of a Vendor */
     @SerializedName("entity")
@@ -82,6 +86,21 @@ public class VendorBankAccount extends ApiResource {
             throw new NullPointerException("VendorCreateRequestParams required");
         }
         return create(READ_URL, vendorBankAcccountGetRequestParams, VendorBankAccount.class);
+    }
+
+    /**
+     * Get a list of vendorBankAccounts
+     *
+     * @param vendorBankAccountListRequestParams data for request to set authorization
+     * @return                          a list of vendorBankAccounts belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<VendorBankAccount> list(ListRequestParams vendorBankAccountListRequestParams) throws BDCException, IOException {
+        if(vendorBankAccountListRequestParams == null) {
+            throw new NullPointerException("VendorBankAccountListRequestParams required");
+        }
+        return createCollection(LIST_VENDOR_BANK_ACCOUNTS_URL, vendorBankAccountListRequestParams, VendorBankAccount.class);
     }
 
     /* Getter-Setter methods for VendorBankAccount variables */

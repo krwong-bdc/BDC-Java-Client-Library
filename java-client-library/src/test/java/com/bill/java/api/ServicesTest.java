@@ -37,7 +37,7 @@ class ServicesTest extends BDDTests {
         amount = BigDecimal.valueOf(1, 2);
         date = "2019-09-12";
 
-        login(2);
+        login();
     }
 
     @Interface
@@ -47,7 +47,7 @@ class ServicesTest extends BDDTests {
             InvoicePay invoicePay = InvoicePay.builder()
                     .with($ -> {
                         $.amount = amount;
-                        $.invoiceId = TestEnv.invoiceId2;
+                        $.invoiceId = TestEnv.testInvoiceId;
                     }).build();
 
             List<InvoicePay> items = new ArrayList<InvoicePay>();
@@ -55,10 +55,10 @@ class ServicesTest extends BDDTests {
 
             ChargeCustomerRequestParams params = ChargeCustomerRequestParams.builder()
                     .with($ -> {
-                        $.customerId = TestEnv.customerId2;
+                        $.customerId = TestEnv.testCustomerId;
                         $.memo = description;
                         $.paymentType = "3";
-                        $.paymentAccountId = TestEnv.customerBankAccountId2;
+                        $.paymentAccountId = TestEnv.testCustomerBankAccountId;
                         $.invoicePays = items;
                     }).build();
 
@@ -88,12 +88,11 @@ class ServicesTest extends BDDTests {
     class payBills {
         @FunctionalTest
         void should_charge_a_customer() throws Exception {
-            login();
 
             BillPay billPay = BillPay.builder()
                     .with($ -> {
                         $.amount = BigDecimal.valueOf(1, 2);
-                        $.billId = TestEnv.billId2;
+                        $.billId = TestEnv.testBillId;
                     }).build();
 
             List<BillPay> items = new ArrayList<BillPay>();
@@ -103,7 +102,7 @@ class ServicesTest extends BDDTests {
 
             PayBillsRequestParams params = PayBillsRequestParams.builder()
                     .with($ -> {
-                        $.vendorId = TestEnv.vendorId2;
+                        $.vendorId = TestEnv.testVendorId;
                         $.billPays = items;
                     }).build();
 
@@ -144,7 +143,7 @@ class ServicesTest extends BDDTests {
             InvoicePay invoicePay = InvoicePay.builder()
                     .with($ -> {
                         $.amount = amount;
-                        $.invoiceId = TestEnv.invoiceId2;
+                        $.invoiceId = TestEnv.testInvoiceId;
                     }).build();
 
             List<InvoicePay> items = new ArrayList<InvoicePay>();
@@ -152,7 +151,7 @@ class ServicesTest extends BDDTests {
 
             RecordARPaymentRequestParams params = RecordARPaymentRequestParams.builder()
                     .with($ -> {
-                        $.customerId = TestEnv.customerId2;
+                        $.customerId = TestEnv.testCustomerId;
                         $.paymentType = "3";
                         $.paymentDate = date;
                         $.amount = amount;
@@ -175,12 +174,11 @@ class ServicesTest extends BDDTests {
     class recordAPPayment {
         @FunctionalTest
         void should_charge_a_customer() throws Exception {
-            login();
 
             BillPay billPay = BillPay.builder()
                     .with($ -> {
                         $.amount = BigDecimal.valueOf(1, 2);
-                        $.billId = TestEnv.billId2;
+                        $.billId = TestEnv.testBillId;
                     }).build();
 
             List<BillPay> items = new ArrayList<BillPay>();
@@ -190,7 +188,7 @@ class ServicesTest extends BDDTests {
 
             RecordAPPaymentRequestParams params = RecordAPPaymentRequestParams.builder()
                     .with($ -> {
-                        $.vendorId = TestEnv.vendorId2;
+                        $.vendorId = TestEnv.testVendorId;
                         $.processDate = format.format(new Date());
                         $.toPrintCheck = genBool();
                         $.billPays = items;
@@ -220,7 +218,6 @@ class ServicesTest extends BDDTests {
     class getAccountsPayableSummary {
         @FunctionalTest
         void should_not_throw_BDCException() throws Exception {
-            login();
             assertDoesNotThrow(() -> {
                 AccountsPayableSummary summary = Services.getAccountsPayableSummary();
             });
@@ -231,11 +228,10 @@ class ServicesTest extends BDDTests {
     class getDisbursementData {
         @FunctionalTest
         void should_not_throw_BDCException() throws Exception {
-            login();
             assertDoesNotThrow(() -> {
                 GetDisbursementDataRequestParams params = GetDisbursementDataRequestParams.builder()
                         .with($ -> {
-                            $.sentPayId = TestEnv.sentPayId;
+                            $.sentPayId = TestEnv.testSentPayId;
                         }).build();
                 DisbursementData data = Services.getDisbursementData(params);
 
@@ -249,7 +245,6 @@ class ServicesTest extends BDDTests {
     class listPayments {
         @FunctionalTest
         void should_not_throw_BDCException() throws Exception {
-            login();
             assertDoesNotThrow(() -> {
                 ListPaymentsRequestParams params = ListPaymentsRequestParams.builder()
                         .with($ -> {

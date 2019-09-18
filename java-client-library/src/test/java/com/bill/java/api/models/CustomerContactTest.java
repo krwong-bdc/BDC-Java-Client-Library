@@ -4,12 +4,16 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.CustomerContactCreateRequestParams;
 import com.bill.java.api.param.CustomerContactGetRequestParams;
 import com.bill.java.api.param.CustomerContactUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import resources.BDDTests;
 import resources.TestEnv;
+
+import java.util.List;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,6 +30,8 @@ class CustomerContactTest extends BDDTests {
     private String fax;
     private String timezoneId;
 
+    private String customerContactId;
+
     @BeforeEach
     void setup() throws Exception {
         login();
@@ -34,11 +40,41 @@ class CustomerContactTest extends BDDTests {
         customerId = TestEnv.testCustomerId;
         firstName = genFName();
         lastName = genLName();
-        email = genEmail();
+        email = String.valueOf(new Random().nextInt(400)) + genEmail();
         phone = genPhone();
         altPhone = genPhone();
         fax = genPhone();
         timezoneId = genNumAsString(3, 6);
+
+        CustomerContact customerContact = CustomerContact.create(CustomerContactCreateRequestParams.builder()
+                .with($ -> {
+                    $.isActive = isActive;
+                    $.customerId = customerId;
+                    $.firstName = firstName;
+                    $.lastName = lastName;
+                    $.email = "2" + email;
+                    $.phone = phone;
+                    $.altPhone = altPhone;
+                    $.fax = fax;
+                    $.timezoneId = timezoneId;
+                }).build());
+
+        customerContactId = customerContact.getId();
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                CustomerContact.list(params);
+            });
+        }
     }
 
     @Interface
@@ -78,10 +114,10 @@ class CustomerContactTest extends BDDTests {
         void should_retrieve_the_sepcified_customerContact() throws Exception {
             CustomerContactGetRequestParams params = CustomerContactGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testCustomerContactId;
+                        $.id = customerContactId;
                     }).build();
             CustomerContact customerContact = CustomerContact.get(params);
-            assertAll(() -> assertEquals(TestEnv.testCustomerContactId, customerContact.getId()));
+            assertAll(() -> assertEquals(customerContactId, customerContact.getId()));
         }
 
         @Condition
@@ -101,7 +137,7 @@ class CustomerContactTest extends BDDTests {
         void should_update_customer_with_given_params() throws Exception {
             CustomerContact customerContact = CustomerContact.update(CustomerContactUpdateRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testCustomerContactId;
+                        $.id = customerContactId;
                         $.isActive = isActive;
                         $.firstName = firstName;
                         $.lastName = lastName;
@@ -132,7 +168,7 @@ class CustomerContactTest extends BDDTests {
         void should_update_the_given_resource() throws Exception {
             CustomerContactGetRequestParams params = CustomerContactGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testCustomerContactId;
+                        $.id = customerContactId;
                     }).build();
             CustomerContact customerContact = CustomerContact.get(params);
 

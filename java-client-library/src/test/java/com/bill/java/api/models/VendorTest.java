@@ -1,10 +1,7 @@
 package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
-import com.bill.java.api.param.VendorBankAccountCreateRequestParams;
-import com.bill.java.api.param.VendorCreateRequestParams;
-import com.bill.java.api.param.VendorGetRequestParams;
-import com.bill.java.api.param.VendorUpdateRequestParams;
+import com.bill.java.api.param.*;
 import jdk.nashorn.internal.objects.annotations.Function;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -71,6 +68,21 @@ class VendorTest extends BDDTests {
         contactFirstName = genFName();
         contactLastName = genLName();
         accountType = genNumAsString(0, 2);
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                Vendor.list(params);
+            });
+        }
     }
 
     @Interface

@@ -5,6 +5,7 @@ import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.param.ItemCreateRequestParams;
 import com.bill.java.api.param.ItemGetRequestParams;
 import com.bill.java.api.param.ItemUpdateRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import jdk.nashorn.internal.objects.annotations.Function;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -38,6 +39,9 @@ class ItemTest extends BDDTests {
     private String shortName;
     private String mergedIntoId;
 
+
+    private String itemId;
+
     @BeforeEach
     void setup() throws Exception {
         BDC.userName = TestEnv.userName;
@@ -50,11 +54,41 @@ class ItemTest extends BDDTests {
         name = genFullName();
         type = String.valueOf(genNumAsString(0, 13));
         description = genDescription();
-        price = BigDecimal.valueOf(new Random().nextInt(400), 2);
+        price = BigDecimal.valueOf(new Random().nextInt(40000), 2);
         purDescription = genDescription() ;
-        purCost = BigDecimal.valueOf(new Random().nextInt(400), 2);
         taxable = genBool();
         shortName = genFName();
+
+        ItemCreateRequestParams params = ItemCreateRequestParams.builder()
+                .with($ -> {
+                    $.isActive = isActive;
+                    $.name = name;
+                    $.type = type;
+                    $.description = description;
+                    $.price = price;
+                    $.purDescription = purDescription;
+                    $.taxable = taxable;
+                    $.shortName = shortName;
+                }).build();
+
+        Item item = Item.create(params);
+
+        itemId = item.getId();
+    }
+
+    @Interface
+    class list {
+        @FunctionalTest
+        void should_fetch_a_list() {
+            assertDoesNotThrow(() -> {
+                ListRequestParams params = ListRequestParams.builder()
+                        .with($ -> {
+                            $.start = 0;
+                            $.max = 10;
+                        }).build();
+                Item.list(params);
+            });
+        }
     }
 
     @Interface
@@ -69,7 +103,6 @@ class ItemTest extends BDDTests {
                         $.description = description;
                         $.price = price;
                         $.purDescription = purDescription;
-                        $.purCost = purCost;
                         $.taxable = taxable;
                         $.shortName = shortName;
                     }).build();
@@ -95,10 +128,10 @@ class ItemTest extends BDDTests {
         void should_retrieve_the_sepcified_item() throws Exception {
             ItemGetRequestParams params = ItemGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testItemId;
+                        $.id = itemId;
                     }).build();
             Item item = Item.get(params);
-            assertAll(() -> assertEquals(TestEnv.testItemId, item.getId()));
+            assertAll(() -> assertEquals(itemId, item.getId()));
         }
         @Condition
         class When_given_bad_input{
@@ -117,14 +150,13 @@ class ItemTest extends BDDTests {
         void should_update_item_with_given_params() throws Exception {
             ItemUpdateRequestParams params = ItemUpdateRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testItemId;
+                        $.id = itemId;
                         $.isActive = isActive;
                         $.name = name;
                         $.type = type;
                         $.description = description;
                         $.price = price;
                         $.purDescription = purDescription;
-                        $.purCost = purCost;
                         $.taxable = taxable;
                         $.shortName = shortName;
                     }).build();
@@ -151,7 +183,7 @@ class ItemTest extends BDDTests {
         void should_update_the_given_resource() throws Exception {
             ItemGetRequestParams params = ItemGetRequestParams.builder()
                     .with($ -> {
-                        $.id = TestEnv.testItemId;
+                        $.id = itemId;
                     }).build();
             Item item = Item.get(params);
 
@@ -179,7 +211,6 @@ class ItemTest extends BDDTests {
            assertEquals(description, item.getDescription());
            assertEquals(price, item.getPrice());
            assertEquals(purDescription, item.getPurDescription());
-           assertEquals(purCost, item.getPurCost());
            assertEquals(taxable, item.getTaxable());
            assertEquals(shortName, item.getShortName());
         });

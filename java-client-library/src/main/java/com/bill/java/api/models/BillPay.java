@@ -3,11 +3,13 @@ package com.bill.java.api.models;
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
 import com.bill.java.api.param.BillPayGetRequestParams;
+import com.bill.java.api.param.ListRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -18,6 +20,9 @@ public class BillPay extends ApiResource {
     /* Resource endpoints for everything BillPay related */
     /** The URI for retrieving a BillPay through the BDC API {@value} */
     public static final String READ_URL = "/Crud/Read/BillPay.json";
+
+    /** The URI for getting a list of BillPays */
+    public static final String LIST_BILLPAYS_URL = "/List/BillPay.json";
 
     /** "BillPay */
     @SerializedName("entity")
@@ -174,5 +179,20 @@ public class BillPay extends ApiResource {
             throw new NullPointerException("BillPayGetRequestParams required");
         }
         return create(READ_URL, billPayGetRequestParams, BillPay.class);
+    }
+
+    /**
+     * Get a list of Bill Pays
+     *
+     * @param billPayListRequestParams data for request to set authorization
+     * @return                          a list of billPays belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<BillPay> list(ListRequestParams billPayListRequestParams) throws BDCException, IOException {
+        if(billPayListRequestParams == null) {
+            throw new NullPointerException("BillPayListRequestParams required");
+        }
+        return createCollection(LIST_BILLPAYS_URL, billPayListRequestParams, BillPay.class);
     }
 }

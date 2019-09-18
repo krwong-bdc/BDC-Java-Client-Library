@@ -2,6 +2,7 @@ package com.bill.java.api.models;
 
 import com.bill.java.api.exception.BDCException;
 import com.bill.java.api.net.ApiResource;
+import com.bill.java.api.param.ListRequestParams;
 import com.bill.java.api.param.SentPayGetRequestParams;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -15,6 +16,9 @@ public class SentPay extends ApiResource {
     /* Resource endpoints for everything SentPay related */
     /** The URI for retrieving a SentPay through the BDC API {@value} */
     public static final String READ_URL = "/Crud/Read/SentPay.json";
+
+    /** The URI for getting a list of sentpays */
+    public static final String LIST_SENTPAYS_URL = "/List/SentPay.json";
 
     /** "SentPay" */
     @SerializedName("entity")
@@ -179,5 +183,20 @@ public class SentPay extends ApiResource {
     public static class Payments {
         @SerializedName("payments")
         private List<SentPay> sentPays;
+    }
+
+    /**
+     * Get a list of sentpays
+     *
+     * @param sentPayListRequestParams data for request to set authorization
+     * @return                          a list of sentPays belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<SentPay> list(ListRequestParams sentPayListRequestParams) throws BDCException, IOException {
+        if(sentPayListRequestParams == null) {
+            throw new NullPointerException("SentPayListRequestParams required");
+        }
+        return createCollection(LIST_SENTPAYS_URL, sentPayListRequestParams, SentPay.class);
     }
 }

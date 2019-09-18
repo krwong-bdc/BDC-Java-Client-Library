@@ -42,6 +42,9 @@ public class Invoice extends ApiResource {
     /** The URI for sending an Invoice via mail to customers through the BDC API {@value} */
     public static final String MAIL_INVOICE_URL = "/MailInvoice.json";
 
+    /** The URI for getting a list of invoices */
+    public static final String LIST_INVOICES_URL = "/List/Invoice.json";
+
     /* All retrievable attributes of an Invoice */
     /** "Invoice" */
     @Setter(AccessLevel.NONE)
@@ -366,6 +369,21 @@ public class Invoice extends ApiResource {
         httpClient.request(MAIL_INVOICE_URL, mailInvoiceRequestParams).getJsonData();
 
         return true;
+    }
+
+    /**
+     * Get a list of invoices
+     *
+     * @param invoiceListRequestParams data for request to set authorization
+     * @return                          a list of invoices belonging to the account
+     * @throws BDCException             when the response from the API is unsuccessful
+     * @throws IOException              when an I/O exception occurs on the underlying request
+     */
+    public static List<Invoice> list(ListRequestParams invoiceListRequestParams) throws BDCException, IOException {
+        if(invoiceListRequestParams == null) {
+            throw new NullPointerException("InvoiceListRequestParams required");
+        }
+        return createCollection(LIST_INVOICES_URL, invoiceListRequestParams, Invoice.class);
     }
 
     /**

@@ -2,6 +2,8 @@ package com.bill.java.api.param;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -43,5 +45,28 @@ public abstract class ApiResourceParams implements BDCParams {
      */
     public String toFormURLEncodedString() throws UnsupportedEncodingException {
         return "data="+ encodeValue(this.toJsonString());
+    }
+
+    @Getter
+    @Setter
+    public static class Filter {
+        @SerializedName("field")
+        private Integer field;
+
+        @SerializedName("op")
+        private Integer op;
+
+        @SerializedName("value")
+        private Integer value;
+    }
+
+    @Getter
+    @Setter
+    public static class Sort {
+        @SerializedName("field")
+        private Integer field;
+
+        @SerializedName("asc")
+        private Integer asc;
     }
 }
