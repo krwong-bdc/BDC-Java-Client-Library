@@ -240,17 +240,37 @@ public abstract class BDDTests {
     }
 
     public void login() throws BDCException, IOException {
-        BDC.devKey = TestEnv.devKey;
-        BDC.userName = TestEnv.userName;
-        BDC.password = TestEnv.password;
-        BDC.setApiBase(BDC.Env.SANDBOX);
+        login(1);
+    }
+    
+    public void login(Integer user) throws BDCException, IOException {
+        if( user == 2){
+            BDC.devKey = TestEnv.devKey2;
+            BDC.userName = TestEnv.userName2;
+            BDC.password = TestEnv.password2;
+            BDC.setApiBase(BDC.Env.SANDBOX);
 
-        SessionLoginRequestParams params = SessionLoginRequestParams.builder()
-                .with($ -> {
-                    $.orgId = TestEnv.orgId;
-                    $.mfaId = TestEnv.mfaId;
-                    $.deviceId = TestEnv.deviceId;
-                }).build();
-        Session.login(params);
+            SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                    .with($ -> {
+                        $.orgId = TestEnv.orgId2;
+                        $.mfaId = TestEnv.mfaId2;
+                        $.deviceId = TestEnv.deviceId2;
+                    }).build();
+            Session.login(params);
+        } else {
+            BDC.devKey = TestEnv.devKey;
+            BDC.userName = TestEnv.userName;
+            BDC.password = TestEnv.password;
+            BDC.setApiBase(BDC.Env.SANDBOX);
+
+            SessionLoginRequestParams params = SessionLoginRequestParams.builder()
+                    .with($ -> {
+                        $.orgId = TestEnv.orgId;
+                        $.mfaId = TestEnv.mfaId;
+                        $.deviceId = TestEnv.deviceId;
+                    }).build();
+            Session.login(params);
+        }
+
     }
 }
