@@ -26,6 +26,10 @@ This library is a Java wrapper around the [BDC API](https://developer.bill.com/h
 - [Gradle](https://docs.gradle.org/current/userguide/gradle_wrapper.html) v5.6.2
 - [Gradle Shadow](https://github.com/johnrengelman/shadow) v5.1.0
 
+#Documentation
+- [BDC API developer docs](https://developer.bill.com/hc/en-us/categories/201195646)  
+- [Java Client Library docs](https://krwong-bdc.github.io/BDC-Java-Client-Library/)
+
 # Before you begin
 
 1. [Sign up](https://developer.bill.com/hc/en-us/requests/new?ticket_form_id=154803) for the API Developer Key and create a developer account (Organization). A Sales Specialist will review the request and reach out to discuss your objectives.
