@@ -95,7 +95,7 @@ public abstract class BDC {
     /**
     * Sets the API base URL.
     *
-    * @param Env  the environment URL that was defined when using the client library
+    * @param env  the environment URL that was defined when using the client library
     *
     */
     public static void setApiBase(Env env) {

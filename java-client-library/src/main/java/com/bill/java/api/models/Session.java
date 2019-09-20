@@ -56,7 +56,7 @@ public class Session extends ApiResource {
      * <a href="https://developer.bill.com/hc/en-us/articles/208197226-Login" target="_blank">Login</a>.</p>
      *
      * @param   sessionLoginRequestParams   parameters required to make the request. For more information, see
-                                            {@link SessionLoginRequestParams#orgId SessionLoginRequestParams}.
+                                            {@link SessionLoginRequestParams SessionLoginRequestParams}.
      * @return                              a Session object containing the response values from the API
      * @throws  BDCException                is thrown when the response from the API is unsuccessful
      * @throws  IOException                 is thrown when an I/O exception occurs on the underlying request
@@ -140,10 +140,10 @@ public class Session extends ApiResource {
      *
      * @param   mfaChallengeRequestparams   the {@link MFAChallengeRequestParams}, which contains an argument to determine whether
      *                                      the token needs to be sent to the primary mobile device [value = false] or back up mobile device [value = true]
-     * @return                              an {@MFAChallenge} object which includes a challenge ID
+     * @return                              an {@link MFAChallenge} object which includes a challenge ID
      * @throws BDCException                 is thrown when the response from the API is unsuccessful
      * @throws IOException                  is thrown when an I/O exception occurs on the underlying request
-     * @see                                 see the <a href="https://developer.bill.com/hc/en-us/articles/212471546" target="_blank">MFA Workflow</a>
+     * @see                                 <a href="https://developer.bill.com/hc/en-us/articles/212471546" target="_blank">MFA Workflow</a>
      */
     public static MFAChallenge requestMFAChallenge(MFAChallengeRequestParams mfaChallengeRequestparams) throws BDCException, IOException {
         return create(MFA_CHALLENGE_URL, mfaChallengeRequestparams, MFAChallenge.class);
@@ -164,7 +164,7 @@ public class Session extends ApiResource {
      * @return                                  an {@link MFA} object which includes an MFA ID
      * @throws  BDCException                    is thrown when the response from the API is unsuccessful
      * @throws  IOException                     is thrown when an I/O exception occurs on the underlying request
-     * @see                                     see the <a href="https://developer.bill.com/hc/en-us/articles/212471546" target="_blank">MFA Workflow</a>
+     * @see                                     <a href="https://developer.bill.com/hc/en-us/articles/212471546" target="_blank">MFA Workflow</a>
      */
     public static MFA MFAAuthenticate(MFAAuthenticateRequestParams mfaAuthenticationRequestParams) throws BDCException, IOException {
         return create(MFA_AUTHENTICATE_URL, mfaAuthenticationRequestParams, MFA.class);
@@ -181,7 +181,7 @@ public class Session extends ApiResource {
      * @return                          an {@link MFAStatus} object which includes the isTrusted boolean field describing if the session trusted or not
      * @throws  BDCException            is thrown when the response from the API is unsuccessful
      * @throws  IOException             is thrown when an I/O exception occurs on the underlying request
-     * @see                             see the <a href="https://developer.bill.com/hc/en-us/articles/212471546" target="_blank">MFA Workflow</a>
+     * @see                             <a href="https://developer.bill.com/hc/en-us/articles/212471546" target="_blank">MFA Workflow</a>
      */
     public static MFAStatus getMFAStatus(MFAStatusRequestParams mfaStatusRequestParams) throws BDCException, IOException {
         return create(MFA_STATUS_URL, mfaStatusRequestParams, MFAStatus.class);
