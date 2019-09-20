@@ -26,7 +26,7 @@ This library is a Java wrapper around the [BDC API](https://developer.bill.com/h
 - [Gradle](https://docs.gradle.org/current/userguide/gradle_wrapper.html) v5.6.2
 - [Gradle Shadow](https://github.com/johnrengelman/shadow) v5.1.0
 
-#Documentation
+# Documentation
 - [BDC API developer docs](https://developer.bill.com/hc/en-us/categories/201195646)  
 - [Java Client Library docs](https://krwong-bdc.github.io/BDC-Java-Client-Library/)
 
