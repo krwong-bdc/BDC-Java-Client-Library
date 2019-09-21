@@ -73,7 +73,7 @@ public class BDCHttpClient {
     public HttpResponse execute(String url, String data, String auth) throws IOException {
         HttpsURLConnection connection = openConnection(url);
         String requestParameters = auth;
-        if (data != "") {
+        if (data != "" && data.compareTo("data=null") != 0) {
             requestParameters += "&" + data;
         }
 
